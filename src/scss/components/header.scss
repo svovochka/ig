@@ -1,0 +1,97 @@
+@import "../variables";
+
+.header {
+  background-color: $color-brand-board;
+}
+
+.logo {
+  height: 48px;
+  margin: 20px 0;
+  display: inline-block;
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.top-menu {
+  float: right;
+}
+
+.top-menu-item {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0 26px;
+  &:first-child{
+    margin-left: 0;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+  > a {
+    display: inline-block;
+    color: $color-white;
+    font-size: $font-size-big;
+    text-decoration: none;
+    margin: 32px 0;
+  }
+  > button {
+    cursor: pointer;
+    display: inline-block;
+    color: $color-white;
+    font-size: $font-size-big;
+    padding: 12px 22px;
+    margin: 20px 0;
+    background-color: transparent;
+    border-radius: $border-radius-button;
+    border: 1px dashed $color-white;
+    position: relative;
+    &.link {
+      padding: 0;
+      margin: 32px 0;
+      border: none;
+    }
+    &.icon {
+      padding: 0;
+      margin: 29px 0;
+      border: none;
+      font-size: $font-size-big + 6;
+      border-radius: unset;
+      .attention-mark{
+        color:$color-brand-red;
+        font-size: 14px;
+        position: absolute;
+        top:0;
+        right:-6px;
+      }
+    }
+  }
+  .avatar {
+    height: 48px;
+    width: 48px;
+    border: 3px solid $color-white;
+    background-color: $color-text-grey;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    margin: 20px 0;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .username {
+    display: inline-block;
+    color: $color-white;
+    font-size: $font-size-big;
+    float: left;
+    margin: 32px 12px;
+  }
+  .dropdown{
+    position:absolute;
+    top:100%;
+  }
+
+}

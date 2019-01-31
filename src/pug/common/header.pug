@@ -1,48 +1,62 @@
+//Used variables
+//- var is_authorized = true;
+//- var has_notifications = true;
+//- var is_homepage= false;
+
 header.header
     div.width-holder
-        div.logo
+        div.work-area
+            div.logo
 
-            if is_homepage
-                h1
-                    img(src="../../img/logo.png")
-            else
-                a(href='./home.html', title="На главную")
-                    img(src="../../img/logo.png")
+                if is_homepage
+                    h1
+                        img(src='../../img/logo-white.png')
+                else
+                    a(href='./home.html', title='На главную')
+                        img(src='../../img/logo-white.png')
 
-        nav.top-menu
+            nav.top-menu
 
-            if !is_homepage
-                div.top-menu-item.active
-                    a(href='./home.html') Главная
-
-            div.top-menu-item
-                a(href='./activity-list.html') Найти развлечения
-            div.top-menu-item
-                a(href='./blog-list.html') Блог
-
-            if is_authorized
-                div.top-menu-item
-                    a(href='./orders-list.html') Мои бронирования
-                div.top-menu-item
-                    a(href='./favorites-list.html') Избранное
-                div.top-menu-item
-                    button(type='button') Уведомления
-
-                    if has_notifications
-                        div.dropdown
-                            div.dropdown-item
-                                a(href='#') Уведомление 1
-                            div.dropdown-item
-                                a(href='#') Уведомление 2
-                            div.dropdown-item
-                                a(href='#') Уведомление 3
-                            div.dropdown-item
-                                a(href='#') Уведомление 4
+                if !is_homepage
+                    div.top-menu-item.active
+                        a(href='./home.html') Главная
 
                 div.top-menu-item
-                    a(href='./profile-edit.html') Иван Иванов
-            else
+                    a(href='./activity-list.html') Найти развлечения
                 div.top-menu-item
-                    button(type='button') Войти
-                div.top-menu-item
-                    button(type='button') Зарегистрироваться
+                    a(href='./blog-list.html') Блог
+
+                if is_authorized
+                    div.top-menu-item
+                        a(href='./orders-list.html') Мои бронирования
+                    div.top-menu-item
+                        a(href='./favorites-list.html') Избранное
+                    div.top-menu-item
+                        button.icon(type='button', title='Уведомления')
+                            i.zmdi.zmdi-notifications
+
+                            if has_notifications
+                                i.zmdi.zmdi-circle.attention-mark
+
+                        if has_notifications
+                            div.dropdown
+                                div.dropdown-item
+                                    a(href='#') Уведомление 1
+                                div.dropdown-item
+                                    a(href='#') Уведомление 2
+                                div.dropdown-item
+                                    a(href='#') Уведомление 3
+                                div.dropdown-item
+                                    a(href='#') Уведомление 4
+
+                    div.top-menu-item
+                        div.avatar
+                            img(src="../../data/avatar.jpg")
+                        div.username Иван Иванов
+                        button.icon(type='button', title='Настройки')
+                            i.zmdi.zmdi-settings
+                else
+                    div.top-menu-item
+                        button.link(type='button') Войти
+                    div.top-menu-item
+                        button(type='button') Зарегистрироваться

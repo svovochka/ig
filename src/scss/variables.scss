@@ -1,3 +1,30 @@
-body{
-  background-color: #ffffff;
-}
+//Colors
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-brand-yellow: #FBC00D;
+$color-brand-red: #D0021B;
+$color-brand-green: #33AA58;
+$color-brand-blue: #4A90E2;
+$color-brand-background: #F6F7F9;
+$color-brand-board: #232630;
+$color-brand-border: #E6EAEE;
+$color-text-default: #232630;
+$color-text-grey: rgba(35, 38, 48, 0.5);
+
+$modal-opacity: 0.5;
+
+//Text
+
+//Font size
+$font-size-default: 16px;
+$font-size-big: 18px;
+$font-size-small: 12px;
+
+$font-size-h1: 48px;
+$font-size-h2: 40px;
+$font-size-h3: 32px;
+$font-size-h4: 24px;
+
+$border-radius-min: 2px;
+$border-radius-button: 5px;
+$border-radius-block: 10px;
