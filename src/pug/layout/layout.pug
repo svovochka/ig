@@ -1,0 +1,19 @@
+extends html-document
+
+block variables
+    - var is_homepage = false
+    - var is_authorized = false
+    - var has_notifications = false
+
+block stylesheets
+    link(rel='stylesheet', href='../../scss/style.css')
+
+block links
+    link(rel='icon', type='image/x-icon' href='../../img/favicon.ico')
+
+block body
+    block header
+        include ../common/header
+    block content
+    block footer
+        include ../common/footer

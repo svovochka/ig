@@ -1,0 +1,15 @@
+block variables
+    - var title = '';
+    - var description = '';
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title #{title}
+        meta(name='description' content=description)
+        block meta
+        block stylesheets
+        block scripts
+        block links
+    body
+        block body

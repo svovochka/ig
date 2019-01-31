@@ -1,2 +1,5 @@
 /.idea
 /node_modules
+/src/pug/**/*.html
+/src/scss/**/*.css
+/src/scss/**/*.css.map
