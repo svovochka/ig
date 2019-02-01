@@ -1,82 +1,99 @@
+// Define breakpoints
+$grid-breakpoints: (
+        m: 0,
+        t: 768px,
+        d: 1024px,
+        l: 1824px
+) !default;
 
-$grid-segments: 74;
-$grid-step: 100% / $grid-segments;
-$grid-gutter: $grid-step *2;
-$grid-column-1: $grid-step *4;
-$grid-column-2: $grid-column-1 *2 + $grid-gutter * 1;
-$grid-column-3: $grid-column-1 *3 + $grid-gutter * 2;
-$grid-column-4: $grid-column-1 *4 + $grid-gutter * 3;
-$grid-column-5: $grid-column-1 *5 + $grid-gutter * 4;
-$grid-column-6: $grid-column-1 *6 + $grid-gutter * 5;
-$grid-column-7: $grid-column-1 *7 + $grid-gutter * 6;
-$grid-column-8: $grid-column-1 *8 + $grid-gutter * 7;
-$grid-column-9: $grid-column-1 *9 + $grid-gutter * 8;
-$grid-column-10: $grid-column-1 *10 + $grid-gutter * 9;
-$grid-column-11: $grid-column-1 *11 + $grid-gutter * 10;
-$grid-column-12: $grid-column-1 *12 + $grid-gutter * 11;
+//Grid settings
+$grid-total-columns: 12;
+$grid-margin-size: 2;
+$grid-gutter-size: 2;
+$grid-column-size: 4;
 
-.width-holder{
+//Calculate number of segments
+$grid-row-segments: ($grid-column-size * $grid-total-columns) + ($grid-gutter-size * ($grid-total-columns - 1));
+$grid-total-segments: ($grid-margin-size *2) + $grid-row-segments;
+
+//Calculate work area margin
+$grid-margin: 100% / $grid-total-segments * $grid-margin-size;
+$grid-segment: 100% / $grid-row-segments;
+
+.width-holder {
   max-width: 1480px;
   margin: 0 auto;
 }
 
-.work-area{
-  margin-left: $grid-gutter;
-  margin-right: $grid-gutter;
+.work-area {
+  margin: 0 $grid-margin;
 }
 
-.columns{
-  clear:both;
+.columns {
+  position: relative;
+  clear: both;
   display: flex;
-  .column{
-    background-color: #9e9e9e;
-    float: left;
-    margin-left: $grid-step;
-    margin-right: $grid-step;
-    &:first-child{
-      margin-left: 0;
-    }
-    &:last-child{
-      margin-right: 0;
-    }
-    &.grid-n-1{
-      width: $grid-column-1;
-    }
-    &.grid-n-2{
-      width: $grid-column-2;
-    }
-    &.grid-n-3{
-      width: $grid-column-3;
-    }
-    &.grid-n-4{
-      width: $grid-column-4;
-    }
-    &.grid-n-5{
-      width: $grid-column-5;
-    }
-    &.grid-n-6{
-      width: $grid-column-6;
-    }
-    &.grid-n-7{
-      width: $grid-column-7;
-    }
-    &.grid-n-8{
-      width: $grid-column-8;
-    }
-    &.grid-n-9{
-      width: $grid-column-9;
-    }
-    &.grid-n-10{
-      width: $grid-column-10;
-    }
-    &.grid-n-11{
-      width: $grid-column-11;
-    }
-    &.grid-n-12{
-      width: $grid-column-12;
-    }
-  }
-  .subcolumn{
+  flex-wrap: wrap;
+}
 
+.split {
+  position: relative;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.column {
+  min-height: 1px;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+@each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
+  @media (min-width: $breakpoint-width) {
+    @for $i from 1 through $grid-total-columns {
+      $column-width: ($grid-segment * $grid-column-size * $i) + ($grid-segment * $grid-gutter-size * ($i - 1));
+      .column {
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &.grid-#{$breakpoint-name}-#{$i} {
+          flex: 0 0 $column-width;
+          width: $column-width;
+          max-width: $column-width;
+          margin-left: $grid-segment;
+          margin-right: $grid-segment;
+          >.split {
+            >.column {
+              @for $s from 1 through $i {
+                $split-grid-row-segments: ($grid-column-size * $i) + ($grid-gutter-size * ($i - 1));
+                $split-grid-segment: 100% / $split-grid-row-segments;
+                $split-column-width: ($split-grid-segment * $grid-column-size * $s) + ($split-grid-segment * $grid-gutter-size * ($s - 1));
+                &:first-child {
+                  margin-left: 0;
+                }
+                &:last-child {
+                  margin-right: 0;
+                }
+                &.grid-#{$breakpoint-name}-#{$s} {
+                  flex: 0 0 $split-column-width;
+                  width: $split-column-width;
+                  max-width: $split-column-width;
+                  margin-left: $split-grid-segment;
+                  margin-right: $split-grid-segment;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -8,67 +8,72 @@ block content
 
     section.section-cover
         div.width-holder
-            h2 Все развлечения города в одном месте
-            p Вставай и получай новые новые эмоции
+            div.work-area
+                h2 Все развлечения города в одном месте
+                p Вставай и получай новые новые эмоции
 
-            div.columns
-                div.column.grid-n-10
-                    div.combined-form
-                        div.combined-form-element
-                            input(type='text', placeholder='Какое развлечение вы готовы попробовать сегодня?')
-                            //TODO prompts
-                        div.combined-form-element
-                            select.dropdown
-                                option(value='', selected='selected') Любой город
-                                option(value='1') Москва
-                                option(value='2') Санкт-Петербург
-                                option(value='3') Владивосток
-                                option(value='4') Новосибирск
-                        div.combined-form-element
-                            button(type='button') Найти
+                div.columns
+                    div.column.grid-d-10
+                        div.combined-form
+                            div.combined-form-element
+                                input(type='text', placeholder='Какое развлечение вы готовы попробовать сегодня?')
+                                //TODO prompts
+                            div.combined-form-element
+                                select.dropdown
+                                    option(value='', selected='selected') Любой город
+                                    option(value='1') Москва
+                                    option(value='2') Санкт-Петербург
+                                    option(value='3') Владивосток
+                                    option(value='4') Новосибирск
+                            div.combined-form-element
+                                button(type='button') Найти
 
 
-            p Случайное предложение
-                a(href='#') Покататься на гидроцикле сегодня в Санкт-Петербурге
+                p Случайное предложение
+                    a(href='#') Покататься на гидроцикле сегодня в Санкт-Петербурге
 
-            div.categories-menu
-                div.categories-menu-item.active Все категории
-                div.categories-menu-item Экстрим
-                div.categories-menu-item Романтика
-                div.categories-menu-item Экскурсии
-                div.categories-menu-item Квесты
-                div.categories-menu-item Спорт
-                div.categories-menu-item Выносливость
+                div.categories-menu
+                    div.categories-menu-item.active Все категории
+                    div.categories-menu-item Экстрим
+                    div.categories-menu-item Романтика
+                    div.categories-menu-item Экскурсии
+                    div.categories-menu-item Квесты
+                    div.categories-menu-item Спорт
+                    div.categories-menu-item Выносливость
 
     section.section-results
         div.width-holder
-            div.activity-cards
-                // TODO Activity cards
-                div.one-button-line
-                    a.button(href='#') Показать все 139 развлечений
+            div.work-area
+                div.activity-cards
+                    // TODO Activity cards
+                    div.one-button-line
+                        a.button(href='#') Показать все 139 развлечений
     section.section-promo-first-time
         div.width-holder
-            h2 Впервые на
-                span Igetup?
-            p Забронируй свое первое приключение!
-            button(type='button') Запустить видео
+            div.work-area
+                h2 Впервые на
+                    span Igetup?
+                p Забронируй свое первое приключение!
+                button(type='button') Запустить видео
 
     section.section-promo-who-are-you
         div.width-holder
-            div.columns
-                div.column.grid-n-5
-                    h2 Кто ты? Тот кто ищет развлечения или тот кто их предлагает?
-                    p Has ei vidit aperiam dissentiet, cum modus intellegam no. Te qui quot propriae adipiscing. Noster rationibus usu in. Cum ne lorem putant, eum omnis nostrud ea. Te dolor postulant voluptatibus sed.
-                    div.columns.subcolumn
-                        div.column.grid-n-3
-                            a.button(href='#') Добавить свое развлечение
-                        div.column.grid-n-2
-                            a.button(href='#') Найти развлечения
+            div.work-area
+                div.columns
+                    div.column.grid-d-5
+                        h2 Кто ты? Тот кто ищет развлечения или тот кто их предлагает?
+                        p Has ei vidit aperiam dissentiet, cum modus intellegam no. Te qui quot propriae adipiscing. Noster rationibus usu in. Cum ne lorem putant, eum omnis nostrud ea. Te dolor postulant voluptatibus sed.
+                        div.split
+                            div.column.grid-d-3
+                                a.button(href='#') Добавить свое развлечение
+                            div.column.grid-d-2
+                                a.button(href='#') Найти развлечения
 
     section.section-promo-testdrive
         div.width-holder
-            h2 Тест-драйвы развлечений
-            p Тестируем и показываем от первого лица
-            //TODO carousel
-            div.one-button-line
-                a.button(href='#') Показать все 139 развлечений
+            div.work-area
+                h2 Тест-драйвы развлечений
+                p Тестируем и показываем от первого лица
+                //TODO carousel
+                div.one-button-line
+                    a.button(href='#') Показать все 139 развлечений
