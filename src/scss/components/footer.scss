@@ -1,5 +1,60 @@
 @import "../variables";
 
-.footer{
-  border-top:1px solid $color-brand-border;
+.footer {
+  border-top: 1px solid $color-brand-border-strong;
+  padding: 32px 0;
+  h2 {
+    font-size: $font-size-big;
+    margin-top: 0;
+  }
+  form.subscription-form {
+    position: relative;
+    border: 1px solid $color-brand-border;
+    background-color: $color-white;
+    border-radius: $border-radius-button;
+    overflow: hidden;
+    input {
+      border: none;
+      padding: 12px;
+      display: block;
+      font-size: 1em;
+    }
+    button {
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      background-color: $color-brand-border-strong;
+      border-radius: 2px;
+      border: none;
+      text-align: center;
+      color: $color-white;
+      position: absolute;
+      display: block;
+      top:12px;
+      right: 12px;
+      padding: 0;
+      i{
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
+    }
+  }
+}
+
+.social-button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 3px solid $color-brand-board;
+  color: $color-brand-board;
+  display: inline-block;
+  margin: 0 8px 0 0;
+  text-align: center;
+  &:last-child {
+    margin-left: 0;
+  }
+  i {
+    margin-top: 7px;
+  }
 }

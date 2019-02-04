@@ -1,0 +1,50 @@
+@import "../variables";
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  font-size: $font-size-big;
+  padding: 12px 22px;
+  border-radius: $border-radius-button;
+  position: relative;
+  margin-right: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  &:last-child{
+    margin-right: 0;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+  &.button-black {
+    color: $color-white;
+    background-color: $color-black;
+  }
+  &.button-dark {
+    color: $color-white;
+    background-color: $color-brand-board;
+  }
+  &.button-yellow {
+    color: $color-white;
+    background-color: $color-brand-yellow;
+  }
+  &.button-green {
+    color: $color-white;
+    background-color: $color-brand-green;
+  }
+  &.button-transparent {
+    color: $color-text-default;
+    background-color: transparent;
+    border: 1px dashed $color-brand-border-strong;
+  }
+  &.button-bage {
+    color: $color-white;
+    background-color: $color-black;
+    padding: 0;
+    height: 46px;
+    overflow: hidden;
+    img{
+      height:100%;
+    }
+  }
+}

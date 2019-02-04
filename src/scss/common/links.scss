@@ -1,0 +1,14 @@
+@import "../variables";
+
+a{
+  cursor: pointer;
+  color: $color-brand-blue;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+  &.grey{
+    font-size: $font-size-small;
+    color: $color-text-grey;
+  }
+}
