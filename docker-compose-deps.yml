@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  npm:
+    container_name: igetup_deps
+    image: node:9.8
+    command:
+      - bash
+      - -c
+      - |
+        cd /app
+        npm install --allow-root
+        chmod -R 777 /app/node_modules
+    tty: true
+    volumes:
+      - "./:/app"

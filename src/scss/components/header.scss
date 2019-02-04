@@ -1,7 +1,11 @@
-@import "../variables";
+@import "../variables.scss";
 
 .header {
   background-color: $color-brand-board;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
 }
 
 .logo {
