@@ -5,3 +5,22 @@ block variables
     - var description = 'Избранное — Igetup';
 
 block content
+    div.header-height-holder
+    div.width-holder
+        div.work-area
+            div.combined-form
+                div.combined-form-element
+                    input(type='text', placeholder='Поиск по названию')
+                    //TODO prompts
+                div.combined-form-element
+                    select.dropdown
+                        option(value='1', selected='selected') По цене (возрастание)
+                        option(value='2') По цене (убывание)
+                        option(value='3') По рейтингу (убывание)
+                        option(value='4') По рейтингу (возрастание)
+                div.combined-form-element
+                    button(type='button') Найти
+            div.mosaic
+                - var items = [{title: 'Комната с енотами'},{title: 'Тир из огнестрельного оружия'},{title:"Прокат гидроциклов"}]
+                each item, index in items
+                    include ../common/activity-card.pug

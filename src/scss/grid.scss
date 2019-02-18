@@ -53,11 +53,22 @@ $grid-segment: 100% / $grid-row-segments;
   max-width: 100%;
 }
 
+.mosaic{
+  position: relative;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mosaic-element{
+  float:left;
+}
+
 @each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
   @media (min-width: $breakpoint-width) {
     @for $i from 1 through $grid-total-columns {
       $column-width: ($grid-segment * $grid-column-size * $i) + ($grid-segment * $grid-gutter-size * ($i - 1));
-      .column {
+      .column, .mosaic-element {
         &:first-child {
           margin-left: 0;
         }

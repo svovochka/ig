@@ -5,3 +5,81 @@ block variables
     - var description = 'Найти развлечения — Igetup';
 
 block content
+    div.header-height-holder
+    div.width-holder
+        div.work-area
+            div.columns
+                div.column.grid-d-3
+                    div.form-box
+                        form
+                            div.form-group
+                                label.form-label Локация
+                                div.form-element
+                                    select
+                                        option(value='', selected='selected') Любой город
+                                        option(value="1") Москва
+                                        option(value="2") Санкт-Перетрбург
+                                        option(value="3") Новосибирск
+                            div.form-group
+                                label.form-label Дата
+                                div.form-element
+                                    input(type="date")
+                            div.form-group
+                                label.form-label Категория
+                                div.form-element
+                                    select
+                                        option(value='', selected='selected') Все развлечения
+                                        option(value="1") Экстрим
+                                        option(value="2") Спорт
+                                        option(value="3") Туризм
+                            div.form-group
+                                label.form-label Цена
+                                div.form-element
+                                    select
+                                        option(value='', selected='selected') Любая стоимость
+                                        option(value="1") до 1000 руб.
+                                        option(value="2") от 1000 до 2000 руб.
+                                        option(value="3") от 2000 до 5000 руб.
+                                        option(value="3") дороже 5000 руб.
+                            div.form-group
+                                label.form-label Участники
+                                div.form-element
+                                    select
+                                        option(value='', selected='selected') Любое количестрво
+                                        option(value="1") 1 чел.
+                                        option(value="2") от 2 до 5 чел.
+                                        option(value="3") от 5 до 10 чел.
+                                        option(value="3") более 10 чел.
+                            div.form-group
+                                div.form-element
+                                    label
+                                        input(type="checkbox")
+                                        | Без предоплаты
+                            div.form-group
+                                div.form-element
+                                    label
+                                        input(type="checkbox")
+                                        | Бесплатная отмена
+                            div.form-group
+                                div.form-element
+                                    label
+                                        input(type="checkbox")
+                                        | Обзор от igetup
+                div.column.grid-d-9
+                    div.map-box
+                    div.combined-form
+                        div.combined-form-element
+                            input(type='text', placeholder='Поиск по названию')
+                            //TODO prompts
+                        div.combined-form-element
+                            select.dropdown
+                                option(value='1', selected='selected') По цене (возрастание)
+                                option(value='2') По цене (убывание)
+                                option(value='3') По рейтингу (убывание)
+                                option(value='4') По рейтингу (возрастание)
+                        div.combined-form-element
+                            button(type='button') Найти
+                    div.mosaic
+                        - var items = [{title: 'Комната с енотами'},{title: 'Тир из огнестрельного оружия'},{title:"Прокат гидроциклов"}]
+                        each item, index in items
+                            include ../common/activity-card

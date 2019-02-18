@@ -5,3 +5,18 @@ block variables
     - var description = 'Мои бронирования — Igetup';
 
 block content
+    div.header-height-holder
+    div.width-holder
+        div.work-area
+            div.section-box
+                div.section-box-content
+                    h1 Мои бронирования
+                    div.form-group
+                        div.form-element
+                            label
+                                input(type="checkbox")
+                                | Прошлые бронирования
+            div.mosaic
+                - var items = [{title: 'Комната с енотами'},{title: 'Тир из огнестрельного оружия'},{title:"Прокат гидроциклов"}]
+                each item, index in items
+                    include ../common/activity-card-order.pug
