@@ -12,6 +12,15 @@ gulp.task('pug', function () {
         .pipe(gulp.dest('./dist/html'));
 });
 
+gulp.task('html', function () {
+    return gulp
+        .src('src/pug/pages/**/*.pug')
+        .pipe(pug({pretty: true}))
+        .pipe(replace('../../scss/', '../../css/'))
+        .pipe(replace('../../', './'))
+        .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('sass', function () {
     return gulp
         .src('./src/scss/style.scss')
@@ -43,7 +52,13 @@ gulp.task('data', function () {
         .pipe(gulp.dest('./dist/data'));
 });
 
-gulp.task('assets', gulp.series('img', 'fonts', 'data', 'vendor'));
+gulp.task('js', function () {
+    return gulp
+        .src('./src/js/**/*')
+        .pipe(gulp.dest('./dist/js'));
+});
 
-gulp.task('default', gulp.series('pug', 'sass', 'assets'));
+gulp.task('assets', gulp.series('img', 'fonts', 'data', 'vendor','js'));
+
+gulp.task('default', gulp.series('pug', 'html', 'sass', 'assets'));
 

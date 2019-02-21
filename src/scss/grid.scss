@@ -53,15 +53,15 @@ $grid-segment: 100% / $grid-row-segments;
   max-width: 100%;
 }
 
-.mosaic{
+.mosaic {
   position: relative;
   clear: both;
   display: flex;
   flex-wrap: wrap;
 }
 
-.mosaic-element{
-  float:left;
+.mosaic-element {
+  float: left;
 }
 
 @each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
@@ -81,8 +81,8 @@ $grid-segment: 100% / $grid-row-segments;
           max-width: $column-width;
           margin-left: $grid-segment;
           margin-right: $grid-segment;
-          >.split {
-            >.column {
+          > .split {
+            > .column {
               @for $s from 1 through $i {
                 $split-grid-row-segments: ($grid-column-size * $i) + ($grid-gutter-size * ($i - 1));
                 $split-grid-segment: 100% / $split-grid-row-segments;
@@ -104,6 +104,26 @@ $grid-segment: 100% / $grid-row-segments;
             }
           }
         }
+      }
+    }
+  }
+}
+
+@each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
+  @media (min-width: $breakpoint-width) {
+    @for $i from 1 through 100 {
+      .width-perc-#{$breakpoint-name}-#{$i} {
+        flex: 0 0 1% * $i;
+        width: 1% * $i;
+        max-width: 1% * $i;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      .width-dec-#{$breakpoint-name}-#{$i} {
+        flex: 0 0 10% * $i;
+        width: 10% * $i;
+        max-width: 10% * $i;
       }
     }
   }

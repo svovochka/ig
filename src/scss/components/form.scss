@@ -1,0 +1,92 @@
+@import "../variables.scss";
+
+.combined-form {
+  width:100%;
+  display: flex;
+  .combined-form-element {
+    display: inline-block;
+    position: relative;
+    input, select, button, .combined-form-input {
+      font-size: $font-size-default;
+      padding: 16px 20px;
+      border: none;
+      margin: 0;
+      width:100%;
+      border-right: 1px solid $color-brand-border;
+      box-sizing: border-box;
+    }
+    &:first-child{
+      input, select, button, .combined-form-input {
+        border-top-left-radius: $border-radius-button;
+        border-bottom-left-radius: $border-radius-button;
+      }
+    }
+    &:last-child{
+      input, select, button, .combined-form-input {
+        border-top-right-radius: $border-radius-button;
+        border-bottom-right-radius: $border-radius-button;
+        border-right: none;
+      }
+    }
+    &.opened{
+      &:first-child, &:last-child{
+        input, select, button, .combined-form-input {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+    .combined-form-input{
+      background-color: $color-white;
+    }
+    select {
+      background-color: $color-white;
+    }
+    input {
+      background-color: $color-white;
+    }
+    button, input[type="button"] {
+      cursor: pointer;
+      font-weight: bold;
+      background-color: $color-brand-yellow;
+    }
+  }
+}
+
+.dropdown{
+  position:relative;
+  .dropdown-value{
+
+  }
+  .dropdown-options{
+    position: absolute;
+    top:100%;
+    left:0;
+    border-bottom-left-radius: $border-radius-button;
+    border-bottom-right-radius: $border-radius-button;
+    background-color: $color-white;
+    width:100%;
+    display:none;
+    .dropdown-option{
+      border: none;
+      border-top: 1px solid $color-brand-border;
+      font-size: $font-size-default;
+      padding: 16px 20px;
+      margin: 0;
+      cursor: pointer;
+      &.selected{
+        font-weight: bold;
+      }
+      .prompt{
+        float: right;
+        color: $color-text-grey;
+      }
+    }
+  }
+
+  &.opened{
+    .dropdown-options{
+      display:block;
+    }
+  }
+}

@@ -9,37 +9,58 @@ block content
     section.section-cover
         div.width-holder
             div.work-area
-                h2 Все развлечения города в одном месте
-                p Вставай и получай новые новые эмоции
+                div.content
+                    h2 Все развлечения города в одном месте
+                    p Вставай и получай новые новые эмоции
 
-                div.columns
-                    div.column.grid-d-10
-                        div.combined-form
-                            div.combined-form-element
-                                input(type='text', placeholder='Какое развлечение вы готовы попробовать сегодня?')
-                                //TODO prompts
-                            div.combined-form-element
-                                select.dropdown
-                                    option(value='', selected='selected') Любой город
-                                    option(value='1') Москва
-                                    option(value='2') Санкт-Петербург
-                                    option(value='3') Владивосток
-                                    option(value='4') Новосибирск
-                            div.combined-form-element
-                                button(type='button') Найти
+                    div.columns
+                        div.column.grid-d-1
+                        div.column.grid-d-10
+                            div.combined-form
+                                div.combined-form-element.dropdown.width-dec-d-5
+                                    input(type='text', placeholder='Какое развлечение вы готовы попробовать сегодня?')
+                                    div.dropdown-options
+                                        div.dropdown-option Приключения
+                                            div.prompt 9 развлечений
+                                        div.dropdown-option Прокат гидроцкилов
+                                            div.prompt 26 развлечений
+                                        div.dropdown-option Прокат катеров без капитана
+                                            div.prompt 11 развлечений
+                                        div.dropdown-option Прокатиться на вейкборде
+                                            div.prompt 1 развлечение
+                                        div.dropdown-option Прогуляться по крышам
+                                            div.prompt 2 развлечения
+                                div.combined-form-element.width-dec-d-3
+                                    div.combined-form-input.dropdown
+                                        div.dropdown-value Любой город
+                                        div.dropdown-options
+                                            div.dropdown-option Любой город
+                                            div.dropdown-option Москва
+                                            div.dropdown-option.selected Санкт-Петербург
+                                            div.dropdown-option Владивосток
+                                            div.dropdown-option Новосибирск
+                                div.combined-form-element.width-dec-d-2
+                                    button(type='button') Найти
+                    p.zen Случайное предложение: &nbsp;
+                        a(href='#') Покататься на гидроцикле сегодня в Санкт-Петербурге
 
-
-                p Случайное предложение
-                    a(href='#') Покататься на гидроцикле сегодня в Санкт-Петербурге
-
-                div.categories-menu
-                    div.categories-menu-item.active Все категории
-                    div.categories-menu-item Экстрим
-                    div.categories-menu-item Романтика
-                    div.categories-menu-item Экскурсии
-                    div.categories-menu-item Квесты
-                    div.categories-menu-item Спорт
-                    div.categories-menu-item Выносливость
+        div.categories-menu
+            div.width-holder
+                div.work-area
+                    div.categories-menu-item.active
+                        a(href="#") Все категории
+                    div.categories-menu-item
+                        a(href="#") Экстрим
+                    div.categories-menu-item
+                        a(href="#") Романтика
+                    div.categories-menu-item
+                        a(href="#") Экскурсии
+                    div.categories-menu-item
+                        a(href="#") Квесты
+                    div.categories-menu-item
+                        a(href="#") Спорт
+                    div.categories-menu-item
+                        a(href="#") Выносливость
 
     section.section-results
         div.width-holder
@@ -50,33 +71,50 @@ block content
                         each item, index in items
                             include ../common/activity-card
                     div.one-button-line
-                        a.button(href='#') Показать все 139 развлечений
+                        a.button.button-black(href='#') Показать все 139 развлечений
     section.section-promo-first-time
         div.width-holder
             div.work-area
-                h2 Впервые на
-                    span Igetup?
-                p Забронируй свое первое приключение!
-                button(type='button') Запустить видео
+                div.content
+                    h2 Впервые на &nbsp;
+                        span igetup
+                        | ?
+                    p Забронируй свое первое приключение!
+                    button.play-video-button(type='button',title="Запустить видео")
+                        img(src="../../img/play.svg")
 
     section.section-promo-who-are-you
         div.width-holder
             div.work-area
-                div.columns
-                    div.column.grid-d-5
-                        h2 Кто ты? Тот кто ищет развлечения или тот кто их предлагает?
-                        p Has ei vidit aperiam dissentiet, cum modus intellegam no. Te qui quot propriae adipiscing. Noster rationibus usu in. Cum ne lorem putant, eum omnis nostrud ea. Te dolor postulant voluptatibus sed.
-                        div.split
-                            div.column.grid-d-3
-                                a.button(href='#') Добавить свое развлечение
-                            div.column.grid-d-2
-                                a.button(href='#') Найти развлечения
+                div.content
+                    div.columns
+                        div.column.grid-d-5
+                            h2 Кто ты? Тот кто ищет развлечения или тот кто их предлагает?
+                            p Has ei vidit aperiam dissentiet, cum modus intellegam no. Te qui quot propriae adipiscing. Noster rationibus usu in. Cum ne lorem putant, eum omnis nostrud ea. Te dolor postulant voluptatibus sed.
+                            div.split
+                                div.column.grid-d-3
+                                    a.button.button-yellow.button-full-size(href='#') Добавить свое развлечение
+                                div.column.grid-d-2
+                                    a.button.button-black.button-full-size(href='#') Найти развлечения
 
     section.section-promo-testdrive
         div.width-holder
             div.work-area
-                h2 Тест-драйвы развлечений
-                p Тестируем и показываем от первого лица
-                //TODO carousel
-                div.one-button-line
-                    a.button(href='#') Показать все 139 развлечений
+                div.content
+                    h2 Тест-драйвы развлечений
+                    p Тестируем и показываем от первого лица
+                    div.columns.video-carousel
+                        div.column.grid-d-6
+                            div.video
+                                button.play-video-button(type='button',title="Запустить видео")
+                                    img(src="../../img/play.svg")
+                                div.video-title Сафари на мотоциклах или как протестировать два колеса, когда есть только одно.
+                                div.video-views 124 просмотра • 1 месяц назад
+                        div.column.grid-d-6
+                            div.video
+                                button.play-video-button(type='button',title="Запустить видео")
+                                    img(src="../../img/play.svg")
+                                div.video-title Сафари на мотоциклах или как протестировать два колеса, когда есть только одно.
+                                div.video-views 124 просмотра • 1 месяц назад
+                    div.one-button-line
+                        a.button.button-inverted(href='#') Показать все 139 развлечений

@@ -3,17 +3,19 @@
 .button {
   display: inline-block;
   cursor: pointer;
-  font-size: $font-size-big;
+  font-size: $font-size-default;
   padding: 12px 22px;
   border-radius: $border-radius-button;
   position: relative;
   margin-right: 16px;
   font-weight: bold;
   text-decoration: none;
-  &:last-child{
+  box-sizing: border-box;
+  text-align: center;
+  &:last-child {
     margin-right: 0;
   }
-  &:hover{
+  &:hover {
     text-decoration: none;
   }
   &.button-black {
@@ -25,7 +27,7 @@
     background-color: $color-brand-board;
   }
   &.button-yellow {
-    color: $color-white;
+    color: $color-black;
     background-color: $color-brand-yellow;
   }
   &.button-green {
@@ -37,14 +39,37 @@
     background-color: transparent;
     border: 1px dashed $color-brand-border-strong;
   }
+  &.button-inverted {
+    color: $color-white;
+    background-color: transparent;
+    border: 2px solid $color-white;
+  }
   &.button-bage {
     color: $color-white;
     background-color: $color-black;
     padding: 0;
     height: 46px;
     overflow: hidden;
-    img{
-      height:100%;
+    img {
+      height: 100%;
     }
   }
+  &.button-full-size {
+    width: 100%;
+  }
+}
+
+.play-video-button {
+  display: block;
+  height: 95px;
+  width: 95px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.one-button-line{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
 }

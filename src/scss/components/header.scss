@@ -7,6 +7,9 @@
   left:0;
   width:100%;
   z-index: 9999;
+  &.transparent{
+    background-color: transparent;
+  }
 }
 
 .header-height-holder{
@@ -41,7 +44,7 @@
   > a {
     display: inline-block;
     color: $color-white;
-    font-size: $font-size-big;
+    font-size: $font-size-default;
     text-decoration: none;
     margin: 32px 0;
   }
@@ -49,7 +52,7 @@
     cursor: pointer;
     display: inline-block;
     color: $color-white;
-    font-size: $font-size-big;
+    font-size: $font-size-default;
     padding: 12px 22px;
     margin: 20px 0;
     background-color: transparent;
@@ -94,7 +97,7 @@
   .username {
     display: inline-block;
     color: $color-white;
-    font-size: $font-size-big;
+    font-size: $font-size-default;
     float: left;
     margin: 32px 12px;
   }
