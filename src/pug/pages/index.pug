@@ -67,7 +67,7 @@ block content
             div.work-area
                 div.activity-cards
                     div.mosaic
-                        - var items = [{title: 'Комната с енотами'},{title: 'Тир из огнестрельного оружия'},{title:"Прокат гидроциклов"}]
+                        - var items = [{title: 'Комната с енотами'},{title: 'Тир из огнестрельного оружия'},{title:"Прокат гидроциклов"},{title:"Дрифт-такси на автодроме"}]
                         each item, index in items
                             include ../common/activity-card
                     div.one-button-line
@@ -106,15 +106,19 @@ block content
                     div.columns.video-carousel
                         div.column.grid-d-6
                             div.video
-                                button.play-video-button(type='button',title="Запустить видео")
-                                    img(src="../../img/play.svg")
+                                img.video-screenshot(src="../../data/test_drive1.png")
+                                div.video-play
+                                    button.play-video-button(type='button',title="Запустить видео")
+                                        img(src="../../img/play.svg")
                                 div.video-title Сафари на мотоциклах или как протестировать два колеса, когда есть только одно.
                                 div.video-views 124 просмотра • 1 месяц назад
                         div.column.grid-d-6
                             div.video
-                                button.play-video-button(type='button',title="Запустить видео")
-                                    img(src="../../img/play.svg")
-                                div.video-title Сафари на мотоциклах или как протестировать два колеса, когда есть только одно.
+                                img.video-screenshot(src="../../data/test_drive2.png")
+                                div.video-play
+                                    button.play-video-button(type='button',title="Запустить видео")
+                                        img(src="../../img/play.svg")
+                                div.video-title Полет на реактивном самолете, прыжок с парашютом.
                                 div.video-views 124 просмотра • 1 месяц назад
                     div.one-button-line
                         a.button.button-inverted(href='#') Показать все 139 развлечений

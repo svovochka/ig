@@ -4,6 +4,7 @@
   position: relative;
   background-color: $color-brand-board;
   background-image: url('../img/header_bg.png');
+  background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   height: 836px;
@@ -68,6 +69,7 @@
 .section-promo-first-time {
   background-color: #e8b663;
   background-image: url('../img/first_time_bg.png');
+  background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   height: 640px;
@@ -100,6 +102,16 @@
 
 .section-promo-who-are-you{
   height: 692px;
+  background-color: $color-white;
+  .width-holder{
+    height:100%;
+  }
+  .work-area{
+    height:100%;
+    background-image: url('../img/start_exploring_bg.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
   .content {
     padding-top: 182px;
     h2 {
@@ -141,11 +153,45 @@
     }
     .video-carousel{
       margin-top: 64px;
-      .video{
-        border-radius: $border-radius-block;
-        background-color: #4A90E2;
-        height: 382px;
-      }
+    }
+  }
+}
+
+.video{
+  border-radius: $border-radius-block;
+  background-color: #4A90E2;
+  height: 382px;
+  position: relative;
+  .video-screenshot{
+    height: 100%;
+    width:auto;
+  }
+  .video-title{
+    position: absolute;
+    color: $color-white;
+    font-size: $font-size-h4;
+    bottom:52px;
+    margin: 0;
+    padding: 0;
+    left:20px;
+    width:85%;
+    font-weight: bold;
+  }
+  .video-views{
+    position: absolute;
+    color: $color-white;
+    margin: 0;
+    padding: 0;
+    bottom:20px;
+    left:20px;
+  }
+  .video-play{
+    position:absolute;
+    top:130px;
+    left: 0;
+    width: 100%;
+    .play-video-button{
+      margin: 0 auto;
     }
   }
 }
