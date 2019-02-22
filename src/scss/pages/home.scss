@@ -24,16 +24,16 @@
       margin-top: 12px;
       text-align: center;
       color: #ffffff;
-      &.zen{
+      &.zen {
         margin-top: 20px;
-        a{
-          color:$color-white;
+        a {
+          color: $color-white;
           text-decoration: none;
           font-weight: bold;
         }
       }
     }
-    .columns{
+    .columns {
       margin-top: 64px;
     }
   }
@@ -63,6 +63,12 @@
       }
 
     }
+  }
+}
+
+.section-results {
+  .activity-cards {
+    margin-top: 96px;
   }
 }
 
@@ -99,34 +105,33 @@
   }
 }
 
-
-.section-promo-who-are-you{
+.section-promo-who-are-you {
   height: 692px;
   background-color: $color-white;
-  .width-holder{
-    height:100%;
-  }
-  .work-area{
-    height:100%;
-    background-image: url('../img/start_exploring_bg.png');
-    background-position: right center;
-    background-repeat: no-repeat;
-  }
   .content {
-    padding-top: 182px;
-    h2 {
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 40px;
+    padding-top: 95px;
+    .text {
+      padding-top: 87px;
+      h2 {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        margin-top: 32px;
+      }
+      .split {
+        margin-top: 32px;
+      }
     }
-    p {
-      margin: 0;
-      padding: 0;
-      margin-top: 32px;
-    }
-    .split{
-      margin-top: 32px;
+    .illustration{
+      img{
+        display:block;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -151,46 +156,46 @@
       padding: 0;
       margin-top: 32px;
     }
-    .video-carousel{
+    .video-carousel {
       margin-top: 64px;
     }
   }
 }
 
-.video{
+.video {
   border-radius: $border-radius-block;
   background-color: #4A90E2;
   height: 382px;
   position: relative;
-  .video-screenshot{
+  .video-screenshot {
     height: 100%;
-    width:auto;
+    width: auto;
   }
-  .video-title{
+  .video-title {
     position: absolute;
     color: $color-white;
     font-size: $font-size-h4;
-    bottom:52px;
+    bottom: 52px;
     margin: 0;
     padding: 0;
-    left:20px;
-    width:85%;
+    left: 20px;
+    width: 85%;
     font-weight: bold;
   }
-  .video-views{
+  .video-views {
     position: absolute;
     color: $color-white;
     margin: 0;
     padding: 0;
-    bottom:20px;
-    left:20px;
+    bottom: 20px;
+    left: 20px;
   }
-  .video-play{
-    position:absolute;
-    top:130px;
+  .video-play {
+    position: absolute;
+    top: 130px;
     left: 0;
     width: 100%;
-    .play-video-button{
+    .play-video-button {
       margin: 0 auto;
     }
   }

@@ -3,18 +3,16 @@
 //- var has_notifications = true;
 //- var is_homepage= false;
 
-header.header
+header.header(class = is_homepage === true ? 'transparent' : '')
     div.width-holder
         div.work-area
             div.logo
-
                 if is_homepage
                     h1
                         img(src='../../img/logo-white.png')
                 else
                     a(href='./index.html', title='На главную')
                         img(src='../../img/logo-white.png')
-
             nav.top-menu
 
                 if !is_homepage

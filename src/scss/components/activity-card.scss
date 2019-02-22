@@ -1,0 +1,123 @@
+@import "../variables.scss";
+
+.activity-card {
+  margin-bottom: 40px;
+  .activity-cover {
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: $border-radius-block;
+    border-top-right-radius: $border-radius-block;
+    height: 200px;
+    background-color: $color-brand-border;
+    img.activity-cover-image {
+      width: 100%;
+      height: 100%;
+    }
+    .activity-like-mark {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      button {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .activity-discount-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .no-prepayment-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+    .free-cancel-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  .activity-card-basics {
+    padding: 20px;
+    border-right: 1px solid $color-brand-border;
+    border-left: 1px solid $color-brand-border;
+    border-bottom: 1px solid $color-brand-border;
+    background-color: $color-white;
+    .activity-company {
+      font-size: $font-size-small;
+      color: $color-text-grey;
+    }
+    .activity-name {
+      margin-top: 4px;
+      a {
+        color: $color-text-default;
+        font-weight: bold;
+        font-size: $font-size-big;
+      }
+    }
+    .activity-address {
+      margin-top: 4px;
+      font-size: $font-size-small;
+    }
+  }
+  .activity-info {
+    padding: 20px;
+    border-right: 1px solid $color-brand-border;
+    border-left: 1px solid $color-brand-border;
+    border-bottom: 1px solid $color-brand-border;
+    background-color: $color-white;
+    .activity-price {
+      display: block;
+      float: right;
+      font-weight: bold;
+      color: $color-brand-green;
+    }
+  }
+  .activity-meta {
+    padding: 20px;
+    display: flex;
+    border-right: 1px solid $color-brand-border;
+    border-left: 1px solid $color-brand-border;
+    border-bottom: 1px solid $color-brand-border;
+    border-bottom-left-radius: $border-radius-block;
+    border-bottom-right-radius: $border-radius-block;
+    background-color: $color-white;
+    .activity-rating-none {
+      font-size: $font-size-small;
+      padding: 9px;
+    }
+    .activity-rating {
+      width: 30%;
+      flex: 0 0 30%;
+      .activity-responses {
+        font-size: $font-size-small;
+        margin-left: 8px;
+      }
+    }
+    .activity-latest-comment {
+      width: 70%;
+      flex: 0 0 70%;
+      .avatar-container {
+        float: left;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      p {
+        margin: 0;
+        margin-left: 40px;
+        font-size: $font-size-small;
+      }
+    }
+
+  }
+}

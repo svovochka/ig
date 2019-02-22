@@ -3,6 +3,7 @@ extends ../layout/layout
 block variables
     - var title = 'Главная — Igetup';
     - var description = 'Главная — Igetup';
+    - var is_homepage = true
 
 block content
 
@@ -32,6 +33,7 @@ block content
                                             div.prompt 2 развлечения
                                 div.combined-form-element.width-dec-d-3
                                     div.combined-form-input.dropdown
+                                        input(type="hidden")
                                         div.dropdown-value Любой город
                                         div.dropdown-options
                                             div.dropdown-option Любой город
@@ -67,9 +69,77 @@ block content
             div.work-area
                 div.activity-cards
                     div.mosaic
-                        - var items = [{title: 'Комната с енотами'},{title: 'Тир из огнестрельного оружия'},{title:"Прокат гидроциклов"},{title:"Дрифт-такси на автодроме"}]
+                        -
+                            var items = [
+                            {
+                            title: 'Комната с енотами',
+                            image: '../../data/fun1.jpg',
+                            has_rating: true
+                            },
+                            {
+                            title: 'Тир из огнестрельного оружия',
+                            image: '../../data/fun2.jpg',
+                            has_rating: true
+                            },
+                            {
+                            title:"Прокат гидроциклов",
+                            image: '../../data/fun3.jpg',
+                            has_rating: false
+                            },
+                            {
+                            title:"Дрифт-такси на автодроме",
+                            image: '../../data/fun4.jpg',
+                            has_rating: true
+                            },
+                            {
+                            title: 'Комната с енотами',
+                            image: '../../data/fun1.jpg',
+                            has_rating: true
+                            },
+                            {
+                            title: 'Тир из огнестрельного оружия',
+                            image: '../../data/fun2.jpg',
+                            has_rating: true
+                            },
+                            {
+                            title:"Прокат гидроциклов",
+                            image: '../../data/fun3.jpg',
+                            has_rating: false
+                            },
+                            {
+                            title:"Дрифт-такси на автодроме",
+                            image: '../../data/fun4.jpg',
+                            has_rating: true
+                            },
+                            {
+                            title: 'Комната с енотами',
+                            image: '../../data/fun1.jpg',
+                            has_rating: true
+                            },
+                            {
+                            title: 'Тир из огнестрельного оружия',
+                            image: '../../data/fun2.jpg',
+                            has_rating: true
+                            },
+                            {
+                            title:"Прокат гидроциклов",
+                            image: '../../data/fun3.jpg',
+                            has_rating: false
+                            },
+                            {
+                            title:"Дрифт-такси на автодроме",
+                            image: '../../data/fun4.jpg',
+                            has_rating: true
+                            }
+                            ]
+
                         each item, index in items
-                            include ../common/activity-card
+                            - var item_title = item.title;
+                            - var item_image = item.image;
+                            - var item_has_rating= item.has_rating;
+
+                            div.mosaic-element.grid-d-3
+                                include ../common/activity-card
                     div.one-button-line
                         a.button.button-black(href='#') Показать все 139 развлечений
     section.section-promo-first-time
@@ -88,7 +158,7 @@ block content
             div.work-area
                 div.content
                     div.columns
-                        div.column.grid-d-5
+                        div.column.grid-d-5.text
                             h2 Кто ты? Тот кто ищет развлечения или тот кто их предлагает?
                             p Has ei vidit aperiam dissentiet, cum modus intellegam no. Te qui quot propriae adipiscing. Noster rationibus usu in. Cum ne lorem putant, eum omnis nostrud ea. Te dolor postulant voluptatibus sed.
                             div.split
@@ -96,7 +166,8 @@ block content
                                     a.button.button-yellow.button-full-size(href='#') Добавить свое развлечение
                                 div.column.grid-d-2
                                     a.button.button-black.button-full-size(href='#') Найти развлечения
-
+                        div.column.grid-d-7.illustration
+                            img(src="../../img/start_exploring_bg.png")
     section.section-promo-testdrive
         div.width-holder
             div.work-area

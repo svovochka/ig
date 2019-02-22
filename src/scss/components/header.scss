@@ -3,23 +3,27 @@
 .header {
   background-color: $color-brand-board;
   position: fixed;
-  top:0;
-  left:0;
-  width:100%;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 9999;
-  &.transparent{
+  &.transparent {
     background-color: transparent;
   }
 }
 
-.header-height-holder{
-  height:184px;
+.header-height-holder {
+  height: 184px;
 }
 
 .logo {
   height: 48px;
   margin: 20px 0;
   display: inline-block;
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
   img {
     height: 100%;
     width: auto;
@@ -35,10 +39,10 @@
   display: block;
   float: left;
   margin: 0 26px;
-  &:first-child{
+  &:first-child {
     margin-left: 0;
   }
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
   > a {
@@ -70,12 +74,12 @@
       border: none;
       font-size: $font-size-big + 6;
       border-radius: unset;
-      .attention-mark{
-        color:$color-brand-red;
+      .attention-mark {
+        color: $color-brand-red;
         font-size: 14px;
         position: absolute;
-        top:0;
-        right:-6px;
+        top: 0;
+        right: -6px;
       }
     }
   }
@@ -101,9 +105,9 @@
     float: left;
     margin: 32px 12px;
   }
-  .dropdown{
-    position:absolute;
-    top:100%;
+  .dropdown {
+    position: absolute;
+    top: 100%;
   }
 
 }

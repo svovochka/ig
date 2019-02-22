@@ -1,0 +1,26 @@
+@import "../variables.scss";
+
+.badge {
+  display: inline-block;
+  border-radius: $border-radius-min;
+  background-color: $color-brand-green;
+  color: $color-white;
+  padding: 4px 8px;
+  line-height: 20px;
+  font-size: $font-size-small;
+  i.zmdi {
+    font-size: $font-size-default;
+    vertical-align: middle;
+  }
+  &.badge-tiny {
+    font-size: $font-size-tiny;
+  }
+  &.badge-big{
+    font-size: $font-size-big;
+    font-weight: bold;
+  }
+  &.badge-yellow{
+    background-color: $color-brand-yellow;
+    color: $color-brand-board;
+  }
+}

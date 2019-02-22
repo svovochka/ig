@@ -81,8 +81,24 @@ $grid-segment: 100% / $grid-row-segments;
           max-width: $column-width;
           margin-left: $grid-segment;
           margin-right: $grid-segment;
+
+          $total: $grid_total-columns;
+          $current: $i;
+          $res:$total/$current;
+
+          @if round($res) == $res {
+            $child:$total/$current;
+            $next_child: $child+1;
+            &:nth-child(#{$child}n+#{$child}){
+              margin-right: 0;
+            }
+            &:nth-child(#{$child}n+#{$next_child}){
+              margin-left: 0;
+            }
+          }
+
           > .split {
-            > .column {
+            > .column, .mosaic-element {
               @for $s from 1 through $i {
                 $split-grid-row-segments: ($grid-column-size * $i) + ($grid-gutter-size * ($i - 1));
                 $split-grid-segment: 100% / $split-grid-row-segments;
@@ -94,6 +110,22 @@ $grid-segment: 100% / $grid-row-segments;
                   margin-right: 0;
                 }
                 &.grid-#{$breakpoint-name}-#{$s} {
+
+                  $total: $i;
+                  $current: $s;
+                  $res:$total/$current;
+
+                  @if round($res) == $res {
+                    $child:$total/$current;
+                    $next_child: $child+1;
+                    &:nth-child(#{$child}n+#{$child}){
+                      margin-right: 0;
+                    }
+                    &:nth-child(#{$child}n+#{$next_child}){
+                      margin-left: 0;
+                    }
+                  }
+
                   flex: 0 0 $split-column-width;
                   width: $split-column-width;
                   max-width: $split-column-width;

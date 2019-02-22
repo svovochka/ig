@@ -1,29 +1,34 @@
-div.activity-card.mosaic-element.grid-d-3
+div.activity-card
     div.activity-cover
+        img.activity-cover-image(src=item_image)
         div.activity-like-mark
-            i.zmdi.zmdi-check
-        div.activity-discount-bage Kэшбэк 10%
-            i.zmdi.zmdi-check
-        div.activity-cover-bages
-            div.no-prepayment-bage
-                i.zmdi.zmdi-shield-check
-                | Без предоплаты
-            div.no-prepayment-bage
-                i.zmdi.zmdi-shield-check
-                | Без предоплаты
+            button
+                i.zmdi.zmdi-check
+        div.badge.badge-tiny.activity-discount-badge Kэшбэк 10%
+        div.badge.badge-small.no-prepayment-badge
+            i.zmdi.zmdi-shield-check
+            | &nbsp; Без предоплаты
+        div.badge.badge-small.free-cancel-badge
+            i.zmdi.zmdi-rotate-left
+            | &nbsp; Бесплатная отмена
     div.activity-card-basics
         div.activity-company ООО Паспорту
         div.activity-name
-            a(href="#") Комната с енотами
+            a(href="#") #{item_title}
         div.activity-address
             i.zmdi.zmdi-pin
-            | Санкт-Петербург, ул. Воссотания 6
+            | &nbsp; Санкт-Петербург, ул. Воссотания 6
     div.activity-info
         span.activity-category Экстрим
-        span.activity-price от 2500 руб.
+        span.activity-price от 2500 &#8381;
     div.activity-meta
-        span.activity-rating 8.7
-        span.activity-views 117
-        div.activity-latest-comment
-            img(src="../../data/user-avatar.jpg")
-            p.comment Было очень круто! Надеюсь прийти ещё...
+        if item_has_rating
+            div.activity-rating
+                span.badge.badge-big.badge-yellow 8.7
+                span.activity-responses 117
+            div.activity-latest-comment
+                div.avatar-container
+                    img(src="../../data/avatar.jpg")
+                p.comment Было очень круто! Надеюсь прийти ещё...
+        else
+            div.activity-rating-none Пока никто не оценил
