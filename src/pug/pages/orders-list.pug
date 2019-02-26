@@ -1,6 +1,6 @@
 extends ../layout/layout
 
-block variables
+append variables
     - var title = 'Мои бронирования — Igetup';
     - var description = 'Мои бронирования — Igetup';
 
@@ -11,12 +11,81 @@ block content
             div.section-box
                 div.section-box-content
                     h1 Мои бронирования
-                    div.form-group
-                        div.form-element
-                            label
-                                input(type="checkbox")
-                                | Прошлые бронирования
+                    div.checkbox.righted
+                        input(type="hidden")
+                        label
+                            span.checkbox-button
+                                i.zmdi.zmdi-check
+                            | Прошлые бронирования
             div.mosaic
-                - var items = [{title: 'Комната с енотами'},{title: 'Тир из огнестрельного оружия'},{title:"Прокат гидроциклов"}]
+                -
+                    var items = [
+                    {
+                    title: 'Комната с енотами',
+                    image: '../../data/fun1.jpg',
+                    has_rating: true
+                    },
+                    {
+                    title: 'Тир из огнестрельного оружия',
+                    image: '../../data/fun2.jpg',
+                    has_rating: true
+                    },
+                    {
+                    title:"Прокат гидроциклов",
+                    image: '../../data/fun3.jpg',
+                    has_rating: false
+                    },
+                    {
+                    title:"Дрифт-такси на автодроме",
+                    image: '../../data/fun4.jpg',
+                    has_rating: true
+                    },
+                    {
+                    title: 'Комната с енотами',
+                    image: '../../data/fun1.jpg',
+                    has_rating: true
+                    },
+                    {
+                    title: 'Тир из огнестрельного оружия',
+                    image: '../../data/fun2.jpg',
+                    has_rating: true
+                    },
+                    {
+                    title:"Прокат гидроциклов",
+                    image: '../../data/fun3.jpg',
+                    has_rating: false
+                    },
+                    {
+                    title:"Дрифт-такси на автодроме",
+                    image: '../../data/fun4.jpg',
+                    has_rating: true
+                    },
+                    {
+                    title: 'Комната с енотами',
+                    image: '../../data/fun1.jpg',
+                    has_rating: true
+                    },
+                    {
+                    title: 'Тир из огнестрельного оружия',
+                    image: '../../data/fun2.jpg',
+                    has_rating: true
+                    },
+                    {
+                    title:"Прокат гидроциклов",
+                    image: '../../data/fun3.jpg',
+                    has_rating: false
+                    },
+                    {
+                    title:"Дрифт-такси на автодроме",
+                    image: '../../data/fun4.jpg',
+                    has_rating: true
+                    }
+                    ]
+
                 each item, index in items
-                    include ../common/activity-card-order.pug
+                    - var item_title = item.title;
+                    - var item_image = item.image;
+                    - var item_has_rating= item.has_rating;
+
+                    div.mosaic-element.grid-d-3
+                        include ../common/activity-card

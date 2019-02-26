@@ -18,7 +18,7 @@
 
 .logo {
   height: 48px;
-  margin: 20px 0;
+  margin: 18px 0;
   display: inline-block;
   h1 {
     margin: 0;
@@ -70,7 +70,8 @@
     }
     &.icon {
       padding: 0;
-      margin: 29px 0;
+      margin: 0;
+      margin-top: 28px;
       border: none;
       font-size: $font-size-big + 6;
       border-radius: unset;
@@ -92,7 +93,8 @@
     display: inline-block;
     float: left;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 0;
+    margin-top:18px;
     img {
       height: 100%;
       width: auto;
@@ -105,9 +107,61 @@
     float: left;
     margin: 32px 12px;
   }
-  .dropdown {
+  .notifications {
     position: absolute;
     top: 100%;
+    width:300px;
+    display:none;
+    .notifications-item{
+      position: relative;
+      background-color: $color-white;
+      box-sizing: border-box;
+      padding: 20px;
+      border-left: 1px solid $color-brand-border;
+      border-right: 1px solid $color-brand-border;
+      border-top: 1px solid $color-brand-border;
+      &:first-child{
+        border-top-left-radius: $border-radius-button;
+        border-top-right-radius: $border-radius-button;
+      }
+      &:last-child{
+        border-bottom-left-radius: $border-radius-button;
+        border-bottom-right-radius: $border-radius-button;
+        border-bottom: 1px solid $color-brand-border;
+      }
+      .notification-mark{
+        position:absolute;
+        right: 20px;
+        top:20px;
+        border-radius: 50%;
+        height:28px;
+        width:28px;
+        font-size: 20px;
+        text-align: center;
+        background-color: $color-text-grey;
+        color:$color-white;
+        &.rejected{
+          background-color: $color-brand-red;
+        }
+        &.accepted{
+          background-color: $color-brand-green;
+        }
+        i{
+          margin-top: 4px;
+        }
+      }
+      .notification-date{
+        color: $color-text-grey;
+        font-size: $font-size-small;
+        margin-bottom: 4px;
+      }
+      .notification-link{
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      .notification-message{
+        font-size: $font-size-small;
+      }
+    }
   }
-
 }

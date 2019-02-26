@@ -6,37 +6,40 @@
   .combined-form-element {
     display: inline-block;
     position: relative;
-    input, select, button, .combined-form-input {
+    input, select, button, .dropdown-value {
       font-size: $font-size-default;
       padding: 16px 20px;
       border: none;
       margin: 0;
       width: 100%;
-      border-right: 1px solid $color-brand-border;
       box-sizing: border-box;
     }
+    input, select, .dropdown-value {
+      border-top: 1px solid $color-brand-border;
+      border-bottom: 1px solid $color-brand-border;
+      border-left: 1px solid $color-brand-border;
+    }
     &:first-child {
-      input, select, button, .combined-form-input {
+      input, select, button, .dropdown-value {
         border-top-left-radius: $border-radius-button;
         border-bottom-left-radius: $border-radius-button;
       }
     }
     &:last-child {
-      input, select, button, .combined-form-input {
+      input, select, button, .dropdown-value {
         border-top-right-radius: $border-radius-button;
         border-bottom-right-radius: $border-radius-button;
-        border-right: none;
       }
     }
     &.opened {
       &:first-child, &:last-child {
-        input, select, button, .combined-form-input {
+        input, select, button, .dropdown-value {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
       }
     }
-    .combined-form-input {
+    .dropdown-value {
       background-color: $color-white;
     }
     select {
@@ -56,7 +59,17 @@
 .dropdown {
   position: relative;
   .dropdown-value {
-
+    .zmdi-caret-up, .zmdi-caret-down {
+      color: $color-text-grey;
+      font-size: 1.2em;
+      float: right;
+    }
+    .zmdi-caret-up {
+      display: none;
+    }
+    .zmdi-caret-down {
+      display: inline;
+    }
   }
   .dropdown-options {
     position: absolute;
@@ -67,7 +80,14 @@
     background-color: $color-white;
     width: 100%;
     display: none;
-    z-index: 9999;
+    box-sizing: border-box;
+    z-index: 1051;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid $color-brand-border;
+    border-right: 1px solid $color-brand-border;
+    border-bottom: 1px solid $color-brand-border;
+
     .dropdown-option {
       border: none;
       border-top: 1px solid $color-brand-border;
@@ -75,6 +95,9 @@
       padding: 16px 20px;
       margin: 0;
       cursor: pointer;
+      &:first-child {
+        border-top: none;
+      }
       &.selected {
         font-weight: bold;
       }
@@ -89,6 +112,40 @@
     .dropdown-options {
       display: block;
     }
+    .dropdown-value {
+      .zmdi-caret-up {
+        display: inline;
+      }
+      .zmdi-caret-down {
+        display: none;
+      }
+    }
+  }
+}
+
+.checkbox {
+  cursor: pointer;
+  .checkbox-button {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: $color-white;
+    border-radius: $border-radius-min;
+    color: $color-white;
+    border: 1px solid $color-brand-border;
+    font-size: 14px;
+    height: 16px;
+    width: 16px;
+    vertical-align: center;
+    margin-right: 8px;
+    text-align: center;
+    padding: 0;
+  }
+  &.checked {
+    .checkbox-button {
+      background-color: $color-brand-green;
+      color: $color-white;
+      border: 1px solid $color-brand-green;
+    }
   }
 }
 
@@ -98,6 +155,7 @@
     background-color: $color-white;
     border-right: 1px solid $color-brand-border;
     border-left: 1px solid $color-brand-border;
+    border-bottom: 1px solid $color-brand-border;
     &:first-child {
       border-top: 1px solid $color-brand-border;
       border-top-left-radius: $border-radius-block;
@@ -121,9 +179,8 @@
       margin-bottom: 12px;
     }
     .form-element {
-
       position: relative;
-      input, select, button, .combined-form-input {
+      input, select, button, .dropdown-value {
         font-size: $font-size-default;
         padding: 16px 20px;
         margin: 0;
@@ -132,7 +189,7 @@
         box-sizing: border-box;
         border-radius: $border-radius-button;
       }
-      .combined-form-input {
+      .dropdown-value {
         background-color: $color-brand-background;
       }
       select {
@@ -146,8 +203,6 @@
         font-weight: bold;
         background-color: $color-brand-yellow;
       }
-
     }
   }
-
 }

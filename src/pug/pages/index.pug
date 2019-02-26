@@ -1,6 +1,6 @@
 extends ../layout/layout
 
-block variables
+append variables
     - var title = 'Главная — Igetup';
     - var description = 'Главная — Igetup';
     - var is_homepage = true
@@ -32,13 +32,13 @@ block content
                                         div.dropdown-option Прогуляться по крышам
                                             div.prompt 2 развлечения
                                 div.combined-form-element.width-dec-d-3
-                                    div.combined-form-input.dropdown
+                                    div.dropdown
                                         input(type="hidden")
                                         div.dropdown-value Любой город
                                         div.dropdown-options
-                                            div.dropdown-option Любой город
+                                            div.dropdown-option.selected Любой город
                                             div.dropdown-option Москва
-                                            div.dropdown-option.selected Санкт-Петербург
+                                            div.dropdown-option Санкт-Петербург
                                             div.dropdown-option Владивосток
                                             div.dropdown-option Новосибирск
                                 div.combined-form-element.width-dec-d-2
