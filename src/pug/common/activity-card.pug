@@ -1,9 +1,19 @@
+-
+    var default_activity = {
+    title: 'Комната с енотами',
+    image: '../../data/fun1.jpg',
+    has_rating: true
+    }
+
+- var index = index ? index : 1
+- var activity = activity ? activity : default_activity
+
 div.activity-card
-    div.activity-cover
-        img.activity-cover-image(src=activity.image)
+    div.activity-card-section.activity-card-cover
+        img.activity-card-cover-image(src=activity.image)
         div.activity-like-mark
             button
-                i.zmdi.zmdi-check
+                i.zmdi.zmdi-favorite-outline
         div.badge.badge-tiny.activity-discount-badge Kэшбэк 10%
         div.badge.badge-small.no-prepayment-badge
             i.zmdi.zmdi-shield-check
@@ -11,17 +21,20 @@ div.activity-card
         div.badge.badge-small.free-cancel-badge
             i.zmdi.zmdi-rotate-left
             | &nbsp; Бесплатная отмена
-    div.activity-card-basics
+
+    div.activity-card-section.activity-card-basics
         div.activity-company ООО Паспорту
         div.activity-name
             a(href="#") #{activity.title}
         div.activity-address
             i.zmdi.zmdi-pin
             | &nbsp; Санкт-Петербург, ул. Воссотания 6
-    div.activity-info
+
+    div.activity-card-section.activity-card-info
         span.activity-category Экстрим
         span.activity-price от 2500 &#8381;
-    div.activity-meta
+
+    div.activity-card-section.activity-card-score
         if activity.has_rating
             div.activity-rating
                 span.badge.badge-big.badge-yellow 8.7

@@ -1,6 +1,19 @@
 @import "../variables.scss";
 
 //Main container
-.page-orders-list{
-
+.page-orders-list {
+  margin-top: 40px;
+  .box-content {
+    h1 {
+      display: inline-block;
+      font-size: $font-size-h4;
+      margin: 4px 0;
+      padding: 0;
+    }
+  }
+  .previous-toggle {
+    margin: 10px 30px 10px 0;
+    display: inline-block;
+    float: right;
+  }
 }

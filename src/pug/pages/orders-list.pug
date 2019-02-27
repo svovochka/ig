@@ -8,16 +8,17 @@ block content
     div.page-orders-list
         div.width-holder
             div.work-area
-                div.section-box
-                    div.section-box-content
+                div.box
+                    div.box-content
                         h1 Мои бронирования
-                        div.checkbox.righted
-                            input(type="hidden")
-                            label
-                                span.checkbox-button
-                                    i.zmdi.zmdi-check
-                                | Прошлые бронирования
+                        div.previous-toggle
+                            div.checkbox
+                                input(type="hidden")
+                                label
+                                    span.checkbox-button
+                                        i.zmdi.zmdi-check
+                                    | Прошлые бронирования
                 div.mosaic
                     each activity, index in activities
                         div.mosaic-element.grid-d-3
-                            include ../common/activity-card
+                            include ../common/activity-card-order.pug

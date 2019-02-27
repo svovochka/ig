@@ -148,6 +148,7 @@ $grid-segment: 100% / $grid-row-segments;
         flex: 0 0 1% * $i;
         width: 1% * $i;
         max-width: 1% * $i;
+        box-sizing: border-box;
       }
     }
 
@@ -156,6 +157,7 @@ $grid-segment: 100% / $grid-row-segments;
         flex: 0 0 10% * $i;
         width: 10% * $i;
         max-width: 10% * $i;
+        box-sizing: border-box;
       }
     }
   }

@@ -1,209 +1,208 @@
 @import "../variables.scss";
-
 @import "../variables.scss";
 
 //Main container
-.page-index{
-
-}
-
-.section-cover {
-  position: relative;
-  background-color: $color-brand-board;
-  background-image: url('../img/header_bg.png');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  height: 836px;
-  .content {
-    padding-top: 280px;
-    h2 {
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-size: 48px;
-      color: #ffffff;
-    }
-    p {
-      margin: 0;
-      padding: 0;
-      margin-top: 12px;
-      text-align: center;
-      color: #ffffff;
-      &.zen {
-        margin-top: 20px;
-        a {
-          color: $color-white;
-          text-decoration: none;
-          font-weight: bold;
-        }
-      }
-    }
-    .columns {
-      margin-top: 64px;
-    }
-  }
-  .categories-menu {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background-color: #2D3142;
-    text-align: center;
-    .categories-menu-item {
-      display: inline-block;
-      margin: 24px 30px;
-      opacity: 0.9;
-      a, a:visited {
-        text-decoration: none;
-        font-size: $font-size-default;
-        font-weight: bold;
-        color: $color-white;
-        &:hover {
-          color: $color-brand-yellow;
-        }
-      }
-      &.active {
-        a {
-          color: $color-brand-yellow;
-        }
-      }
-
-    }
-  }
-}
-
-.section-results {
-  .activity-cards {
-    margin-top: 96px;
-  }
-}
-
-.section-promo-first-time {
-  background-color: #e8b663;
-  background-image: url('../img/first_time_bg.png');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  height: 640px;
-  .content {
-    padding-top: 96px;
-    h2 {
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      font-size: 40px;
-      color: #ffffff;
-      span {
-        color: $color-brand-yellow;
-      }
-    }
-    p {
-      margin: 0;
-      padding: 0;
-      margin-top: 12px;
-      text-align: center;
-      color: #ffffff;
-    }
-    .play-video-button {
-      margin: 92px auto 0 auto;
-    }
-  }
-}
-
-.section-promo-who-are-you {
-  height: 692px;
-  background-color: $color-white;
-  .content {
-    padding-top: 95px;
-    .text {
-      padding-top: 87px;
+.page-index {
+  .section-cover {
+    position: relative;
+    background-color: $color-brand-board;
+    background-image: url('../img/header_bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 836px;
+    .content {
+      padding-top: 280px;
       h2 {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 48px;
+        color: #ffffff;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        margin-top: 12px;
+        text-align: center;
+        color: #ffffff;
+        &.zen {
+          margin-top: 20px;
+          a {
+            color: $color-white;
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+      }
+      .columns {
+        margin-top: 64px;
+      }
+    }
+    .categories-menu {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      background-color: #2D3142;
+      text-align: center;
+      .categories-menu-item {
+        display: inline-block;
+        margin: 24px 30px;
+        opacity: 0.9;
+        a, a:visited {
+          text-decoration: none;
+          font-size: $font-size-default;
+          font-weight: bold;
+          color: $color-white;
+          &:hover {
+            color: $color-brand-yellow;
+          }
+        }
+        &.active {
+          a {
+            color: $color-brand-yellow;
+          }
+        }
+
+      }
+    }
+  }
+
+  .section-results {
+    .activity-cards {
+      margin-top: 96px;
+    }
+  }
+
+  .section-promo-first-time {
+    background-color: #e8b663;
+    background-image: url('../img/first_time_bg.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 640px;
+    .content {
+      padding-top: 96px;
+      h2 {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 40px;
+        color: #ffffff;
+        span {
+          color: $color-brand-yellow;
+        }
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        margin-top: 12px;
+        text-align: center;
+        color: #ffffff;
+      }
+      .play-video-button {
+        margin: 92px auto 0 auto;
+      }
+    }
+  }
+
+  .section-promo-who-are-you {
+    height: 692px;
+    background-color: $color-white;
+    .content {
+      padding-top: 95px;
+      .text {
+        padding-top: 87px;
+        h2 {
+          font-weight: bold;
+          margin: 0;
+          padding: 0;
+          font-size: 40px;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+          margin-top: 32px;
+        }
+        .split {
+          margin-top: 32px;
+        }
+      }
+      .illustration {
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .section-promo-testdrive {
+    height: 834px;
+    background-color: $color-text-default;
+    .content {
+      padding-top: 96px;
+      h2 {
+        text-align: center;
+        color: $color-white;
         font-weight: bold;
         margin: 0;
         padding: 0;
         font-size: 40px;
       }
       p {
+        text-align: center;
+        color: $color-white;
         margin: 0;
         padding: 0;
         margin-top: 32px;
       }
-      .split {
-        margin-top: 32px;
+      .video-carousel {
+        margin-top: 64px;
       }
     }
-    .illustration{
-      img{
-        display:block;
+  }
+
+  .video {
+    border-radius: $border-radius-block;
+    background-color: #4A90E2;
+    height: 382px;
+    position: relative;
+    .video-screenshot {
+      height: 100%;
+      width: auto;
+    }
+    .video-title {
+      position: absolute;
+      color: $color-white;
+      font-size: $font-size-h4;
+      bottom: 52px;
+      margin: 0;
+      padding: 0;
+      left: 20px;
+      width: 85%;
+      font-weight: bold;
+    }
+    .video-views {
+      position: absolute;
+      color: $color-white;
+      margin: 0;
+      padding: 0;
+      bottom: 20px;
+      left: 20px;
+    }
+    .video-play {
+      position: absolute;
+      top: 130px;
+      left: 0;
+      width: 100%;
+      .play-video-button {
         margin: 0 auto;
       }
     }
   }
+
 }
 
-.section-promo-testdrive {
-  height: 834px;
-  background-color: $color-text-default;
-  .content {
-    padding-top: 96px;
-    h2 {
-      text-align: center;
-      color: $color-white;
-      font-weight: bold;
-      margin: 0;
-      padding: 0;
-      font-size: 40px;
-    }
-    p {
-      text-align: center;
-      color: $color-white;
-      margin: 0;
-      padding: 0;
-      margin-top: 32px;
-    }
-    .video-carousel {
-      margin-top: 64px;
-    }
-  }
-}
-
-.video {
-  border-radius: $border-radius-block;
-  background-color: #4A90E2;
-  height: 382px;
-  position: relative;
-  .video-screenshot {
-    height: 100%;
-    width: auto;
-  }
-  .video-title {
-    position: absolute;
-    color: $color-white;
-    font-size: $font-size-h4;
-    bottom: 52px;
-    margin: 0;
-    padding: 0;
-    left: 20px;
-    width: 85%;
-    font-weight: bold;
-  }
-  .video-views {
-    position: absolute;
-    color: $color-white;
-    margin: 0;
-    padding: 0;
-    bottom: 20px;
-    left: 20px;
-  }
-  .video-play {
-    position: absolute;
-    top: 130px;
-    left: 0;
-    width: 100%;
-    .play-video-button {
-      margin: 0 auto;
-    }
-  }
-}

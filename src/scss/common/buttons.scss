@@ -22,6 +22,10 @@
     color: $color-white;
     background-color: $color-black;
   }
+  &.button-white {
+    color: $color-black;
+    background-color: $color-white;
+  }
   &.button-dark {
     color: $color-white;
     background-color: $color-brand-board;
@@ -56,6 +60,11 @@
   }
   &.button-full-size {
     width: 100%;
+  }
+  &.button-small{
+    font-size: $font-size-small;
+    font-weight: normal;
+    padding: 4px 15px;
   }
 }
 

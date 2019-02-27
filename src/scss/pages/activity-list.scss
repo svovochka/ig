@@ -1,16 +1,21 @@
 @import "../variables.scss";
 
 //Main container
-.page-activity-list{
+.page-activity-list {
 
+  margin-top: 96px;
+
+  .map-box {
+    height: 400px;
+    background-color: $color-text-grey;
+  }
+
+  .combined-form {
+    margin-top: 40px;
+  }
+
+  .mosaic {
+    margin-top: 40px;
+  }
 }
 
-.map-box{
-  height:400px;
-  margin-bottom: 40px;
-  background-color: $color-text-grey;
-}
-
-.combined-form{
-  margin-bottom: 40px;
-}

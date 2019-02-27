@@ -1,6 +1,9 @@
-.section-box{
+@import "../variables.scss";
+
+.box{
   margin-bottom: 40px;
-  .section-box-content, .section-box-header, .section-box-footer {
+  border-radius: $border-radius-block;
+  .box-content, .box-body, .box-header, .box-footer {
     padding: 20px;
     background-color: $color-white;
     border-right: 1px solid $color-brand-border;
@@ -17,13 +20,4 @@
       border-bottom-right-radius: $border-radius-block;
     }
   }
-  h1{
-    font-size: $font-size-h4;
-    margin: 4px 0;
-    padding: 0;
-  }
-}
-
-.righted{
-  float:right;
 }

@@ -37,6 +37,10 @@ $(function () {
 
     });
 
+    $('.flip-toggle').click(function(e){
+        $(e.target).parents('.flip-container').toggleClass('flipped');
+    });
+
     var win = $(window);
     var header = $('.header.transparent');
     if (header.length > 0) {

@@ -1,14 +1,24 @@
 @import "../variables.scss";
 
-a{
+a, .link {
   cursor: pointer;
   color: $color-brand-blue;
   text-decoration: none;
-  &:hover{
+  display: inline;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  &:hover {
     text-decoration: underline;
   }
-  &.grey{
-    font-size: $font-size-small;
+  &.grey {
     color: $color-text-grey;
+  }
+  &.small {
+    font-size: $font-size-small;
+  }
+  &.red {
+    color: $color-brand-red;
   }
 }
