@@ -1,15 +1,28 @@
 @import "variables.scss";
 @import "reset.scss";
 @import "grid.scss";
+
 @import "common/layout.scss";
 @import "common/buttons.scss";
 @import "common/badges.scss";
 @import "common/links.scss";
 @import "common/box.scss";
+
 @import "components/header.scss";
 @import "components/footer.scss";
 @import "components/activity-card.scss";
 @import "components/form.scss";
-@import "pages/home.scss";
+
+@import "pages/404.scss";
+@import "pages/activity-booking.scss";
 @import "pages/activity-list.scss";
+@import "pages/activity-view.scss";
+@import "pages/blog-article.scss";
+@import "pages/blog-list.scss";
+@import "pages/favourites-list.scss";
+@import "pages/index.scss";
+@import "pages/orders-list.scss";
+@import "pages/profile-edit.scss";
+@import "pages/profile-register.scss";
+
 @import "../vendor/material-design-iconic-font/css/material-design-iconic-font.min.css";

@@ -5,87 +5,88 @@ append variables
     - var description = 'Мои бронирования — Igetup';
 
 block content
-    div.header-height-holder
-    div.width-holder
-        div.work-area
-            div.section-box
-                div.section-box-content
-                    h1 Мои бронирования
-                    div.checkbox.righted
-                        input(type="hidden")
-                        label
-                            span.checkbox-button
-                                i.zmdi.zmdi-check
-                            | Прошлые бронирования
-            div.mosaic
-                -
-                    var items = [
-                    {
-                    title: 'Комната с енотами',
-                    image: '../../data/fun1.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Тир из огнестрельного оружия',
-                    image: '../../data/fun2.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title:"Прокат гидроциклов",
-                    image: '../../data/fun3.jpg',
-                    has_rating: false
-                    },
-                    {
-                    title:"Дрифт-такси на автодроме",
-                    image: '../../data/fun4.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Комната с енотами',
-                    image: '../../data/fun1.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Тир из огнестрельного оружия',
-                    image: '../../data/fun2.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title:"Прокат гидроциклов",
-                    image: '../../data/fun3.jpg',
-                    has_rating: false
-                    },
-                    {
-                    title:"Дрифт-такси на автодроме",
-                    image: '../../data/fun4.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Комната с енотами',
-                    image: '../../data/fun1.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Тир из огнестрельного оружия',
-                    image: '../../data/fun2.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title:"Прокат гидроциклов",
-                    image: '../../data/fun3.jpg',
-                    has_rating: false
-                    },
-                    {
-                    title:"Дрифт-такси на автодроме",
-                    image: '../../data/fun4.jpg',
-                    has_rating: true
-                    }
-                    ]
+    div.page-orders-list
+        div.header-height-holder
+        div.width-holder
+            div.work-area
+                div.section-box
+                    div.section-box-content
+                        h1 Мои бронирования
+                        div.checkbox.righted
+                            input(type="hidden")
+                            label
+                                span.checkbox-button
+                                    i.zmdi.zmdi-check
+                                | Прошлые бронирования
+                div.mosaic
+                    -
+                        var items = [
+                        {
+                        title: 'Комната с енотами',
+                        image: '../../data/fun1.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Тир из огнестрельного оружия',
+                        image: '../../data/fun2.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title:"Прокат гидроциклов",
+                        image: '../../data/fun3.jpg',
+                        has_rating: false
+                        },
+                        {
+                        title:"Дрифт-такси на автодроме",
+                        image: '../../data/fun4.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Комната с енотами',
+                        image: '../../data/fun1.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Тир из огнестрельного оружия',
+                        image: '../../data/fun2.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title:"Прокат гидроциклов",
+                        image: '../../data/fun3.jpg',
+                        has_rating: false
+                        },
+                        {
+                        title:"Дрифт-такси на автодроме",
+                        image: '../../data/fun4.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Комната с енотами',
+                        image: '../../data/fun1.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Тир из огнестрельного оружия',
+                        image: '../../data/fun2.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title:"Прокат гидроциклов",
+                        image: '../../data/fun3.jpg',
+                        has_rating: false
+                        },
+                        {
+                        title:"Дрифт-такси на автодроме",
+                        image: '../../data/fun4.jpg',
+                        has_rating: true
+                        }
+                        ]
 
-                each item, index in items
-                    - var item_title = item.title;
-                    - var item_image = item.image;
-                    - var item_has_rating= item.has_rating;
+                    each item, index in items
+                        - var item_title = item.title;
+                        - var item_image = item.image;
+                        - var item_has_rating= item.has_rating;
 
-                    div.mosaic-element.grid-d-3
-                        include ../common/activity-card
+                        div.mosaic-element.grid-d-3
+                            include ../common/activity-card

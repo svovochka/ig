@@ -5,108 +5,109 @@ append variables
     - var description = 'Избранное — Igetup';
 
 block content
-    div.header-height-holder
-    div.width-holder
-        div.work-area
-            div.combined-form
-                div.combined-form-element.dropdown.width-dec-d-5
-                    input(type='text', placeholder='Поиск по названию')
-                    div.dropdown-options
-                        div.dropdown-option Приключения
-                            div.prompt 9 развлечений
-                        div.dropdown-option Прокат гидроцкилов
-                            div.prompt 26 развлечений
-                        div.dropdown-option Прокат катеров без капитана
-                            div.prompt 11 развлечений
-                        div.dropdown-option Прокатиться на вейкборде
-                            div.prompt 1 развлечение
-                        div.dropdown-option Прогуляться по крышам
-                            div.prompt 2 развлечения
-                div.combined-form-element.width-dec-d-3
-                    div.combined-form-input.dropdown
-                        input(type="hidden")
-                        div.dropdown-value По цене (возрастание)
-                            i.zmdi.zmdi-caret-down
-                            i.zmdi.zmdi-caret-up
+    div.page-favourites-list
+        div.header-height-holder
+        div.width-holder
+            div.work-area
+                div.combined-form
+                    div.combined-form-element.dropdown.width-dec-d-5
+                        input(type='text', placeholder='Поиск по названию')
                         div.dropdown-options
-                            div.dropdown-option.selected По цене (возрастание)
-                            div.dropdown-option По цене (убывание)
-                            div.dropdown-option По рейтингу (убывание)
-                            div.dropdown-option По рейтингу (возрастание)
-                div.combined-form-element.width-dec-d-2
-                    button(type='button') Найти
+                            div.dropdown-option Приключения
+                                div.prompt 9 развлечений
+                            div.dropdown-option Прокат гидроцкилов
+                                div.prompt 26 развлечений
+                            div.dropdown-option Прокат катеров без капитана
+                                div.prompt 11 развлечений
+                            div.dropdown-option Прокатиться на вейкборде
+                                div.prompt 1 развлечение
+                            div.dropdown-option Прогуляться по крышам
+                                div.prompt 2 развлечения
+                    div.combined-form-element.width-dec-d-3
+                        div.combined-form-input.dropdown
+                            input(type="hidden")
+                            div.dropdown-value По цене (возрастание)
+                                i.zmdi.zmdi-caret-down
+                                i.zmdi.zmdi-caret-up
+                            div.dropdown-options
+                                div.dropdown-option.selected По цене (возрастание)
+                                div.dropdown-option По цене (убывание)
+                                div.dropdown-option По рейтингу (убывание)
+                                div.dropdown-option По рейтингу (возрастание)
+                    div.combined-form-element.width-dec-d-2
+                        button(type='button') Найти
 
-            div.mosaic.split
+                div.mosaic.split
 
-                -
-                    var items = [
-                    {
-                    title: 'Комната с енотами',
-                    image: '../../data/fun1.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Тир из огнестрельного оружия',
-                    image: '../../data/fun2.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title:"Прокат гидроциклов",
-                    image: '../../data/fun3.jpg',
-                    has_rating: false
-                    },
-                    {
-                    title:"Дрифт-такси на автодроме",
-                    image: '../../data/fun4.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Комната с енотами',
-                    image: '../../data/fun1.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Тир из огнестрельного оружия',
-                    image: '../../data/fun2.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title:"Прокат гидроциклов",
-                    image: '../../data/fun3.jpg',
-                    has_rating: false
-                    },
-                    {
-                    title:"Дрифт-такси на автодроме",
-                    image: '../../data/fun4.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Комната с енотами',
-                    image: '../../data/fun1.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title: 'Тир из огнестрельного оружия',
-                    image: '../../data/fun2.jpg',
-                    has_rating: true
-                    },
-                    {
-                    title:"Прокат гидроциклов",
-                    image: '../../data/fun3.jpg',
-                    has_rating: false
-                    },
-                    {
-                    title:"Дрифт-такси на автодроме",
-                    image: '../../data/fun4.jpg',
-                    has_rating: true
-                    }
-                    ]
+                    -
+                        var items = [
+                        {
+                        title: 'Комната с енотами',
+                        image: '../../data/fun1.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Тир из огнестрельного оружия',
+                        image: '../../data/fun2.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title:"Прокат гидроциклов",
+                        image: '../../data/fun3.jpg',
+                        has_rating: false
+                        },
+                        {
+                        title:"Дрифт-такси на автодроме",
+                        image: '../../data/fun4.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Комната с енотами',
+                        image: '../../data/fun1.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Тир из огнестрельного оружия',
+                        image: '../../data/fun2.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title:"Прокат гидроциклов",
+                        image: '../../data/fun3.jpg',
+                        has_rating: false
+                        },
+                        {
+                        title:"Дрифт-такси на автодроме",
+                        image: '../../data/fun4.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Комната с енотами',
+                        image: '../../data/fun1.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title: 'Тир из огнестрельного оружия',
+                        image: '../../data/fun2.jpg',
+                        has_rating: true
+                        },
+                        {
+                        title:"Прокат гидроциклов",
+                        image: '../../data/fun3.jpg',
+                        has_rating: false
+                        },
+                        {
+                        title:"Дрифт-такси на автодроме",
+                        image: '../../data/fun4.jpg',
+                        has_rating: true
+                        }
+                        ]
 
-                each item, index in items
+                    each item, index in items
 
-                    - var item_title = item.title;
-                    - var item_image = item.image;
-                    - var item_has_rating= item.has_rating;
+                        - var item_title = item.title;
+                        - var item_image = item.image;
+                        - var item_has_rating= item.has_rating;
 
-                    div.mosaic-element.grid-d-3
-                        include ../common/activity-card.pug
+                        div.mosaic-element.grid-d-3
+                            include ../common/activity-card.pug

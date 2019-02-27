@@ -6,190 +6,190 @@ append variables
     - var is_homepage = true
 
 block content
-
-    section.section-cover
-        div.width-holder
-            div.work-area
-                div.content
-                    h2 Все развлечения города в одном месте
-                    p Вставай и получай новые новые эмоции
-
-                    div.columns
-                        div.column.grid-d-1
-                        div.column.grid-d-10
-                            div.combined-form
-                                div.combined-form-element.dropdown.width-dec-d-5
-                                    input(type='text', placeholder='Какое развлечение вы готовы попробовать сегодня?')
-                                    div.dropdown-options
-                                        div.dropdown-option Приключения
-                                            div.prompt 9 развлечений
-                                        div.dropdown-option Прокат гидроцкилов
-                                            div.prompt 26 развлечений
-                                        div.dropdown-option Прокат катеров без капитана
-                                            div.prompt 11 развлечений
-                                        div.dropdown-option Прокатиться на вейкборде
-                                            div.prompt 1 развлечение
-                                        div.dropdown-option Прогуляться по крышам
-                                            div.prompt 2 развлечения
-                                div.combined-form-element.width-dec-d-3
-                                    div.dropdown
-                                        input(type="hidden")
-                                        div.dropdown-value Любой город
-                                        div.dropdown-options
-                                            div.dropdown-option.selected Любой город
-                                            div.dropdown-option Москва
-                                            div.dropdown-option Санкт-Петербург
-                                            div.dropdown-option Владивосток
-                                            div.dropdown-option Новосибирск
-                                div.combined-form-element.width-dec-d-2
-                                    button(type='button') Найти
-                    p.zen Случайное предложение: &nbsp;
-                        a(href='#') Покататься на гидроцикле сегодня в Санкт-Петербурге
-
-        div.categories-menu
+    div.page-index
+        section.section-cover
             div.width-holder
                 div.work-area
-                    div.categories-menu-item.active
-                        a(href="#") Все категории
-                    div.categories-menu-item
-                        a(href="#") Экстрим
-                    div.categories-menu-item
-                        a(href="#") Романтика
-                    div.categories-menu-item
-                        a(href="#") Экскурсии
-                    div.categories-menu-item
-                        a(href="#") Квесты
-                    div.categories-menu-item
-                        a(href="#") Спорт
-                    div.categories-menu-item
-                        a(href="#") Выносливость
+                    div.content
+                        h2 Все развлечения города в одном месте
+                        p Вставай и получай новые новые эмоции
 
-    section.section-results
-        div.width-holder
-            div.work-area
-                div.activity-cards
-                    div.mosaic
-                        -
-                            var items = [
-                            {
-                            title: 'Комната с енотами',
-                            image: '../../data/fun1.jpg',
-                            has_rating: true
-                            },
-                            {
-                            title: 'Тир из огнестрельного оружия',
-                            image: '../../data/fun2.jpg',
-                            has_rating: true
-                            },
-                            {
-                            title:"Прокат гидроциклов",
-                            image: '../../data/fun3.jpg',
-                            has_rating: false
-                            },
-                            {
-                            title:"Дрифт-такси на автодроме",
-                            image: '../../data/fun4.jpg',
-                            has_rating: true
-                            },
-                            {
-                            title: 'Комната с енотами',
-                            image: '../../data/fun1.jpg',
-                            has_rating: true
-                            },
-                            {
-                            title: 'Тир из огнестрельного оружия',
-                            image: '../../data/fun2.jpg',
-                            has_rating: true
-                            },
-                            {
-                            title:"Прокат гидроциклов",
-                            image: '../../data/fun3.jpg',
-                            has_rating: false
-                            },
-                            {
-                            title:"Дрифт-такси на автодроме",
-                            image: '../../data/fun4.jpg',
-                            has_rating: true
-                            },
-                            {
-                            title: 'Комната с енотами',
-                            image: '../../data/fun1.jpg',
-                            has_rating: true
-                            },
-                            {
-                            title: 'Тир из огнестрельного оружия',
-                            image: '../../data/fun2.jpg',
-                            has_rating: true
-                            },
-                            {
-                            title:"Прокат гидроциклов",
-                            image: '../../data/fun3.jpg',
-                            has_rating: false
-                            },
-                            {
-                            title:"Дрифт-такси на автодроме",
-                            image: '../../data/fun4.jpg',
-                            has_rating: true
-                            }
-                            ]
+                        div.columns
+                            div.column.grid-d-1
+                            div.column.grid-d-10
+                                div.combined-form
+                                    div.combined-form-element.dropdown.width-dec-d-5
+                                        input(type='text', placeholder='Какое развлечение вы готовы попробовать сегодня?')
+                                        div.dropdown-options
+                                            div.dropdown-option Приключения
+                                                div.prompt 9 развлечений
+                                            div.dropdown-option Прокат гидроцкилов
+                                                div.prompt 26 развлечений
+                                            div.dropdown-option Прокат катеров без капитана
+                                                div.prompt 11 развлечений
+                                            div.dropdown-option Прокатиться на вейкборде
+                                                div.prompt 1 развлечение
+                                            div.dropdown-option Прогуляться по крышам
+                                                div.prompt 2 развлечения
+                                    div.combined-form-element.width-dec-d-3
+                                        div.dropdown
+                                            input(type="hidden")
+                                            div.dropdown-value Любой город
+                                            div.dropdown-options
+                                                div.dropdown-option.selected Любой город
+                                                div.dropdown-option Москва
+                                                div.dropdown-option Санкт-Петербург
+                                                div.dropdown-option Владивосток
+                                                div.dropdown-option Новосибирск
+                                    div.combined-form-element.width-dec-d-2
+                                        button(type='button') Найти
+                        p.zen Случайное предложение: &nbsp;
+                            a(href='#') Покататься на гидроцикле сегодня в Санкт-Петербурге
 
-                        each item, index in items
-                            - var item_title = item.title;
-                            - var item_image = item.image;
-                            - var item_has_rating= item.has_rating;
+            div.categories-menu
+                div.width-holder
+                    div.work-area
+                        div.categories-menu-item.active
+                            a(href="#") Все категории
+                        div.categories-menu-item
+                            a(href="#") Экстрим
+                        div.categories-menu-item
+                            a(href="#") Романтика
+                        div.categories-menu-item
+                            a(href="#") Экскурсии
+                        div.categories-menu-item
+                            a(href="#") Квесты
+                        div.categories-menu-item
+                            a(href="#") Спорт
+                        div.categories-menu-item
+                            a(href="#") Выносливость
 
-                            div.mosaic-element.grid-d-3
-                                include ../common/activity-card
-                    div.one-button-line
-                        a.button.button-black(href='#') Показать все 139 развлечений
-    section.section-promo-first-time
-        div.width-holder
-            div.work-area
-                div.content
-                    h2 Впервые на &nbsp;
-                        span igetup
-                        | ?
-                    p Забронируй свое первое приключение!
-                    button.play-video-button(type='button',title="Запустить видео")
-                        img(src="../../img/play.svg")
+        section.section-results
+            div.width-holder
+                div.work-area
+                    div.activity-cards
+                        div.mosaic
+                            -
+                                var items = [
+                                {
+                                title: 'Комната с енотами',
+                                image: '../../data/fun1.jpg',
+                                has_rating: true
+                                },
+                                {
+                                title: 'Тир из огнестрельного оружия',
+                                image: '../../data/fun2.jpg',
+                                has_rating: true
+                                },
+                                {
+                                title:"Прокат гидроциклов",
+                                image: '../../data/fun3.jpg',
+                                has_rating: false
+                                },
+                                {
+                                title:"Дрифт-такси на автодроме",
+                                image: '../../data/fun4.jpg',
+                                has_rating: true
+                                },
+                                {
+                                title: 'Комната с енотами',
+                                image: '../../data/fun1.jpg',
+                                has_rating: true
+                                },
+                                {
+                                title: 'Тир из огнестрельного оружия',
+                                image: '../../data/fun2.jpg',
+                                has_rating: true
+                                },
+                                {
+                                title:"Прокат гидроциклов",
+                                image: '../../data/fun3.jpg',
+                                has_rating: false
+                                },
+                                {
+                                title:"Дрифт-такси на автодроме",
+                                image: '../../data/fun4.jpg',
+                                has_rating: true
+                                },
+                                {
+                                title: 'Комната с енотами',
+                                image: '../../data/fun1.jpg',
+                                has_rating: true
+                                },
+                                {
+                                title: 'Тир из огнестрельного оружия',
+                                image: '../../data/fun2.jpg',
+                                has_rating: true
+                                },
+                                {
+                                title:"Прокат гидроциклов",
+                                image: '../../data/fun3.jpg',
+                                has_rating: false
+                                },
+                                {
+                                title:"Дрифт-такси на автодроме",
+                                image: '../../data/fun4.jpg',
+                                has_rating: true
+                                }
+                                ]
 
-    section.section-promo-who-are-you
-        div.width-holder
-            div.work-area
-                div.content
-                    div.columns
-                        div.column.grid-d-5.text
-                            h2 Кто ты? Тот кто ищет развлечения или тот кто их предлагает?
-                            p Has ei vidit aperiam dissentiet, cum modus intellegam no. Te qui quot propriae adipiscing. Noster rationibus usu in. Cum ne lorem putant, eum omnis nostrud ea. Te dolor postulant voluptatibus sed.
-                            div.split
-                                div.column.grid-d-3
-                                    a.button.button-yellow.button-full-size(href='#') Добавить свое развлечение
-                                div.column.grid-d-2
-                                    a.button.button-black.button-full-size(href='#') Найти развлечения
-                        div.column.grid-d-7.illustration
-                            img(src="../../img/start_exploring_bg.png")
-    section.section-promo-testdrive
-        div.width-holder
-            div.work-area
-                div.content
-                    h2 Тест-драйвы развлечений
-                    p Тестируем и показываем от первого лица
-                    div.columns.video-carousel
-                        div.column.grid-d-6
-                            div.video
-                                img.video-screenshot(src="../../data/test_drive1.png")
-                                div.video-play
-                                    button.play-video-button(type='button',title="Запустить видео")
-                                        img(src="../../img/play.svg")
-                                div.video-title Сафари на мотоциклах или как протестировать два колеса, когда есть только одно.
-                                div.video-views 124 просмотра • 1 месяц назад
-                        div.column.grid-d-6
-                            div.video
-                                img.video-screenshot(src="../../data/test_drive2.png")
-                                div.video-play
-                                    button.play-video-button(type='button',title="Запустить видео")
-                                        img(src="../../img/play.svg")
-                                div.video-title Полет на реактивном самолете, прыжок с парашютом.
-                                div.video-views 124 просмотра • 1 месяц назад
-                    div.one-button-line
-                        a.button.button-inverted(href='#') Показать все 139 развлечений
+                            each item, index in items
+                                - var item_title = item.title;
+                                - var item_image = item.image;
+                                - var item_has_rating= item.has_rating;
+
+                                div.mosaic-element.grid-d-3
+                                    include ../common/activity-card
+                        div.one-button-line
+                            a.button.button-black(href='#') Показать все 139 развлечений
+        section.section-promo-first-time
+            div.width-holder
+                div.work-area
+                    div.content
+                        h2 Впервые на &nbsp;
+                            span igetup
+                            | ?
+                        p Забронируй свое первое приключение!
+                        button.play-video-button(type='button',title="Запустить видео")
+                            img(src="../../img/play.svg")
+
+        section.section-promo-who-are-you
+            div.width-holder
+                div.work-area
+                    div.content
+                        div.columns
+                            div.column.grid-d-5.text
+                                h2 Кто ты? Тот кто ищет развлечения или тот кто их предлагает?
+                                p Has ei vidit aperiam dissentiet, cum modus intellegam no. Te qui quot propriae adipiscing. Noster rationibus usu in. Cum ne lorem putant, eum omnis nostrud ea. Te dolor postulant voluptatibus sed.
+                                div.split
+                                    div.column.grid-d-3
+                                        a.button.button-yellow.button-full-size(href='#') Добавить свое развлечение
+                                    div.column.grid-d-2
+                                        a.button.button-black.button-full-size(href='#') Найти развлечения
+                            div.column.grid-d-7.illustration
+                                img(src="../../img/start_exploring_bg.png")
+        section.section-promo-testdrive
+            div.width-holder
+                div.work-area
+                    div.content
+                        h2 Тест-драйвы развлечений
+                        p Тестируем и показываем от первого лица
+                        div.columns.video-carousel
+                            div.column.grid-d-6
+                                div.video
+                                    img.video-screenshot(src="../../data/test_drive1.png")
+                                    div.video-play
+                                        button.play-video-button(type='button',title="Запустить видео")
+                                            img(src="../../img/play.svg")
+                                    div.video-title Сафари на мотоциклах или как протестировать два колеса, когда есть только одно.
+                                    div.video-views 124 просмотра • 1 месяц назад
+                            div.column.grid-d-6
+                                div.video
+                                    img.video-screenshot(src="../../data/test_drive2.png")
+                                    div.video-play
+                                        button.play-video-button(type='button',title="Запустить видео")
+                                            img(src="../../img/play.svg")
+                                    div.video-title Полет на реактивном самолете, прыжок с парашютом.
+                                    div.video-views 124 просмотра • 1 месяц назад
+                        div.one-button-line
+                            a.button.button-inverted(href='#') Показать все 139 развлечений
