@@ -1,6 +1,6 @@
 div.activity-card
     div.activity-cover
-        img.activity-cover-image(src=item_image)
+        img.activity-cover-image(src=activity.image)
         div.activity-like-mark
             button
                 i.zmdi.zmdi-check
@@ -14,7 +14,7 @@ div.activity-card
     div.activity-card-basics
         div.activity-company ООО Паспорту
         div.activity-name
-            a(href="#") #{item_title}
+            a(href="#") #{activity.title}
         div.activity-address
             i.zmdi.zmdi-pin
             | &nbsp; Санкт-Петербург, ул. Воссотания 6
@@ -22,7 +22,7 @@ div.activity-card
         span.activity-category Экстрим
         span.activity-price от 2500 &#8381;
     div.activity-meta
-        if item_has_rating
+        if activity.has_rating
             div.activity-rating
                 span.badge.badge-big.badge-yellow 8.7
                 span.activity-responses 117

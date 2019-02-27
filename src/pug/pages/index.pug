@@ -69,75 +69,7 @@ block content
                 div.work-area
                     div.activity-cards
                         div.mosaic
-                            -
-                                var items = [
-                                {
-                                title: 'Комната с енотами',
-                                image: '../../data/fun1.jpg',
-                                has_rating: true
-                                },
-                                {
-                                title: 'Тир из огнестрельного оружия',
-                                image: '../../data/fun2.jpg',
-                                has_rating: true
-                                },
-                                {
-                                title:"Прокат гидроциклов",
-                                image: '../../data/fun3.jpg',
-                                has_rating: false
-                                },
-                                {
-                                title:"Дрифт-такси на автодроме",
-                                image: '../../data/fun4.jpg',
-                                has_rating: true
-                                },
-                                {
-                                title: 'Комната с енотами',
-                                image: '../../data/fun1.jpg',
-                                has_rating: true
-                                },
-                                {
-                                title: 'Тир из огнестрельного оружия',
-                                image: '../../data/fun2.jpg',
-                                has_rating: true
-                                },
-                                {
-                                title:"Прокат гидроциклов",
-                                image: '../../data/fun3.jpg',
-                                has_rating: false
-                                },
-                                {
-                                title:"Дрифт-такси на автодроме",
-                                image: '../../data/fun4.jpg',
-                                has_rating: true
-                                },
-                                {
-                                title: 'Комната с енотами',
-                                image: '../../data/fun1.jpg',
-                                has_rating: true
-                                },
-                                {
-                                title: 'Тир из огнестрельного оружия',
-                                image: '../../data/fun2.jpg',
-                                has_rating: true
-                                },
-                                {
-                                title:"Прокат гидроциклов",
-                                image: '../../data/fun3.jpg',
-                                has_rating: false
-                                },
-                                {
-                                title:"Дрифт-такси на автодроме",
-                                image: '../../data/fun4.jpg',
-                                has_rating: true
-                                }
-                                ]
-
-                            each item, index in items
-                                - var item_title = item.title;
-                                - var item_image = item.image;
-                                - var item_has_rating= item.has_rating;
-
+                            each activity, index in activities
                                 div.mosaic-element.grid-d-3
                                     include ../common/activity-card
                         div.one-button-line
