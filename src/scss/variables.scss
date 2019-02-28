@@ -1,3 +1,27 @@
+
+//Screen widths
+$width-min-m: 0;
+$width-max-m: 767px;
+
+$width-min-t: 768px;
+$width-max-t: 1024px;
+
+$width-min-d: 1025px;
+$width-max-d: 1824px;
+
+$width-min-l: 1824px;
+$width-max-l: 3000px;
+
+// Define breakpoints
+$grid-breakpoints: (
+        m: (min:$width-min-m ,max: $width-max-m),
+        t: (min:$width-min-t ,max: $width-max-t),
+        d: (min:$width-min-d ,max: $width-max-l),
+        l: (min:$width-min-l ,max: $width-max-l),
+        mt: (min:$width-min-m ,max: $width-max-t),
+        td: (min:$width-min-t ,max: $width-max-d),
+) !default;
+
 //Colors
 $color-black: #000000;
 $color-white: #FFFFFF;
@@ -13,8 +37,6 @@ $color-text-default: #232630;
 $color-text-grey: rgba(35, 38, 48, 0.5);
 
 $modal-opacity: 0.5;
-
-//Text
 
 //Font size
 $font-size-default: 16px;

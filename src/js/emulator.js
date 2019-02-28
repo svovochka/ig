@@ -41,6 +41,10 @@ $(function () {
         $(e.target).parents('.flip-container').toggleClass('flipped');
     });
 
+    $('.top-menu-toggle').click(function(e){
+        $(e.target).parents('.header').toggleClass('opened');
+    });
+
     var win = $(window);
     var header = $('.header.transparent');
     if (header.length > 0) {

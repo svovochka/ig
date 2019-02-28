@@ -17,3 +17,23 @@
     float: right;
   }
 }
+
+//Mobile styles
+@media (max-width: $width-max-m) {
+
+}
+
+//Tablet styles
+@media (min-width: $width-min-t) and (max-width: $width-max-t) {
+
+}
+
+//Desktop styles
+@media (min-width: $width-min-d) and (max-width: $width-max-d) {
+
+}
+
+//Large desktop styles
+@media (min-width: $width-min-l) and (max-width: $width-max-d) {
+
+}

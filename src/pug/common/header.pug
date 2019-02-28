@@ -3,7 +3,7 @@
 //- var has_notifications = true;
 //- var is_homepage= false;
 
-header.header(class = is_homepage === true ? 'transparent' : '')
+header.header.opened(class = is_homepage === true ? 'transparent' : '')
     div.width-holder
         div.work-area
             div.logo
@@ -13,6 +13,11 @@ header.header(class = is_homepage === true ? 'transparent' : '')
                 else
                     a(href='./index.html', title='На главную')
                         img(src='../../img/logo-light.svg')
+
+            button.top-menu-toggle.device-d-hidden
+                i.zmdi.zmdi-menu
+                i.zmdi.zmdi-close
+
             nav.top-menu
 
                 if !is_homepage

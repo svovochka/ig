@@ -1,10 +1,4 @@
-// Define breakpoints
-$grid-breakpoints: (
-        m: 0,
-        t: 768px,
-        d: 1024px,
-        l: 1824px
-) !default;
+@import "./variables.scss";
 
 //Grid settings
 $grid-total-columns: 12;
@@ -65,7 +59,7 @@ $grid-segment: 100% / $grid-row-segments;
 }
 
 @each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
-  @media (min-width: $breakpoint-width) {
+  @media (min-width: map_get($breakpoint-width, 'min')) and (max-width: map_get($breakpoint-width, 'max')) {
     @for $i from 1 through $grid-total-columns {
       $column-width: ($grid-segment * $grid-column-size * $i) + ($grid-segment * $grid-gutter-size * ($i - 1));
       .column, .mosaic-element {
@@ -142,7 +136,7 @@ $grid-segment: 100% / $grid-row-segments;
 }
 
 @each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
-  @media (min-width: $breakpoint-width) {
+  @media (min-width: map_get($breakpoint-width, 'min')) and (max-width: map_get($breakpoint-width, 'max')) {
     @for $i from 1 through 100 {
       .width-perc-#{$breakpoint-name}-#{$i} {
         flex: 0 0 1% * $i;
@@ -159,6 +153,10 @@ $grid-segment: 100% / $grid-row-segments;
         max-width: 10% * $i;
         box-sizing: border-box;
       }
+    }
+
+    .device-#{$breakpoint-name}-hidden{
+      display: none;
     }
   }
 }
