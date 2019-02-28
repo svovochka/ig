@@ -1,0 +1,282 @@
+@import "../variables.scss";
+
+.activity-card-order {
+  margin-bottom: 40px;
+
+  .averse {
+
+    .activity-card-section {
+
+      padding: 20px;
+      border-right: 1px solid $color-brand-border;
+      border-left: 1px solid $color-brand-border;
+      border-bottom: 1px solid $color-brand-border;
+      background-color: $color-white;
+
+      &.activity-card-cover {
+        padding: 0;
+        border: none;
+        overflow: hidden;
+        position: relative;
+        border-top-left-radius: $border-radius-block;
+        border-top-right-radius: $border-radius-block;
+        height: 200px;
+        background-color: $color-brand-border;
+
+        img.activity-card-cover-image {
+          width: 100%;
+          height: 100%;
+        }
+
+        .status-indicator {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          height: 28px;
+          .status-mark {
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+            font-size: 20px;
+            text-align: center;
+            background-color: $color-text-grey;
+            color: $color-white;
+            float: left;
+            &.rejected {
+              background-color: $color-brand-red;
+            }
+            &.accepted {
+              background-color: $color-brand-green;
+            }
+            &.pending {
+              background-color: $color-text-grey;
+            }
+            i {
+              margin-top: 4px;
+            }
+          }
+          .status-text {
+            width: 110px;
+            margin-left: 8px;
+            float: left;
+            font-size: $font-size-small;
+            font-weight: bold;
+            color: $color-white;
+          }
+        }
+        .download-ticket {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+
+      &.activity-card-basics {
+
+        .activity-company {
+          font-size: $font-size-small;
+          color: $color-text-grey;
+        }
+        .activity-name {
+          margin-top: 4px;
+          a {
+            color: $color-text-default;
+            font-weight: bold;
+            font-size: $font-size-big;
+          }
+        }
+        .activity-address {
+          margin-top: 4px;
+          font-size: $font-size-small;
+        }
+      }
+
+      &.activity-card-param {
+        color: $color-text-grey;
+        .activity-param-name {
+
+        }
+        .activity-param-value {
+          display: block;
+          float: right;
+          color: $color-text-default;
+        }
+      }
+
+      &.activity-card-details {
+        .description {
+          color: $color-brand-blue;
+          height: 40px;
+          overflow: hidden;
+        }
+        .options {
+          margin-top: 4px;
+          display: flex;
+          font-size: $font-size-small;
+        }
+      }
+
+      &.activity-card-actions {
+        display: flex;
+        .decline {
+          text-align: right;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $color-brand-border;
+        border-bottom-left-radius: $border-radius-block;
+        border-bottom-right-radius: $border-radius-block;
+      }
+    }
+  }
+
+  .reverse {
+    height: 100%;
+    .chat-box {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+      .chat-header {
+        position: relative;
+        .chat-title {
+          font-size: $font-size-big;
+          font-weight: bold;
+          line-height: 32px;
+        }
+        .chat-order {
+
+        }
+        .chat-close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          font-size: $font-size-big;
+          color: $color-text-grey;
+          i {
+            cursor: pointer;
+          }
+        }
+      }
+      .chat-body {
+        padding: 0 20px;
+        overflow-y: scroll;
+        .messages {
+          .date-separator {
+            padding: 12px 0 4px 0;
+            font-weight: bold;
+            text-align: center;
+            color: $color-text-grey;
+            clear: both;
+          }
+          .cleanup{
+            clear: both;
+            height: 4px;
+          }
+          .message {
+            clear: both;
+            font-size: $font-size-small;
+            .text {
+              box-sizing: border-box;
+              padding: 8px;
+              border-radius: $border-radius-button;
+            }
+            .time {
+              padding: 4px 0;
+              font-size: $font-size-small;
+              color: $color-text-grey;
+            }
+            &.incoming {
+              .text {
+                margin-right: 20px;
+                color: $color-text-default;
+                background-color: $color-brand-border;
+                float: left;
+              }
+              .time {
+                text-align: left;
+                font-size: $font-size-small;
+                color: $color-text-grey;
+              }
+            }
+            &.outgoing {
+              .text {
+                margin-left: 20px;
+                color: $color-white;
+                background-color: $color-text-grey;
+                float: right;
+              }
+              .time {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+      .chat-send {
+        position: relative;
+        .input-message {
+          margin-right: 30px;
+          textarea {
+            font-size: $font-size-small;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            height: 20px;
+            max-height: 20px;
+            min-height: 20px;
+            line-height: 20px;
+            resize: none;
+            border: none;
+          }
+        }
+        .submit-button {
+          position: absolute;
+          right: 20px;
+          top: 24px;
+          button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.flip-container {
+  position: relative;
+  perspective: 4000px;
+
+  .flipper {
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+
+    .averse, .reverse {
+      backface-visibility: hidden;
+    }
+    .averse {
+      z-index: 2;
+    }
+    .reverse {
+      z-index: 1;
+      transform: rotateY(180deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &.flipped {
+    .flipper {
+      transform: rotateY(180deg);
+    }
+  }
+}

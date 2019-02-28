@@ -19,5 +19,8 @@
       border-bottom-left-radius: $border-radius-block;
       border-bottom-right-radius: $border-radius-block;
     }
+    &.no-padding{
+      padding:0;
+    }
   }
 }

@@ -9,7 +9,7 @@
 - var activity = activity ? activity : default_activity
 
 div.flip-container
-    div.activity-card.flipper
+    div.activity-card-order.flipper
         div.averse
             div.activity-card-section.activity-card-cover
                 img.activity-card-cover-image(src=activity.image)
@@ -50,7 +50,7 @@ div.flip-container
                 span.activity-param-name Стоимость
                 span.activity-param-value 12 900 &#8381;
 
-            div.activity-card-section.activity-card-order
+            div.activity-card-section.activity-card-details
                 div.description 1 комната с 2 енотами + корм, вместе с инструктором по жизни
                 div.options
                     div.width-dec-d-5
@@ -77,5 +77,32 @@ div.flip-container
                         i.zmdi.zmdi-close.flip-toggle
                     div.chat-title Сообщения
                     div.chat-order № 145678 - #{activity.title}
-                div.box-body 123123
-                div.box-footer 123123
+                div.box-body.no-padding.chat-body
+                    div.messages
+                        div.date-separator 23.01.2019
+                        div.message.incoming
+                            div.time 12:44
+                            div.text Здравствуйте! Ваше бронирование подтвержденно, но есть вероятность  плохой погоды. Пожалуйста, подумайте насчет изменения даты бронирования на другую, например после 23 числа. Спасибо!
+                        div.message.outgoing
+                            div.time 12:44
+                            div.text Хорошо.
+                        div.message.incoming
+                            div.time 12:44
+                            div.text Здравствуйте! Ваше бронирование подтвержденно, но есть вероятность  плохой погоды. Пожалуйста, подумайте насчет изменения даты бронирования на другую, например после 23 числа. Спасибо!
+                        div.message.outgoing
+                            div.time 12:44
+                            div.text Здравствуйте! Ваше бронирование подтвержденно, но есть вероятность  плохой погоды. Пожалуйста, подумайте насчет изменения даты бронирования на другую, например после 23 числа. Спасибо!
+                        div.date-separator вчера
+                        div.message.incoming
+                            div.time 12:44
+                            div.text Нормально?
+                        div.message.outgoing
+                            div.time 12:44
+                            div.text Здравствуйте! Ваше бронирование подтвержденно, но есть вероятность  плохой погоды. Пожалуйста, подумайте насчет изменения даты бронирования на другую, например после 23 числа. Спасибо!
+                        div.cleanup
+                div.box-footer.chat-send
+                    div.input-message
+                        textarea(placeholder="Ваше сообщение")
+                    div.submit-button
+                        button
+                            i.zmdi.zmdi-mail-send

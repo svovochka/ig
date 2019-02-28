@@ -55,48 +55,6 @@
         bottom: 20px;
         right: 20px;
       }
-
-      .status-indicator {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        height: 28px;
-        .status-mark {
-          border-radius: 50%;
-          height: 28px;
-          width: 28px;
-          font-size: 20px;
-          text-align: center;
-          background-color: $color-text-grey;
-          color: $color-white;
-          float: left;
-          &.rejected {
-            background-color: $color-brand-red;
-          }
-          &.accepted {
-            background-color: $color-brand-green;
-          }
-          &.pending {
-            background-color: $color-text-grey;
-          }
-          i {
-            margin-top: 4px;
-          }
-        }
-        .status-text {
-          width: 110px;
-          margin-left: 8px;
-          float: left;
-          font-size: $font-size-small;
-          font-weight: bold;
-          color: $color-white;
-        }
-      }
-      .download-ticket {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-      }
     }
 
     &.activity-card-basics {
@@ -118,6 +76,7 @@
         font-size: $font-size-small;
       }
     }
+
     &.activity-card-info {
       .activity-category {
 
@@ -129,17 +88,7 @@
         color: $color-brand-green;
       }
     }
-    &.activity-card-param {
-      color: $color-text-grey;
-      .activity-param-name {
 
-      }
-      .activity-param-value {
-        display: block;
-        float: right;
-        color: $color-text-default;
-      }
-    }
     &.activity-card-score {
       display: flex;
       .activity-rating-none {
@@ -175,85 +124,11 @@
         }
       }
     }
-    &.activity-card-order {
-      .description {
-        color: $color-brand-blue;
-        height: 40px;
-        overflow: hidden;
-      }
-      .options {
-        margin-top: 4px;
-        display: flex;
-        font-size: $font-size-small;
-      }
-    }
-    &.activity-card-actions {
-      display: flex;
-      .decline {
-        text-align: right;
-      }
-    }
+
     &:last-child {
       border-bottom: 1px solid $color-brand-border;
       border-bottom-left-radius: $border-radius-block;
       border-bottom-right-radius: $border-radius-block;
-    }
-  }
-
-  .chat-box{
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
-    .chat-header{
-      position: relative;
-      .chat-title{
-        font-size: $font-size-big;
-        font-weight: bold;
-        line-height: 32px;
-      }
-      .chat-order{
-
-      }
-      .chat-close{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        i{
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-}
-
-.flip-container {
-  position: relative;
-  perspective: 4000px;
-
-  .flipper {
-
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-
-    .averse, .reverse {
-      backface-visibility: hidden;
-    }
-    .averse {
-      z-index: 2;
-    }
-    .reverse {
-      z-index: 1;
-      transform: rotateY(180deg);
-      position: absolute;
-      top: 0;
-      left:0;
-      width:100%;
-    }
-  }
-
-  &.flipped {
-    .flipper {
-      transform: rotateY(180deg);
     }
   }
 }
