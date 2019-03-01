@@ -3,32 +3,29 @@
 //- var has_notifications = true;
 //- var is_homepage= false;
 
-header.header.opened(class = is_homepage === true ? 'transparent' : '')
+header.header(class = is_homepage === true ? 'transparent' : '')
     div.width-holder
         div.work-area
             div.logo
                 if is_homepage
                     h1
-                        img(src='../../img/logo-light.svg')
+                        img(src='../../img/logo-light.png')
                 else
                     a(href='./index.html', title='На главную')
-                        img(src='../../img/logo-light.svg')
+                        img(src='../../img/logo-light.png')
 
             button.top-menu-toggle.device-d-hidden
                 i.zmdi.zmdi-menu
                 i.zmdi.zmdi-close
 
             nav.top-menu
-
                 if !is_homepage
                     div.top-menu-item.active
                         a(href='./index.html') Главная
-
                 div.top-menu-item
                     a(href='./activity-list.html') Найти развлечения
                 div.top-menu-item
                     a(href='./blog-list.html') Блог
-
                 if is_authorized
                     div.top-menu-item
                         a(href='./orders-list.html') Мои бронирования
@@ -37,43 +34,8 @@ header.header.opened(class = is_homepage === true ? 'transparent' : '')
                     div.top-menu-item
                         button#toggle-notifications.icon(type='button', title='Уведомления')
                             i.zmdi.zmdi-notifications
-
                             if has_notifications
                                 i.zmdi.zmdi-circle.attention-mark
-
-                        if has_notifications
-                            div.notifications#notifications
-
-                                div.notifications-item
-                                    div.notification-mark.message
-                                        i.zmdi.zmdi-info-outline
-                                    div.notification-date Сегодня в 13:45
-                                    div.notification-link
-                                        a(href='./activity-view.html') Комната с енотами
-                                    div.notification-message Представитель развлесения отправил вам &nbsp;
-                                        a(href='./activity-view.html') новое сообщение
-
-                                div.notifications-item
-                                    div.notification-mark.rejected
-                                        i.zmdi.zmdi-close
-                                    div.notification-date Вчера в 16:32
-                                    div.notification-link
-                                        a(href='./activity-view.html') Прокатиться на карете
-                                    div.notification-message Представитель развлечения отменил ваше &nbsp;
-                                        a(href='./activity-view.html') бронирование №14568
-                                        | &nbsp; на 12.08.19.
-
-                                div.notifications-item
-                                    div.notification-mark.accepted
-                                        i.zmdi.zmdi-check
-                                    div.notification-date 23.01.18 в 11:30
-                                    div.notification-link
-                                        a(href='./activity-view.html') Пострелять по звёздам
-                                    div.notification-message Представитель развлечения подтвердил ваше &nbsp;
-                                        a(href='./activity-view.html') бронирование №14568
-                                        | &nbsp; на 12.08.19.
-
-                    div.top-menu-item
                         div.avatar
                             img(src="../../data/avatar.jpg")
                         div.username Иван Иванов
@@ -84,6 +46,33 @@ header.header.opened(class = is_homepage === true ? 'transparent' : '')
                         button.link(type='button') Войти
                     div.top-menu-item
                         button(type='button') Зарегистрироваться
-
+                if has_notifications
+                    div.notifications#notifications
+                        div.notifications-item
+                            div.notification-mark.message
+                                i.zmdi.zmdi-info-outline
+                            div.notification-date Сегодня в 13:45
+                            div.notification-link
+                                a(href='./activity-view.html') Комната с енотами
+                            div.notification-message Представитель развлесения отправил вам &nbsp;
+                                a(href='./activity-view.html') новое сообщение
+                        div.notifications-item
+                            div.notification-mark.rejected
+                                i.zmdi.zmdi-close
+                            div.notification-date Вчера в 16:32
+                            div.notification-link
+                                a(href='./activity-view.html') Прокатиться на карете
+                            div.notification-message Представитель развлечения отменил ваше &nbsp;
+                                a(href='./activity-view.html') бронирование №14568
+                                | &nbsp; на 12.08.19.
+                        div.notifications-item
+                            div.notification-mark.accepted
+                                i.zmdi.zmdi-check
+                            div.notification-date 23.01.18 в 11:30
+                            div.notification-link
+                                a(href='./activity-view.html') Пострелять по звёздам
+                            div.notification-message Представитель развлечения подтвердил ваше &nbsp;
+                                a(href='./activity-view.html') бронирование №14568
+                                | &nbsp; на 12.08.19.
 if !is_homepage
     div.header-height-holder

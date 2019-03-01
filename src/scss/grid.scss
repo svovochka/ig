@@ -16,6 +16,7 @@ $grid-segment: 100% / $grid-row-segments;
 
 .width-holder {
   max-width: 1480px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
