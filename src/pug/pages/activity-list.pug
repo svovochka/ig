@@ -10,9 +10,9 @@ append scripts
 block content
     div.page-activity-list
         div.width-holder
-            div.work-area
+            div.work-area.grid-12-d.grid-6-t.grid-3-m
                 div.columns
-                    div.column.grid-d-3
+                    div.column.grid-12-d-3
                         div.form-box
                             form
                                 div.form-section
@@ -101,7 +101,7 @@ block content
                                                     span.checkbox-button
                                                         i.zmdi.zmdi-check
                                                     | Обзор от igetup
-                    div.column.grid-d-9
+                    div.column.grid-12-d-9
                         div.map-box#map
                         div.combined-form
                             div.combined-form-element.dropdown.width-dec-d-5
@@ -133,5 +133,5 @@ block content
 
                         div.mosaic.split
                             each activity, index in activities
-                                div.mosaic-element.grid-d-3
+                                div.mosaic-element.grid-12-d-3
                                     include ../common/activity-card.pug

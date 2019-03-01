@@ -7,7 +7,7 @@ append variables
 block content
     div.page-favourites-list
         div.width-holder
-            div.work-area
+            div.work-area.grid-12-d.grid-6-t.grid-3-m
                 div.combined-form
                     div.combined-form-element.dropdown.width-dec-d-5
                         input(type='text', placeholder='Поиск по названию')
@@ -38,5 +38,5 @@ block content
 
                 div.mosaic.split
                     each activity, index in activities
-                        div.mosaic-element.grid-d-3
+                        div.mosaic-element.grid-12-d-3
                             include ../common/activity-card.pug

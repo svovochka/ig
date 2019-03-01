@@ -1,27 +1,7 @@
 @import "./variables.scss";
 
-//Grid settings
-$grid-total-columns: 12;
-$grid-margin-size: 2;
-$grid-gutter-size: 2;
-$grid-column-size: 4;
-
-//Calculate number of segments
-$grid-row-segments: ($grid-column-size * $grid-total-columns) + ($grid-gutter-size * ($grid-total-columns - 1));
-$grid-total-segments: ($grid-margin-size *2) + $grid-row-segments;
-
-//Calculate work area margin
-$grid-margin: 100% / $grid-total-segments * $grid-margin-size;
-$grid-segment: 100% / $grid-row-segments;
-
-.width-holder {
-  max-width: 1480px;
-  min-width: 320px;
-  margin: 0 auto;
-}
-
 .work-area {
-  margin: 0 $grid-margin;
+  margin: 0;
 }
 
 .columns {
@@ -59,73 +39,102 @@ $grid-segment: 100% / $grid-row-segments;
   float: left;
 }
 
-@each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
-  @media (min-width: map_get($breakpoint-width, 'min')) and (max-width: map_get($breakpoint-width, 'max')) {
-    @for $i from 1 through $grid-total-columns {
-      $column-width: ($grid-segment * $grid-column-size * $i) + ($grid-segment * $grid-gutter-size * ($i - 1));
-      .column, .mosaic-element {
-        &:first-child {
-          margin-left: 0;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-        &.grid-#{$breakpoint-name}-#{$i} {
-          flex: 0 0 $column-width;
-          width: $column-width;
-          max-width: $column-width;
-          margin-left: $grid-segment;
-          margin-right: $grid-segment;
+.width-holder {
+  max-width: 1480px;
+  min-width: 320px;
+  margin: 0 auto;
+}
 
-          $total: $grid_total-columns;
-          $current: $i;
-          $res:$total/$current;
+$grids: (12, 6, 3);
 
-          @if round($res) == $res {
-            $child:$total/$current;
-            $next_child: $child+1;
-            &:nth-child(#{$child}n+#{$child}){
-              margin-right: 0;
-            }
-            &:nth-child(#{$child}n+#{$next_child}){
-              margin-left: 0;
-            }
+@each $grid-total-columns in $grids {
+
+  //Grid settings
+  $grid-margin-size: 2;
+  $grid-gutter-size: 2;
+  $grid-column-size: 4;
+
+  //Calculate number of segments
+  $grid-row-segments: ($grid-column-size * $grid-total-columns) + ($grid-gutter-size * ($grid-total-columns - 1));
+  $grid-total-segments: ($grid-margin-size *2) + $grid-row-segments;
+
+  //Calculate work area margin
+  $grid-margin: 100% / $grid-total-segments * $grid-margin-size;
+  $grid-segment: 100% / $grid-row-segments;
+
+  @each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
+    @media (min-width: map_get($breakpoint-width, 'min')) and (max-width: map_get($breakpoint-width, 'max')) {
+      .work-area {
+        &.grid-#{$grid-total-columns}-#{$breakpoint-name}{
+          margin: 0 $grid-margin;
+        }
+      }
+      @for $i from 1 through $grid-total-columns {
+        $column-width: ($grid-segment * $grid-column-size * $i) + ($grid-segment * $grid-gutter-size * ($i - 1));
+        .column, .mosaic-element {
+          &:first-child {
+            margin-left: 0;
           }
+          &:last-child {
+            margin-right: 0;
+          }
+          &.grid-#{$grid-total-columns}-#{$breakpoint-name}-#{$i} {
+            flex: 0 0 $column-width;
+            width: $column-width;
+            max-width: $column-width;
+            margin-left: $grid-segment;
+            margin-right: $grid-segment;
 
-          > .split {
-            > .column, .mosaic-element {
-              @for $s from 1 through $i {
-                $split-grid-row-segments: ($grid-column-size * $i) + ($grid-gutter-size * ($i - 1));
-                $split-grid-segment: 100% / $split-grid-row-segments;
-                $split-column-width: ($split-grid-segment * $grid-column-size * $s) + ($split-grid-segment * $grid-gutter-size * ($s - 1));
-                &:first-child {
-                  margin-left: 0;
-                }
-                &:last-child {
-                  margin-right: 0;
-                }
-                &.grid-#{$breakpoint-name}-#{$s} {
+            $total: $grid_total-columns;
+            $current: $i;
+            $res: $total/$current;
 
-                  $total: $i;
-                  $current: $s;
-                  $res:$total/$current;
+            @if round($res) == $res {
+              $child: $total/$current;
+              $next_child: $child+1;
+              &:nth-child(#{$child}n+#{$child}) {
+                margin-right: 0;
+              }
+              &:nth-child(#{$child}n+#{$next_child}) {
+                margin-left: 0;
+              }
+            }
 
-                  @if round($res) == $res {
-                    $child:$total/$current;
-                    $next_child: $child+1;
-                    &:nth-child(#{$child}n+#{$child}){
-                      margin-right: 0;
-                    }
-                    &:nth-child(#{$child}n+#{$next_child}){
-                      margin-left: 0;
-                    }
+            > .split {
+              > .column, .mosaic-element {
+                @for $s from 1 through $i {
+                  $split-grid-row-segments: ($grid-column-size * $i) + ($grid-gutter-size * ($i - 1));
+                  $split-grid-segment: 100% / $split-grid-row-segments;
+                  $split-column-width: ($split-grid-segment * $grid-column-size * $s) + ($split-grid-segment * $grid-gutter-size * ($s - 1));
+                  &:first-child {
+                    margin-left: 0;
                   }
+                  &:last-child {
+                    margin-right: 0;
+                  }
+                  &.grid-#{$grid-total-columns}-#{$breakpoint-name}-#{$s} {
 
-                  flex: 0 0 $split-column-width;
-                  width: $split-column-width;
-                  max-width: $split-column-width;
-                  margin-left: $split-grid-segment;
-                  margin-right: $split-grid-segment;
+                    $total: $i;
+                    $current: $s;
+                    $res: $total/$current;
+
+                    @if round($res) == $res {
+                      $child: $total/$current;
+                      $next_child: $child+1;
+                      &:nth-child(#{$child}n+#{$child}) {
+                        margin-right: 0;
+                      }
+                      &:nth-child(#{$child}n+#{$next_child}) {
+                        margin-left: 0;
+                      }
+                    }
+
+                    flex: 0 0 $split-column-width;
+                    width: $split-column-width;
+                    max-width: $split-column-width;
+                    margin-left: $split-grid-segment;
+                    margin-right: $split-grid-segment;
+                  }
                 }
               }
             }
@@ -156,7 +165,7 @@ $grid-segment: 100% / $grid-row-segments;
       }
     }
 
-    .device-#{$breakpoint-name}-hidden{
+    .device-#{$breakpoint-name}-hidden {
       display: none;
     }
   }
