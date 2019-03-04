@@ -1,9 +1,18 @@
 @import "../variables.scss";
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
+html{
+  //height: 100%;
+  //min-height: 100%;
+}
+
 body{
   font-family: 'Roboto', sans-serif;
   background-color: $color-brand-background;
   font-size: $font-size-default;
   color: $color-text-default;
+  //display: flex;
+  //flex-direction: column;
+  //height: 100%;
+  //min-height: 100%;
 }
