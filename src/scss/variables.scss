@@ -1,14 +1,23 @@
 
 //Screen widths
+
+//M - mobile
 $width-min-m: 0;
 $width-max-m: 767px;
 
+//T - tablet
 $width-min-t: 768px;
 $width-max-t: 1024px;
 
-$width-min-d: 1025px;
+//S - small screen
+$width-min-s: 1025px;
+$width-max-s: 1479px;
+
+//D - desktop
+$width-min-d: 1480px;
 $width-max-d: 1824px;
 
+//L - large screen
 $width-min-l: 1824px;
 $width-max-l: 3000px;
 
@@ -16,10 +25,14 @@ $width-max-l: 3000px;
 $grid-breakpoints: (
         m: (min:$width-min-m ,max: $width-max-m),
         t: (min:$width-min-t ,max: $width-max-t),
-        d: (min:$width-min-d ,max: $width-max-l),
+        s: (min:$width-min-s ,max: $width-max-s),
+        d: (min:$width-min-d ,max: $width-max-d),
         l: (min:$width-min-l ,max: $width-max-l),
         mt: (min:$width-min-m ,max: $width-max-t),
-        td: (min:$width-min-t ,max: $width-max-d),
+        ts: (min:$width-min-t ,max: $width-max-s),
+        sd: (min:$width-min-s ,max: $width-max-d),
+        dl: (min:$width-min-d ,max: $width-max-l),
+        sl: (min:$width-min-s ,max: $width-max-l),
 ) !default;
 
 //Colors

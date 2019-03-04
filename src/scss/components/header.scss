@@ -141,14 +141,14 @@
         font-size: $font-size-default;
         text-decoration: none;
         margin: 34px 12px;
-        font-weight:bold;
+        font-weight: bold;
       }
     }
     .notifications {
       position: absolute;
       top: 100%;
       right: 0;
-      width: 300px;
+      width: 320px;
       display: none;
       text-align: left;
       .notifications-item {
@@ -214,10 +214,7 @@
 //Mobile styles
 @media (max-width: $width-max-m) {
   .header {
-    .work-area {
-      margin: 0 20px;
-    }
-    .logo{
+    .logo {
       height: 24px;
       h1 {
         height: 24px;
@@ -270,8 +267,8 @@
         }
 
       }
-      .notifications{
-        width:100%;
+      .notifications {
+        width: 100%;
       }
     }
 
@@ -281,11 +278,9 @@
 //Tablet styles
 @media (min-width: $width-min-t) and (max-width: $width-max-t) {
   .header {
-    .work-area {
-      margin: 0 40px;
-    }
     .top-menu {
-      padding: 40px;
+      padding-top: 40px;
+      padding-bottom: 40px;
       .top-menu-item {
         text-align: right;
         margin: 0;
@@ -296,6 +291,10 @@
         }
         > a {
           line-height: 24px;
+          &.icon{
+            margin-top: 12px;
+            margin-bottom: 12px;
+          }
         }
         > button {
           margin-top: 0;
@@ -320,14 +319,14 @@
           margin-bottom: 12px;
         }
       }
-      .notifications{
-        right:30px;
+      .notifications {
+        right: 30px;
       }
     }
   }
 }
 
-//Tablet & mobile styles
+//Mobile -- tablet screen styles
 @media (min-width: $width-min-m) and (max-width: $width-max-t) {
   .header {
     .work-area {
@@ -380,14 +379,14 @@
 }
 
 //Desktop small screens menu minification
-@media (min-width: $width-min-d) and (max-width: 1260px) {
+@media (min-width: $width-min-s) and (max-width: $width-max-s) {
   .header {
-    .top-menu{
-      .top-menu-item{
-        margin-right:12px;
-        margin-left:12px;
-        .avatar{
-          margin-left:12px;
+    .top-menu {
+      .top-menu-item {
+        margin-right: 12px;
+        margin-left: 12px;
+        .avatar {
+          margin-left: 12px;
         }
       }
     }
@@ -400,7 +399,7 @@
 }
 
 //Large desktop styles
-@media (min-width: $width-min-l) and (max-width: $width-max-d) {
+@media (min-width: $width-min-l) {
 
 }
 

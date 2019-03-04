@@ -30,10 +30,10 @@
       color: $color-white;
       position: absolute;
       display: block;
-      top:12px;
+      top: 12px;
       right: 12px;
       padding: 0;
-      i{
+      i {
         padding: 0;
         margin: 0;
         display: block;
@@ -46,7 +46,7 @@
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  border: 3px solid $color-brand-board;
+  border: 2px solid $color-brand-board;
   color: $color-brand-board;
   display: inline-block;
   margin: 0 8px 0 0;
@@ -61,20 +61,71 @@
 
 //Mobile styles
 @media (max-width: $width-max-m) {
-
+  .footer {
+    h2 {
+      font-size: $font-size-default;
+      margin-top: 0;
+    }
+    .column {
+      margin-bottom: 32px;
+    }
+    .policy-link, .conditions-link {
+      margin-top: 12px;
+      a {
+        color: $color-text-default;
+      }
+    }
+    .partners-link {
+      width: 100%;
+    }
+  }
 }
 
-//Tablet styles
-@media (min-width: $width-min-t) and (max-width: $width-max-t) {
-
+//Tablet - small screen styles
+@media (min-width: $width-min-t) and (max-width: $width-max-s) {
+  .footer {
+    .column {
+      margin-bottom: 32px;
+    }
+    .partners-link {
+      width: 100%;
+    }
+    .policy-link, .conditions-link {
+      margin-top: 12px;
+      a {
+        color: $color-text-default;
+      }
+    }
+    .policy-link {
+      margin-top: 24px;
+    }
+    .conditions-link {
+      margin-top: 12px;
+    }
+  }
 }
 
 //Desktop styles
 @media (min-width: $width-min-d) and (max-width: $width-max-d) {
-
+  .footer {
+    .policy-link {
+      margin-top: 24px;
+    }
+    .conditions-link {
+      margin-top: 10px;
+    }
+  }
 }
 
 //Large desktop styles
-@media (min-width: $width-min-l) and (max-width: $width-max-d) {
-
+@media (min-width: $width-min-l) {
+  .footer {
+    .policy-link {
+      margin-top: 24px;
+    }
+    .conditions-link {
+      margin-top: 10px;
+    }
+  }
 }
+

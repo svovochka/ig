@@ -5,7 +5,7 @@
 
 header.header(class = is_homepage === true ? 'transparent' : '')
     div.width-holder
-        div.work-area.grid-12-d.grid-6-t.grid-3-m
+        div.work-area.grid-12-sl.grid-4-t.grid-2-m
             div.logo
                 if is_homepage
                     h1
@@ -14,14 +14,15 @@ header.header(class = is_homepage === true ? 'transparent' : '')
                     a(href='./index.html', title='На главную')
                         img(src='../../img/logo-light.png')
 
-            button.top-menu-toggle.device-d-hidden
+            button.top-menu-toggle.device-sl-hidden
                 i.zmdi.zmdi-menu
                 i.zmdi.zmdi-close
-
-            nav.top-menu
+            nav.top-menu.padding-area.grid-4-t
                 if !is_homepage
                     div.top-menu-item.active
-                        a(href='./index.html') Главная
+                        a.device-s-hidden(href='./index.html') Главная
+                        a.icon.device-mt-hidden.device-dl-hidden(href='./index.html', title='Главная')
+                            i.zmdi.zmdi-home
                 div.top-menu-item
                     a(href='./activity-list.html') Найти развлечения
                 div.top-menu-item

@@ -45,14 +45,19 @@
   margin: 0 auto;
 }
 
-$grids: (12, 6, 3);
+$grids: (
+        (total-columns: 12, margin-size: 2, gutter-size: 2, column-size: 4),
+        (total-columns: 4, margin-size: 2, gutter-size: 2, column-size: 14.2),
+        (total-columns: 2, margin-size: 1, gutter-size: 1, column-size: 6.5)
+);
 
-@each $grid-total-columns in $grids {
+@each $grid in $grids {
 
   //Grid settings
-  $grid-margin-size: 2;
-  $grid-gutter-size: 2;
-  $grid-column-size: 4;
+  $grid-total-columns: map_get($grid, 'total-columns');
+  $grid-margin-size: map_get($grid, 'margin-size');
+  $grid-gutter-size: map_get($grid, 'gutter-size');
+  $grid-column-size: map_get($grid, 'column-size');
 
   //Calculate number of segments
   $grid-row-segments: ($grid-column-size * $grid-total-columns) + ($grid-gutter-size * ($grid-total-columns - 1));
@@ -65,8 +70,18 @@ $grids: (12, 6, 3);
   @each $breakpoint-name, $breakpoint-width in $grid-breakpoints {
     @media (min-width: map_get($breakpoint-width, 'min')) and (max-width: map_get($breakpoint-width, 'max')) {
       .work-area {
-        &.grid-#{$grid-total-columns}-#{$breakpoint-name}{
+        &.grid-#{$grid-total-columns}-#{$breakpoint-name} {
           margin: 0 $grid-margin;
+        }
+      }
+      .margin-area {
+        &.grid-#{$grid-total-columns}-#{$breakpoint-name} {
+          margin: 0 $grid-margin;
+        }
+      }
+      .padding-area {
+        &.grid-#{$grid-total-columns}-#{$breakpoint-name} {
+          padding: 0 $grid-margin;
         }
       }
       @for $i from 1 through $grid-total-columns {
@@ -165,8 +180,8 @@ $grids: (12, 6, 3);
       }
     }
 
-    .device-#{$breakpoint-name}-hidden {
-      display: none;
+    *.device-#{$breakpoint-name}-hidden {
+      display: none !important;
     }
   }
 }
