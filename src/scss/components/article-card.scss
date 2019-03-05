@@ -1,0 +1,122 @@
+@import "../variables.scss";
+
+.article-card {
+  margin-bottom: 40px;
+
+  .article-card-section {
+
+    padding: 20px;
+    border-right: 1px solid $color-brand-border;
+    border-left: 1px solid $color-brand-border;
+    border-bottom: 1px solid $color-brand-border;
+    background-color: $color-white;
+
+    &:last-child {
+      border-bottom: 1px solid $color-brand-border;
+      border-bottom-left-radius: $border-radius-block;
+      border-bottom-right-radius: $border-radius-block;
+    }
+
+    &.article-card-cover {
+      padding: 0;
+      border: none;
+      overflow: hidden;
+      position: relative;
+      border-top-left-radius: $border-radius-block;
+      border-top-right-radius: $border-radius-block;
+      height: 320px;
+      background-color: $color-brand-border;
+
+      img.article-card-cover-image {
+        width: auto;
+        height: 100%;
+      }
+
+      .author {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        vertical-align: middle;
+        .author-avatar {
+          vertical-align: middle;
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+          overflow: hidden;
+          text-align: center;
+          background-color: $color-text-grey;
+          display: inline-block;
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+        .author-name {
+          vertical-align: middle;
+          margin-left: 8px;
+          display: inline-block;
+          font-size: $font-size-small;
+          font-weight: bold;
+          color: $color-white;
+          text-shadow: 1px 1px 1px black;
+        }
+      }
+    }
+
+    &.article-card-details {
+
+      .article-card-info {
+        display: flex;
+        font-size: $font-size-small;
+        color: $color-text-grey;
+      }
+
+      .article-card-title {
+        h2 {
+          font-size: $font-size-big;
+          font-weight: bold;
+          a {
+            color: $color-text-default;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Mobile styles
+@media (max-width: $width-max-m) {
+  .article-card {
+    .article-card-section {
+      &.article-card-cover {
+        height: 320px;
+      }
+    }
+  }
+}
+
+//Tablet styles
+@media (min-width: $width-min-t) and (max-width: $width-max-t) {
+  .article-card {
+    .article-card-section {
+      &.article-card-cover {
+        height: 324px;
+      }
+    }
+  }
+}
+
+//Small screen styles
+@media (min-width: $width-min-s) and (max-width: $width-max-s) {
+
+}
+
+//Desktop styles
+@media (min-width: $width-min-d) and (max-width: $width-max-d) {
+
+}
+
+//Large desktop styles
+@media (min-width: $width-min-l) {
+
+}

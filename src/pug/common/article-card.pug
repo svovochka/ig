@@ -1,0 +1,31 @@
+-
+    var default_article = {
+    title: 'Лучшие завтраки в Петербурге',
+    description: 'Овсяная каша с клубникой и амарантовая — на топленом молоке, малиновые ньокки со свежими ягодами, блюда из яиц.',
+    image: '../../data/art1.jpg'
+    }
+
+- var article = article ? article : default_article
+
+div.article-card
+    div.article-card-section.article-card-cover
+        img.article-card-cover-image(src=article.image)
+        div.author
+            .author-avatar
+                img(src="../../data/avatar.jpg")
+            .author-name Александр Борисов
+    div.article-card-section.article-card-details
+        div.article-card-info
+            div.width-dec-ml-5
+                i.zmdi.zmdi-timer
+                | &nbsp; 02 Сент 2018
+            div.width-dec-ml-5
+                i.zmdi.zmdi-label-alt-outline
+                | &nbsp; Промо-акции
+        div.article-card-title
+            h2
+                a(href="#") #{article.title}
+        div.article-card-title
+            p #{article.description}
+        div.article-card-link
+            a(href="#") Читать дальше
