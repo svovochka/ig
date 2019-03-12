@@ -11,6 +11,7 @@
   font-weight: bold;
   text-decoration: none;
   box-sizing: border-box;
+  border: none;
   text-align: center;
   &:last-child {
     margin-right: 0;
@@ -42,6 +43,11 @@
     color: $color-text-default;
     background-color: transparent;
     border: 1px dashed $color-brand-border-strong;
+  }
+  &.button-transparent-black {
+    color: $color-text-default;
+    background-color: transparent;
+    border: 2px solid $color-brand-border-strong;
   }
   &.button-inverted {
     color: $color-white;

@@ -11,7 +11,7 @@
   flex-wrap: wrap;
 }
 
-.split {
+.column-split {
   position: relative;
   clear: both;
   display: flex;
@@ -115,7 +115,7 @@ $grids: (
               }
             }
 
-            > .split {
+            .column-split {
               > .column, .mosaic-element {
                 @for $s from 1 through $i {
                   $split-grid-row-segments: ($grid-column-size * $i) + ($grid-gutter-size * ($i - 1));

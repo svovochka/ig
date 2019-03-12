@@ -32,11 +32,9 @@
       }
     }
     &.opened {
-      &:first-child, &:last-child {
         input, select, button, .dropdown-value {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
-        }
       }
     }
     .dropdown-value {
@@ -214,7 +212,20 @@
 
 //Tablet styles
 @media (min-width: $width-min-t) and (max-width: $width-max-t) {
-
+  .combined-form {
+    .combined-form-element {
+      margin-bottom:20px;
+      input, select, button, .dropdown-value {
+        border-radius: $border-radius-button;
+      }
+      .dropdown.opened {
+        input, select, button, .dropdown-value {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+  }
 }
 
 //Desktop styles
