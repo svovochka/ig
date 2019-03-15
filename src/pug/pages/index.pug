@@ -12,14 +12,13 @@ block content
             div.width-holder
                 div.work-area.grid-12-sl.grid-4-t.grid-2-m
                     div.content
-                        h2 Все развлечения города в одном месте
-                        p Вставай и получай новые новые эмоции
-
+                        h2 Все развлечения города в&nbsp;одном&nbsp;месте
+                        p Вставай и получай новые эмоции
                         div.columns
                             div.column.grid-12-dl-1
                             div.column.grid-12-dl-10.grid-12-sd-12
-                                div.combined-form
-                                    div.combined-form-element.dropdown.width-dec-sl-5
+                                div.search-form.combined-form.columns
+                                    div.combined-form-element.dropdown.width-dec-sl-5.column.grid-4-t-4.grid-4-t-single
                                         input(type='text', placeholder='Какое развлечение вы готовы попробовать сегодня?')
                                         div.dropdown-options
                                             div.dropdown-option Приключения
@@ -32,7 +31,7 @@ block content
                                                 div.prompt 1 развлечение
                                             div.dropdown-option Прогуляться по крышам
                                                 div.prompt 2 развлечения
-                                    div.combined-form-element.width-dec-sl-3
+                                    div.combined-form-element.width-dec-sl-3.column.grid-4-t-2.grid-4-t-first
                                         div.dropdown
                                             input(type="hidden")
                                             div.dropdown-value Любой город
@@ -44,36 +43,35 @@ block content
                                                 div.dropdown-option Санкт-Петербург
                                                 div.dropdown-option Владивосток
                                                 div.dropdown-option Новосибирск
-                                    div.combined-form-element.width-dec-sl-2
+                                    div.combined-form-element.width-dec-sl-2.column.grid-4-t-2.grid-4-t-last
                                         button(type='button') Найти
                         p.zen Случайное предложение: &nbsp;
                             a(href='#') Покататься на гидроцикле сегодня в Санкт-Петербурге
 
             div.categories-menu
-                div.width-holder
-                    div.work-area.grid-12-sl.grid-4-t.grid-2-m
-                        div.categories-menu-item.active
-                            a(href="#") Все категории
-                        div.categories-menu-item
-                            a(href="#") Экстрим
-                        div.categories-menu-item
-                            a(href="#") Романтика
-                        div.categories-menu-item
-                            a(href="#") Экскурсии
-                        div.categories-menu-item
-                            a(href="#") Квесты
-                        div.categories-menu-item
-                            a(href="#") Спорт
-                        div.categories-menu-item
-                            a(href="#") Выносливость
+                div.categories-menu-items
+                    div.categories-menu-item.active
+                        a(href="#") Все категории
+                    div.categories-menu-item
+                        a(href="#") Экстрим
+                    div.categories-menu-item
+                        a(href="#") Романтика
+                    div.categories-menu-item
+                        a(href="#") Экскурсии
+                    div.categories-menu-item
+                        a(href="#") Квесты
+                    div.categories-menu-item
+                        a(href="#") Спорт
+                    div.categories-menu-item
+                        a(href="#") Выносливость
 
         section.section-results
             div.width-holder
-                div.work-area.grid-12-sl.grid-4-t.grid-2-m
+                div.work-area.grid-12-sl.grid-4-t
                     div.activity-cards
                         div.mosaic
                             each activity, index in activities
-                                div.mosaic-element.grid-12-dl-3.grid-12-s-4.grid-4-t-2.grid-2-m-2
+                                div.mosaic-element.grid-12-dl-3.grid-12-s-4.grid-4-t-2
                                     include ../common/activity-card
                         div.one-button-line
                             a.button.button-black(href='#') Показать все 139 развлечений
@@ -85,23 +83,23 @@ block content
                             span igetup
                             | ?
                         p Забронируй свое первое приключение!
-                        button.play-video-button(type='button',title="Запустить видео")
-                            img(src="../../img/play.svg")
+                        div.video-play
+                            button.play-video-button(type='button',title="Запустить видео")
 
         section.section-promo-who-are-you
             div.width-holder
                 div.work-area.grid-12-sl.grid-4-t.grid-2-m
                     div.content
                         div.columns
-                            div.column.grid-12-dl-5.text
+                            div.text.column.grid-12-dl-5.grid-12-s-6.grid-4-t-2.grid-2-m-2
                                 h2 Кто ты? Тот кто ищет развлечения или тот кто их предлагает?
                                 p Has ei vidit aperiam dissentiet, cum modus intellegam no. Te qui quot propriae adipiscing. Noster rationibus usu in. Cum ne lorem putant, eum omnis nostrud ea. Te dolor postulant voluptatibus sed.
                                 div.column-split
-                                    div.column.grid-12-dl-3
+                                    div.column.grid-12-dl-3.grid-12-s-3
                                         a.button.button-yellow.button-full-size(href='#') Добавить свое развлечение
-                                    div.column.grid-12-dl-2
+                                    div.column.grid-12-dl-2.grid-12-s-3
                                         a.button.button-black.button-full-size(href='#') Найти развлечения
-                            div.column.grid-12-dl-7.illustration
+                            div.illustration.column.grid-12-dl-7.grid-12-s-6.grid-4-t-2.grid-2-m-2
                                 img(src="../../img/start_exploring_bg.png")
         section.section-promo-testdrive
             div.width-holder
@@ -109,22 +107,21 @@ block content
                     div.content
                         h2 Тест-драйвы развлечений
                         p Тестируем и показываем от первого лица
-                        div.columns.video-carousel
-                            div.column.grid-12-dl-6
-                                div.video
-                                    img.video-screenshot(src="../../data/test_drive1.png")
-                                    div.video-play
-                                        button.play-video-button(type='button',title="Запустить видео")
-                                            img(src="../../img/play.svg")
-                                    div.video-title Сафари на мотоциклах или как протестировать два колеса, когда есть только одно.
-                                    div.video-views 124 просмотра • 1 месяц назад
-                            div.column.grid-12-dl-6
-                                div.video
-                                    img.video-screenshot(src="../../data/test_drive2.png")
-                                    div.video-play
-                                        button.play-video-button(type='button',title="Запустить видео")
-                                            img(src="../../img/play.svg")
-                                    div.video-title Полет на реактивном самолете, прыжок с парашютом.
-                                    div.video-views 124 просмотра • 1 месяц назад
+                        div.video-carousel
+                            div.video-carousel-caret.columns
+                                div.column.grid-12-sl-6.grid-4-t-2.grid-2-m-2
+                                    div.video
+                                        img.video-screenshot(src="../../data/test_drive1.png")
+                                        div.video-play
+                                            button.play-video-button(type='button',title="Запустить видео")
+                                        div.video-title Сафари на мотоциклах или как протестировать два колеса, когда есть только одно.
+                                        div.video-views 124 просмотра • 1 месяц назад
+                                div.column.grid-12-sl-6.grid-4-t-2.grid-2-m-2
+                                    div.video
+                                        img.video-screenshot(src="../../data/test_drive2.png")
+                                        div.video-play
+                                            button.play-video-button(type='button',title="Запустить видео")
+                                        div.video-title Полет на реактивном самолете, прыжок с парашютом.
+                                        div.video-views 124 просмотра • 1 месяц назад
                         div.one-button-line
-                            a.button.button-inverted(href='#') Показать все 139 развлечений
+                            a.button.button-inverted(href='#') Смотреть все 24 тест-драйва

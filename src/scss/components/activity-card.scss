@@ -18,12 +18,15 @@
       position: relative;
       border-top-left-radius: $border-radius-block;
       border-top-right-radius: $border-radius-block;
-      height: 200px;
+      min-height: 200px;
       background-color: $color-brand-border;
 
       img.activity-card-cover-image {
-        width:auto;
-        height: 100%;
+        display:block;
+        margin:0;
+        padding:0;
+        width:100%;
+        height: auto;
       }
 
       .activity-like-mark {
@@ -47,12 +50,12 @@
       }
       .no-prepayment-badge {
         position: absolute;
-        bottom: 20px;
+        bottom: 12px;
         left: 20px;
       }
       .free-cancel-badge {
         position: absolute;
-        bottom: 20px;
+        bottom: 12px;
         right: 20px;
       }
     }
@@ -61,10 +64,11 @@
 
       .activity-company {
         font-size: $font-size-small;
+        line-height: 20px;
         color: $color-text-grey;
       }
       .activity-name {
-        margin-top: 4px;
+        line-height: 32px;
         a {
           color: $color-text-default;
           font-weight: bold;
@@ -72,7 +76,7 @@
         }
       }
       .activity-address {
-        margin-top: 4px;
+        line-height: 20px;
         font-size: $font-size-small;
       }
     }
@@ -96,16 +100,19 @@
         padding: 9px;
       }
       .activity-rating {
-        width: 30%;
-        flex: 0 0 30%;
+        width: 35%;
+        flex: 0 0 35%;
+        .badge{
+          padding: 2px 8px;
+        }
         .activity-responses {
           font-size: $font-size-small;
           margin-left: 8px;
         }
       }
       .activity-latest-comment {
-        width: 70%;
-        flex: 0 0 70%;
+        width: 65%;
+        flex: 0 0 65%;
         .avatar-container {
           float: left;
           height: 32px;

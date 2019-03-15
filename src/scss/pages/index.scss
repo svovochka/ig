@@ -10,15 +10,16 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    height: 836px;
     .content {
-      padding-top: 280px;
+      padding-top: 278px;
+      padding-bottom: 298px;
       h2 {
         font-weight: bold;
         margin: 0;
         padding: 0;
         text-align: center;
         font-size: 48px;
+        line-height: 60px;
         color: #ffffff;
       }
       p {
@@ -26,6 +27,7 @@
         padding: 0;
         margin-top: 12px;
         text-align: center;
+        line-height: 24px;
         color: #ffffff;
         &.zen {
           margin-top: 20px;
@@ -36,7 +38,7 @@
           }
         }
       }
-      .columns {
+      .search-form {
         margin-top: 64px;
       }
     }
@@ -44,34 +46,45 @@
       position: absolute;
       width: 100%;
       bottom: 0;
-      background-color: #2D3142;
-      text-align: center;
-      .categories-menu-item {
-        display: inline-block;
-        margin: 24px 30px;
-        opacity: 0.9;
-        a, a:visited {
-          text-decoration: none;
-          font-size: $font-size-default;
-          font-weight: bold;
-          color: $color-white;
-          &:hover {
-            color: $color-brand-yellow;
-          }
-        }
-        &.active {
-          a {
-            color: $color-brand-yellow;
-          }
-        }
+      overflow: hidden;
+      background-color: rgba(45, 49, 66, 0.9);
+      .categories-menu-items {
+        text-align: center;
 
+        height: 72px;
+        margin: 0 auto;
+        min-width: 1000px;
+        .categories-menu-item {
+          display: inline-block;
+          margin: 0 30px;
+          padding: 27px 0;
+          opacity: 0.9;
+          position: relative;
+          a, a:visited {
+            text-decoration: none;
+            font-size: $font-size-default;
+            font-weight: bold;
+            color: $color-white;
+            &:hover {
+              color: $color-brand-yellow;
+            }
+          }
+          &.active {
+            a {
+              color: $color-brand-yellow;
+            }
+            background-image: url('../img/categories-menu-caret.png');
+            background-repeat: no-repeat;
+            background-position: bottom center;
+          }
+        }
       }
     }
   }
 
   .section-results {
     .activity-cards {
-      margin-top: 96px;
+      margin: 96px 0;
     }
   }
 
@@ -82,6 +95,7 @@
     background-position: top center;
     background-size: cover;
     height: 640px;
+    position: relative;
     .content {
       padding-top: 96px;
       h2 {
@@ -102,17 +116,32 @@
         text-align: center;
         color: #ffffff;
       }
-      .play-video-button {
-        margin: 92px auto 0 auto;
+      .video-play {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        .play-video-button {
+          height: 96px;
+          width: 96px;
+          top: -48px;
+          background-image: url('../img/play.png');
+          background-size: cover;
+          opacity: 0.8;
+          position: relative;
+          margin: 0 auto;
+          &:hover {
+            opacity: 0.9;
+          }
+        }
       }
     }
   }
 
   .section-promo-who-are-you {
-    height: 692px;
     background-color: $color-white;
+    padding: 95px 0;
     .content {
-      padding-top: 95px;
       .text {
         padding-top: 87px;
         h2 {
@@ -125,6 +154,7 @@
           margin: 0;
           padding: 0;
           margin-top: 32px;
+          line-height: 24px;
         }
         .column-split {
           margin-top: 32px;
@@ -140,10 +170,10 @@
   }
 
   .section-promo-testdrive {
-    height: 834px;
     background-color: $color-text-default;
+    padding: 96px 0;
     .content {
-      padding-top: 96px;
+
       h2 {
         text-align: center;
         color: $color-white;
@@ -151,74 +181,357 @@
         margin: 0;
         padding: 0;
         font-size: 40px;
+        line-height: 60px;
       }
       p {
         text-align: center;
         color: $color-white;
         margin: 0;
         padding: 0;
-        margin-top: 32px;
+        line-height: 24px;
       }
+
       .video-carousel {
-        margin-top: 64px;
+        margin: 64px 0;
+        overflow: hidden;
+        .video-carousel-caret {
+          .video {
+            border-radius: $border-radius-block;
+            background-color: #4A90E2;
+            position: relative;
+            overflow: hidden;
+            .video-screenshot {
+              display: block;
+              width: 100%;
+              height: auto;
+            }
+            .video-title {
+              position: absolute;
+              color: $color-white;
+              font-size: $font-size-h4;
+              line-height: 34px;
+              bottom: 52px;
+              margin: 0;
+              padding: 0;
+              left: 20px;
+              width: 85%;
+              font-weight: bold;
+            }
+            .video-views {
+              position: absolute;
+              color: $color-white;
+              margin: 0;
+              padding: 0;
+              bottom: 20px;
+              left: 20px;
+            }
+            .video-play {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 100%;
+              .play-video-button {
+                height: 96px;
+                width: 96px;
+                top: -48px;
+                background-image: url('../img/play.png');
+                background-size: cover;
+                opacity: 0.8;
+                position: relative;
+                margin: 0 auto;
+                &:hover {
+                  opacity: 0.9;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
-
-  .video {
-    border-radius: $border-radius-block;
-    background-color: #4A90E2;
-    height: 382px;
-    position: relative;
-    .video-screenshot {
-      height: 100%;
-      width: auto;
-    }
-    .video-title {
-      position: absolute;
-      color: $color-white;
-      font-size: $font-size-h4;
-      bottom: 52px;
-      margin: 0;
-      padding: 0;
-      left: 20px;
-      width: 85%;
-      font-weight: bold;
-    }
-    .video-views {
-      position: absolute;
-      color: $color-white;
-      margin: 0;
-      padding: 0;
-      bottom: 20px;
-      left: 20px;
-    }
-    .video-play {
-      position: absolute;
-      top: 130px;
-      left: 0;
-      width: 100%;
-      .play-video-button {
-        margin: 0 auto;
-      }
-    }
-  }
-
 }
 
 //Mobile styles
 @media (max-width: $width-max-m) {
+  .page-index {
+    .section-cover {
+      height: unset;
+      .content {
+        padding: 84px 0;
+        h2 {
+          font-size: 28px;
+          line-height: 32px;
+          text-align: left;
+        }
+        p {
+          text-align: left;
+          margin-top: 12px;
+          &.zen {
+            margin-top: 0;
+          }
+        }
+        .search-form {
+          margin-top: 12px;
+        }
+      }
+    }
 
+    .section-results {
+      .activity-cards {
+        margin: 40px 0;
+      }
+    }
+
+    .section-promo-first-time{
+      height: unset;
+      .content {
+        padding: 72px 0 160px 0;
+        h2 {
+          font-weight: bold;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          font-size: 24px;
+          color: #ffffff;
+          span {
+            color: $color-brand-yellow;
+          }
+        }
+        p {
+          margin: 0;
+          padding: 0;
+          margin-top: 12px;
+          text-align: center;
+          color: #ffffff;
+        }
+        .video-play {
+          position: absolute;
+          bottom: 100px;
+          left: 0;
+          width: 100%;
+          .play-video-button {
+            height: 48px;
+            width: 48px;
+            top: 24px;
+          }
+        }
+      }
+    }
+
+    .section-promo-who-are-you {
+      padding: 40px 0;
+      .content {
+        padding: 0;
+        .text {
+          padding: 0;
+          h2 {
+            font-size: 24px;
+          }
+          p {
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+          }
+          .column-split {
+            margin-top: 32px;
+            .button {
+              margin-bottom: 12px;
+            }
+          }
+        }
+        .illustration {
+          margin-top: 40px;
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    .section-promo-testdrive {
+      padding: 40px 0;
+      .content {
+
+        h2{
+          font-size: 24px;
+          line-height: 28px;
+        }
+        p{
+          margin-top: 12px;
+        }
+        .video-carousel {
+          margin: 20px 0;
+          .video-carousel-caret {
+            .video {
+              height:280px;
+              .video-screenshot {
+                display: block;
+                height: 100%;
+                width: auto;
+              }
+              .video-title {
+                font-size: $font-size-small;
+                line-height: 20px;
+                bottom: 48px;
+              }
+              .video-views {
+                font-size: $font-size-small;
+              }
+              .video-play {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                .play-video-button {
+                  height: 48px;
+                  width: 48px;
+                  top: -24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 //Tablet styles
 @media (min-width: $width-min-t) and (max-width: $width-max-t) {
+  .page-index {
+    .section-cover {
+      .content {
+        padding-top: 228px;
+        h2 {
+          line-height: 60px;
+        }
+        p {
+          margin-top: 14px;
+          &.zen {
+            margin-top: 0;
+          }
+        }
+        .search-form {
+          margin-top: 21px;
+        }
+      }
+    }
 
+    .section-results {
+      .activity-cards {
+        margin: 64px 0;
+      }
+    }
+    .section-promo-who-are-you {
+      padding: 64px 0;
+      .content {
+        padding: 0;
+        .text {
+          padding: 0;
+          h2 {
+            font-size: 24px;
+          }
+          p {
+            margin: 0;
+            padding: 0;
+            margin-top: 32px;
+          }
+          .column-split {
+            margin-top: 32px;
+            .button {
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .illustration {
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .section-promo-testdrive {
+      .content {
+        .video-carousel {
+          .video-carousel-caret {
+            .video {
+              height:280px;
+              .video-screenshot {
+                display: block;
+                height: 100%;
+                width: auto;
+              }
+              .video-title {
+                font-size: $font-size-small;
+                line-height: 20px;
+                bottom: 48px;
+              }
+              .video-views {
+                font-size: $font-size-small;
+              }
+              .video-play {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                .play-video-button {
+                  height: 48px;
+                  width: 48px;
+                  top: -24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 //Desktop styles
-@media (min-width: $width-min-d) and (max-width: $width-max-d) {
-
+@media (min-width: $width-min-s) and (max-width: $width-max-s) {
+  .page-index {
+    .section-promo-testdrive {
+      .content {
+        .video-carousel {
+          .video-carousel-caret {
+            .video {
+              .video-screenshot {
+                display: block;
+                width: 100%;
+                height: auto;
+              }
+              .video-title {
+                font-size: $font-size-default;
+                line-height: 24px;
+                bottom: 48px;
+              }
+              .video-views {
+                font-size: $font-size-small;
+              }
+              .video-play {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                .play-video-button {
+                  height: 48px;
+                  width: 48px;
+                  top: -24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 //Large desktop styles

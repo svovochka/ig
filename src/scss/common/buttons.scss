@@ -4,6 +4,7 @@
   display: inline-block;
   cursor: pointer;
   font-size: $font-size-default;
+  line-height: 24px;
   padding: 12px 22px;
   border-radius: $border-radius-button;
   position: relative;
@@ -21,7 +22,7 @@
   }
   &.button-black {
     color: $color-white;
-    background-color: $color-black;
+    background-color: $color-black-button;
   }
   &.button-white {
     color: $color-black;
@@ -69,6 +70,7 @@
   }
   &.button-small{
     font-size: $font-size-small;
+    line-height: 20px;
     font-weight: normal;
     padding: 4px 15px;
   }
@@ -84,7 +86,5 @@
 }
 
 .one-button-line{
-  margin-top: 40px;
-  margin-bottom: 40px;
   text-align: center;
 }

@@ -13,6 +13,8 @@
       margin: 0;
       width: 100%;
       box-sizing: border-box;
+      height:56px;
+      overflow:hidden;
     }
     input, select, .dropdown-value {
       border-top: 1px solid $color-brand-border;
@@ -49,6 +51,7 @@
     button, input[type="button"] {
       cursor: pointer;
       font-weight: bold;
+      box-sizing: border-box;
       background-color: $color-brand-yellow;
     }
   }
@@ -207,7 +210,29 @@
 
 //Mobile styles
 @media (max-width: $width-max-m) {
+  .combined-form {
+    .combined-form-element {
+      margin-bottom:12px;
 
+      input, select, button, .dropdown-value {
+        padding: 12px 20px;
+        height:48px;
+      }
+
+      input, select, .dropdown-value {
+        border: 1px solid $color-brand-border;
+      }
+      input, select, button, .dropdown-value {
+        border-radius: $border-radius-button;
+      }
+      .dropdown.opened {
+        input, select, button, .dropdown-value {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+  }
 }
 
 //Tablet styles
@@ -215,6 +240,15 @@
   .combined-form {
     .combined-form-element {
       margin-bottom:20px;
+
+      input, select, button, .dropdown-value {
+        padding: 12px 20px;
+        height:48px;
+      }
+
+      input, select, .dropdown-value {
+        border: 1px solid $color-brand-border;
+      }
       input, select, button, .dropdown-value {
         border-radius: $border-radius-button;
       }

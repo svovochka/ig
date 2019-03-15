@@ -20,12 +20,12 @@
         position: relative;
         border-top-left-radius: $border-radius-block;
         border-top-right-radius: $border-radius-block;
-        height: 200px;
+        min-height: 200px;
         background-color: $color-brand-border;
 
         img.activity-card-cover-image {
-          width:auto;
-          height: 100%;
+          width:100%;
+          height: auto;
         }
 
         .status-indicator {

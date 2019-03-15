@@ -37,6 +37,7 @@
 
 .mosaic-element {
   float: left;
+  width:100%;
 }
 
 .width-holder {
@@ -47,7 +48,7 @@
 
 $grids: (
         (total-columns: 12, margin-size: 2, gutter-size: 2, column-size: 4),
-        (total-columns: 4, margin-size: 2, gutter-size: 2, column-size: 14.2),
+        (total-columns: 4, margin-size: 2, gutter-size: 2, column-size: 7),
         (total-columns: 2, margin-size: 1, gutter-size: 1, column-size: 6.5)
 );
 
@@ -115,6 +116,19 @@ $grids: (
               }
             }
 
+            &.grid-#{$grid-total-columns}-#{$breakpoint-name}-single{
+              margin-left: 0;
+              margin-right: 0;
+            }
+            &.grid-#{$grid-total-columns}-#{$breakpoint-name}-first{
+              margin-left: 0;
+              margin-right: $grid-segment;
+            }
+            &.grid-#{$grid-total-columns}-#{$breakpoint-name}-last{
+              margin-left: $grid-segment;
+              margin-right: 0;
+            }
+
             .column-split {
               > .column, .mosaic-element {
                 @for $s from 1 through $i {
@@ -149,6 +163,19 @@ $grids: (
                     max-width: $split-column-width;
                     margin-left: $split-grid-segment;
                     margin-right: $split-grid-segment;
+
+                    &.grid-#{$grid-total-columns}-#{$breakpoint-name}-single{
+                      margin-left: 0;
+                      margin-right: 0;
+                    }
+                    &.grid-#{$grid-total-columns}-#{$breakpoint-name}-first{
+                      margin-left: 0;
+                      margin-right: $split-grid-segment;
+                    }
+                    &.grid-#{$grid-total-columns}-#{$breakpoint-name}-last{
+                      margin-left: $split-grid-segment;
+                      margin-right: 0;
+                    }
                   }
                 }
               }

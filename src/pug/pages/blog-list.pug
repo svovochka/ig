@@ -8,41 +8,8 @@ block content
     div.page-blog-list
         div.width-holder
             div.work-area.grid-12-sl.grid-4-t.grid-2-m
-                div.combined-form.columns
-                    div.combined-form-element.dropdown.width-dec-sl-5.column.grid-4-t-4.grid-single-t
-                        input(type='text', placeholder='Что ищем сегодня?')
-                        div.dropdown-options
-                            div.dropdown-option Приключения
-                            div.dropdown-option Прокат гидроцкилов
-                            div.dropdown-option Прокат катеров без капитана
-                            div.dropdown-option Прокатиться на вейкборде
-                            div.dropdown-option Прогуляться по крышам
-                    div.combined-form-element.width-dec-sl-2.column.grid-4-t-2.grid-first-t
-                        div.dropdown
-                            input(type="hidden")
-                            div.dropdown-value Любой город
-                                i.zmdi.zmdi-caret-down
-                                i.zmdi.zmdi-caret-up
-                            div.dropdown-options
-                                div.dropdown-option.selected Любой город
-                                div.dropdown-option Москва
-                                div.dropdown-option Санкт-Петербург
-                                div.dropdown-option Владивосток
-                                div.dropdown-option Новосибирск
-                    div.combined-form-element.width-dec-sl-2.column.grid-4-t-2.grid-last-t
-                        div.dropdown
-                            input(type="hidden")
-                            div.dropdown-value Любая категория
-                                i.zmdi.zmdi-caret-down
-                                i.zmdi.zmdi-caret-up
-                            div.dropdown-options
-                                div.dropdown-option.selected Любая категория
-                                div.dropdown-option Новости
-                                div.dropdown-option Еда
-                                div.dropdown-option Полезные советы
-                                div.dropdown-option Концерты
-                    div.combined-form-element.width-dec-sl-1.column.grid-4-t-4.grid-single-t
-                        button(type='button') Найти
+
+                include ../common/blog-search-form.pug
 
                 div.city-search
                     h1 Что делать в Санкт-Петербурге
