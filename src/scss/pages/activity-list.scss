@@ -21,12 +21,50 @@
 
 //Mobile styles
 @media (max-width: $width-max-m) {
-
+  .page-activity-list {
+    margin-top: 0;
+    .map-box {
+      height: 400px;
+    }
+    .combined-form {
+      margin-top: 40px;
+    }
+    .mosaic {
+      margin-top: 40px;
+    }
+  }
 }
 
 //Tablet styles
 @media (min-width: $width-min-t) and (max-width: $width-max-t) {
+  .page-activity-list {
+    margin-top: 0;
+    .map-box {
+      height: 400px;
+    }
+    .combined-form {
+      margin-top: 40px;
+    }
+    .mosaic {
+      margin-top: 40px;
+    }
+  }
+}
 
+//Desktop styles
+@media (min-width: $width-min-s) and (max-width: $width-max-s) {
+  .page-activity-list {
+    margin-top: 0;
+    .map-box {
+      height: 400px;
+    }
+    .combined-form {
+      margin-top: 40px;
+    }
+    .mosaic {
+      margin-top: 40px;
+    }
+  }
 }
 
 //Desktop styles

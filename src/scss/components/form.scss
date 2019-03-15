@@ -53,6 +53,11 @@
       font-weight: bold;
       box-sizing: border-box;
       background-color: $color-brand-yellow;
+      &.button-secondary{
+        color: $color-text-default;
+        background-color: transparent;
+        border: 2px solid $color-brand-border-strong;
+      }
     }
   }
 }
@@ -202,7 +207,6 @@
       button, input[type="button"] {
         cursor: pointer;
         font-weight: bold;
-        background-color: $color-brand-yellow;
       }
     }
   }
@@ -263,8 +267,30 @@
 }
 
 //Desktop styles
-@media (min-width: $width-min-d) and (max-width: $width-max-d) {
+@media (min-width: $width-min-s) and (max-width: $width-max-s) {
+  .combined-form.separated-t {
+    .combined-form-element {
+      margin-bottom:20px;
 
+      input, select, button, .dropdown-value {
+        padding: 12px 20px;
+        height:48px;
+      }
+
+      input, select, .dropdown-value {
+        border: 1px solid $color-brand-border;
+      }
+      input, select, button, .dropdown-value {
+        border-radius: $border-radius-button;
+      }
+      .dropdown.opened {
+        input, select, button, .dropdown-value {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+  }
 }
 
 //Large desktop styles

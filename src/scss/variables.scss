@@ -28,12 +28,17 @@ $grid-breakpoints: (
         s: (min:$width-min-s ,max: $width-max-s),
         d: (min:$width-min-d ,max: $width-max-d),
         l: (min:$width-min-l ,max: $width-max-l),
+
         mt: (min:$width-min-m ,max: $width-max-t),
         ts: (min:$width-min-t ,max: $width-max-s),
         sd: (min:$width-min-s ,max: $width-max-d),
-        ml: (min:$width-min-m ,max: $width-max-l),
-        tl: (min:$width-min-t ,max: $width-max-l),
         dl: (min:$width-min-d ,max: $width-max-l),
+
+        ms: (min:$width-min-m ,max: $width-max-s),
+        md: (min:$width-min-m ,max: $width-max-d),
+        ml: (min:$width-min-m ,max: $width-max-l),
+
+        tl: (min:$width-min-t ,max: $width-max-l),
         sl: (min:$width-min-s ,max: $width-max-l),
 ) !default;
 
