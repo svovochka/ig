@@ -45,11 +45,11 @@ $(function () {
 
     });
 
-    $('.flip-toggle').click(function(e){
+    $('.flip-toggle').click(function (e) {
         $(e.target).parents('.flip-container').toggleClass('flipped');
     });
 
-    $('.top-menu-toggle').click(function(e){
+    $('.top-menu-toggle').click(function (e) {
         $(e.target).parents('.header').toggleClass('opened');
     });
 
@@ -61,6 +61,34 @@ $(function () {
             win.scrollTop() > 0 ? header.removeClass("transparent") : header.addClass("transparent");
         });
     }
+
+    $('.modal-control-open').click(function (e) {
+        var control = $(e.target);
+        if (!control.hasClass('modal-control-open')) {
+            control = control.parents('.modal-control-open');
+        }
+        var targetId = control.data('target');
+        var modal = $('#'+targetId);
+        var otherModals = $('.modal');
+        otherModals.removeClass('opened');
+        modal.addClass('opened');
+    });
+
+    $('.modal-control-close').click(function (e) {
+        var control = $(e.target);
+        if (!control.hasClass('modal-control-close')) {
+            control = control.parents('.modal-control-close');
+        }
+        control.parents('.modal').removeClass('opened');
+    });
+
+    $('.modal-control-commit').click(function (e) {
+        if (!control.hasClass('modal-control-commit')) {
+            control = control.parents('.modal-control-commit');
+        }
+        var control = $(e.target);
+        control.parents('.modal').removeClass('opened');
+    });
 
 });
 

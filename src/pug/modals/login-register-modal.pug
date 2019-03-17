@@ -1,7 +1,7 @@
 extends ./base-modal.pug
 
 block modal-variables
-    - var modalId = 'restore-password-modal';
+    - var modalId = 'login-register-modal';
     - var modalOpened = false;
 
 block modal-body
@@ -26,17 +26,17 @@ block modal-body
                             div.form-element
                                 input(type="password")
 
-                        button.link.modal-control-open(data-target="tab-register") Забыли пароль?
+                        button.link.modal-control-open(data-target="restore-password-modal", type='button') Забыли пароль?
                         div.form-button
-                            button.button.button-yellow.modal-control-commit(data-target=modalId) Войти
+                            button.button.button-yellow.modal-control-commit( type='button') Войти
 
                     div.form-section
                         legend.form-legend или войдите в аккаунт
                         div.login-via-social
-                            button.login-via-social-option
+                            button.login-via-social-option(type='button')
                                 img.login-via-social-image(src="../../img/icon-fb.png")
                                 span.login-via-social-label Войти через Facebook
-                            button.login-via-social-option
+                            button.login-via-social-option(type='button')
                                 img.login-via-social-image(src="../../img/icon-vk.png")
                                 span.login-via-social-label Войти через Vkontakte
                     div.form-section
@@ -82,7 +82,7 @@ block modal-body
                             div.form-element
                                 input(type="text", placeholder="дд.мм.гггг")
                         div.form-button
-                            button.button.button-yellow.modal-control-commit(data-target=modalId) Зарегистрироваться
+                            button.button.button-yellow.modal-control-commit( type='button') Зарегистрироваться
                     div.form-section
                         | Регистрируясь, вы соглашаетесь с нашими
                         a(href="#",target="_blank") Правилами использования

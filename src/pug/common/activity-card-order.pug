@@ -62,13 +62,13 @@ div.flip-container
             div.activity-card-section.activity-card-actions
                 div.width-dec-ml-5
                     if (index + 2) % 2 == 1
-                        button.link.flip-toggle
+                        button.link.flip-toggle(type='button')
                             strong Сообщения
                             | &nbsp; (5)
                     if (index + 2) % 2 == 0
-                        button.link.flip-toggle Сообщения
+                        button.link.flip-toggle(type='button') Сообщения
                 div.width-dec-ml-5.decline
-                    button.link.red Отменить
+                    button.link.red(type='button') Отменить
 
         div.reverse
             div.box.chat-box

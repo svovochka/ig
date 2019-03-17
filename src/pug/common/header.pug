@@ -14,7 +14,7 @@ header.header(class = is_homepage === true ? 'transparent' : '')
                     a(href='./index.html', title='На главную')
                         img(src='../../img/logo-light.png')
 
-            button.top-menu-toggle.device-sl-hidden
+            button.top-menu-toggle.device-sl-hidden(type='button')
                 i.zmdi.zmdi-menu
                 i.zmdi.zmdi-close
             nav.top-menu.padding-area.grid-4-t
@@ -44,9 +44,9 @@ header.header(class = is_homepage === true ? 'transparent' : '')
                             i.zmdi.zmdi-settings
                 else
                     div.top-menu-item
-                        button.link(type='button') Войти
+                        button.link.modal-control-open(type='button', data-target="login-register-modal") Войти
                     div.top-menu-item
-                        button(type='button') Создать аккаунт
+                        button.modal-control-open(type='button', data-target="login-register-modal") Создать аккаунт
                 if has_notifications
                     div.notifications#notifications
                         div.notifications-item

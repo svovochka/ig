@@ -22,7 +22,7 @@ footer.footer
                     h2 Подписаться на новости и акции
                     form.subscription-form
                         input(type='email',placeholder='Введите ваш email')
-                        button(title="Подписаться")
+                        button.modal-control-open(type='button', title="Подписаться", data-target="subscription-modal")
                             i.zmdi.zmdi-check
                 div.column.grid-12-dl-2.grid-4-ts-2.grid-2-m-3
                     h2 Вход для партнеров

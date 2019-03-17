@@ -1,36 +1,81 @@
-.modal{
+.modal {
   z-index: 9999;
-  display:none;
-  &.opened{
-    display:block;
+  display: none;
+  &.opened {
+    display: block;
   }
-  .modal-overlay{
+
+  .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    height:100%;
-    width:100%;
-    min-height:100%;
-    min-width:100%;
-    background-color: rgba(0,0,0,0.5);
-    .modal-box{
-      position:relative;
-      width: 320px;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .modal-box {
+      box-sizing: border-box;
+      position: relative;
+      width: 520px;
       margin: 0 auto;
-      margin-top:200px;
-      padding:20px;
+      margin-top: 200px;
       background-color: $color-white;
-      border-radius: $border-radius-block;
+      border-radius: $border-radius-button;
       border: none;
-      .modal-close{
-        position:absolute;
+      overflow: hidden;
+      .modal-close {
+        position: absolute;
         top: 20px;
-        right:20px;
-        cursor:pointer;
+        right: 20px;
+        cursor: pointer;
       }
-      .modal-title{
-        font-size: 18px;
+      .modal-title {
+        text-align: center;
+        font-size: $font-size-big;
+        line-height: 32px;
         font-weight: bold;
+        padding-top: 32px;
+        margin-bottom: 16px;
+      }
+      .modal-message {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .modal-sub {
+        font-size: $font-size-small;
+        line-height: 32px;
+        text-align: center;
+      }
+      .modal-tabs-controls {
+        background-color: $color-brand-background;
+        display: flex;
+        padding-right: 50px;
+        .modal-tab {
+          background-color: transparent;
+          flex: 1;
+          font-size: 18px;
+          line-height: 32px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          text-align: center;
+          cursor: pointer;
+          &.opened {
+            cursor: unset;
+            font-weight: bold;
+            background-color: $color-white;
+          }
+        }
+      }
+      .modal-tabs-content {
+        .modal-tab-content {
+          display: none;
+          &.opened {
+            display: block;
+          }
+        }
       }
     }
   }
