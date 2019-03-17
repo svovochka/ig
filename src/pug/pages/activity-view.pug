@@ -6,3 +6,215 @@ append variables
 
 block content
     div.page-activity-view
+        section.activity-cover.contrast.contrast-light
+            img(src="/data/activity-cover.png")
+            div
+                button.button-transparent-black(href="/activity-list.html") Вернуться к списку
+            div
+                button.button.button-contrast-filled(type="button") Помотреть 5 фото
+                button.button.button-contrast-transparent(type="button") В избранное
+                button.button.button-contrast-transparent(type="button") Ещё
+                button.button.button-yellow(type="button") Забронировать
+
+        section.activity-description
+            div.activity-description-section
+                h1 провести время с енотом-полоскуном и его верным другом
+                div.params
+                    div.param
+                        i.zmdi.zmdi-badge-check
+                        | Экстирим
+                    div.param
+                        i.zmdi.zmdi-badge-check
+                        | 1-8 участников
+                    div.param
+                        i.zmdi.zmdi-badge-check
+                        | 15 мин. - 8 ч.
+                    div.param
+                        i.zmdi.zmdi-badge-check
+                        | от 10 000 руб
+
+            div.activity-description-section
+                div.rating
+                    div.rating-value 8.9
+                    span.rating-summary Очень хорошо
+                    bitton.link.rating-feedbacks 27 отзывов
+                div.shedule
+                    div.shedule-marker
+                        i.zmdi.zmdi-timer
+                    span.schedule-summary
+                    span.shedule-time
+                        | 12:00 &ndash; 23:00
+                        button.link.shedule-info
+                            i.zmid.zmdi-info
+            div.activity-description-section
+                div.company-info
+                    div.company-name ООО Еноты
+                    div.company-registered Зарегистрирован с 2018 года
+                div.activities-info
+                    div.activities-count
+                        strong 1
+                        | активное развлечение
+                    div.usage-statistics
+                        strong 125
+                        | человек воспользовались услугами
+            div.activity-description-section
+                div.video-presentation
+            div.activity-description-section
+                div.verification-info
+                    span.checked-icon
+                        i.zmdi.zmdi-check
+                    | Проверено командой igetup
+                    span.check-date 12.09.2018
+            div.activity-description-section
+                div.about-text
+                    p Lotteria is one of fast-food restaurant chains belonging to Lotte Group – top five greatest group
+                        | of Korea. For 7 consecutive years, Lotteria ranked No.1 for “Brand power”, a certification granted by
+                        | Korea Management Association, and also No.1 for Brand’s Competitive Advantages with the title “Brand Stock”.
+
+                    p Lotteria was established firstly in Vietnam in 1998. Nowadays, with an international stature, Lotteria is
+                        | leading the fast-food industry in Vietnam with over 210 restaurants in approximately 30
+                        | cities/provinces throughout the country and these number are increasing incessantly.
+                        | This is the consequence for our constant. Read more
+            div.activity-description-section
+                div.map#map
+                div.address
+                    i.zmdi.zmdi-pin
+                    | Санкт-Петербург, Невский проспект, д 5, корпус 4
+
+            div.activity-description-section
+                h2 27 отзывов
+                div.feedbacks-list
+                    div.feedback-card
+                        div.feedback-header
+                            div.feedback-author
+                                div.feedback-author-photo
+                                    img(src="../data/avatar1.jpg")
+                                div.feedback-author-name Иван Васильевич
+                                div.feedback-date 20.10.2018
+
+                            div.feedback-marks
+                                div.feedback-mark
+                                    div.feedback-mark-value 7.5
+                                    div.feedback-mark-param Персонал
+                                div.feedback-mark
+                                    div.feedback-mark-value 7.5
+                                    div.feedback-mark-param Организация
+                                div.feedback-mark
+                                    div.feedback-mark-value 7.5
+                                    div.feedback-mark-param Впечатления
+
+                        div.feedback-body
+                            p Lotteria is one of fast-food restaurant chains belonging to Lotte Group – top five greatest group
+                                | of Korea. For 7 consecutive years, Lotteria ranked No.1 for “Brand power”, a certification granted by
+                                | Korea Management Association, and also No.1 for Brand’s Competitive Advantages with the title “Brand Stock”.
+
+                        div.feedback-actions
+                            button.link.modal-control-open(type="button", data-target="complain-feedback-modal")
+                                i.zmdi.zmdi-warning
+                                | Пожаловаться
+
+                        div.feedback-response
+                            div.feedback-response-header
+                                | Ответ представителя развлечения
+                                span.feedback-response-date 02.12.2018
+                            div.feedback-response-text Lotteria is one of fast-food restaurant chains belonging to Lotte Group – top five greatest group
+                                | of Korea. For 7 consecutive years, Lotteria ranked No.1 for “Brand power”, a certification granted by
+                                | Korea Management Association, and also No.1 for Brand’s Competitive Advantages with the title “Brand Stock”.
+                    div.feedback-more
+                        button.link(type="button") Еще 12 отзывов
+
+            div.activity-description-section
+                h2 Вам также может понравиться
+                div.similar-activities
+                    div.width-dec-5
+                        include ../common/activity-card
+                    div.width-dec-5
+                        include ../common/activity-card
+
+        section.activity-booking
+            div.activity-description-section
+                h2 Забронировать развлечение
+                form
+                    div.form-group
+                        label.form-label Дата
+                        div.form-element
+                            div.dropdown
+                                input(type="hidden")
+                                div.dropdown-value 20 сентября 2019
+                                    i.zmdi.zmdi-caret-down
+                                    i.zmdi.zmdi-caret-up
+                                div.dropdown-options
+                    div.form-group
+                        label.form-label Количество участников
+                        div.form-element
+                            div.dropdown
+                                input(type="hidden")
+                                div.dropdown-value Любое количество
+                                    i.zmdi.zmdi-caret-down
+                                    i.zmdi.zmdi-caret-up
+                                div.dropdown-options
+                                    div.dropdown-option.selected Любое количество
+                                    div.dropdown-option 1 чел.
+                                    div.dropdown-option от 2 до 5 чел.
+                                    div.dropdown-option от 5 до 10 чел.
+                                    div.dropdown-option более 10 чел.
+                    div.form-group
+                        div.form-element
+                            div.checkbox.checked
+                                input(type="hidden")
+                                label
+                                    span.checkbox-button
+                                        i.zmdi.zmdi-check
+                                    | Без предоплаты
+                    div.form-group
+                        div.form-element
+                            div.checkbox
+                                input(type="hidden")
+                                label
+                                    span.checkbox-button
+                                        i.zmdi.zmdi-check
+                                    | Бесплатная отмена
+                div.results-count
+                    | Доступно
+                    strong 32 тарифа
+
+                div.tariffs
+                    table.tariffs-table
+                        thead
+                            tr
+                                th Доступные тарифы
+                                th Цена
+                                th количество
+                        tbody
+                            each val in [1, 2, 3, 4, 5]
+                                tr
+                                    td
+                                        div.tariff
+                                            div.tariff-card
+                                                div.tariff-image
+                                                    img(src="/images/tariff-image.jpg")
+                                                div.tariff-info
+                                                    div.tariff-description 1 комната с 2 енотами + корм, вместе с инструктором по жизни
+                                                    div.tariff-options
+                                                        div.width-dec-ml-5
+                                                            i.zmdi.zmdi-account-o
+                                                            | &nbsp; 1-2 человека
+                                                        div.width-dec-ml-5
+                                                            i.zmdi.zmdi-timer
+                                                            | &nbsp; 120 минут
+                                                    div.tariff-promo
+                                                        div.badge.badge-small.no-prepayment-badge
+                                                            i.zmdi.zmdi-shield-check
+                                                            | &nbsp; Без предоплаты
+                                                        div.badge.badge-small.free-cancel-badge
+                                                            i.zmdi.zmdi-rotate-left
+                                                            | &nbsp; Бесплатная отмена
+                                    td 10 000 руб.
+                                    td
+                                        div.quantity-selector
+                                            button.dacrement -
+                                            input(type="text")
+                                            button.increment +
+
+                div.one-button-line
+                    button.button.button-yellow(type="button") Забронировать

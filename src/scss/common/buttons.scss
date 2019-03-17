@@ -45,10 +45,19 @@
     background-color: transparent;
     border: 1px dashed $color-brand-border-strong;
   }
-  &.button-transparent-black {
+  &.button-transparent-black  {
     color: $color-text-default;
     background-color: transparent;
     border: 2px solid $color-brand-border-strong;
+  }
+  &.button-contrast-filled {
+    color: $color-black;
+    background-color: $color-white;
+  }
+  &.button-contrast-transparent  {
+    color: $color-white;
+    background-color: transparent;
+    border: 2px solid $color-white;
   }
   &.button-inverted {
     color: $color-white;
@@ -73,6 +82,35 @@
     line-height: 20px;
     font-weight: normal;
     padding: 4px 15px;
+  }
+}
+
+.contrast{
+  .contrast-light{
+    .button{
+      &.button-contrast-filled {
+        color: $color-black;
+        background-color: $color-white;
+      }
+      &.button-contrast-transparent  {
+        color: $color-white;
+        background-color: transparent;
+        border: 2px solid $color-white;
+      }
+    }
+  }
+  .contrast-dark{
+    .button{
+      &.button-contrast-filled {
+        color: $color-white;
+        background-color: $color-black;
+      }
+      &.button-contrast-transparent  {
+        color: $color-black;
+        background-color: transparent;
+        border: 2px solid $color-black;
+      }
+    }
   }
 }
 
