@@ -1,0 +1,37 @@
+.modal{
+  z-index: 9999;
+  display:none;
+  &.opened{
+    display:block;
+  }
+  .modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:100%;
+    width:100%;
+    min-height:100%;
+    min-width:100%;
+    background-color: rgba(0,0,0,0.5);
+    .modal-box{
+      position:relative;
+      width: 320px;
+      margin: 0 auto;
+      margin-top:200px;
+      padding:20px;
+      background-color: $color-white;
+      border-radius: $border-radius-block;
+      border: none;
+      .modal-close{
+        position:absolute;
+        top: 20px;
+        right:20px;
+        cursor:pointer;
+      }
+      .modal-title{
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+extends ./base-modal.pug
+
+block modal-variables
+    - var modalId = 'add-payment-card-modal';
+    - var modalOpened= false;
+
+block modal-body
+    div.modal-title Добавить новую карту
+    form
+        div.form-section
+            div.form-group
+                label.form-label Номер карты
+                div.form-element
+                    input(type="text", placeholder="xxxx xxxx xxxx xxxx")
+            div.form-group
+                label.form-label Срок действия
+                div.form-element
+                    input(type="text", placeholder="ММ / ГГ")
+            div.form-group
+                label.form-label Имя держателя
+                div.form-element
+                    input(type="text", placeholder="Peter Ivanov")
+            div.form-group
+                label.form-label CVC/CVV
+                div.form-element
+                    input(type="text", placeholder="xxx")
+            div.form-button
+                button.button.button-yellow.modal-control-commit(data-target=modalId) Добавить
+            div.form-button
+                button.button.button-transparent-black.modal-control-commit(data-target=modalId) Отмена
+    div
+        | Добавляя платежную карту, вы соглашаетесь с нашими
+        a(href="#", target="_blank") Правилами использования
+        | и
+        a(href="#", target="_blank") Политикой конфиденциальности

@@ -1,0 +1,11 @@
+extends ./base-modal.pug
+
+block modal-variables
+    - var modalId = 'booking-success-modal';
+    - var modalOpened= false;
+
+block modal-body
+    div.modal-title Бронирование успешно отправлено
+    div.modal-message Ожидайте подтверждения бронирования от представителя развлечения
+    a.button.button-yellow.modal-control-commit(data-target=modalId, href="./orders-list.html") Мои бронирования
+    a.button.button-transparent-black.modal-control-commit(data-target=modalId, href="./activity-list.html") Искать развлечения

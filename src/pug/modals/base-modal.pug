@@ -1,0 +1,13 @@
+block modal-variables
+    - var modalId = 'default';
+    - var modalOpened= false;
+
+div.modal(id=modalId, class = modalOpened === true ? 'opened' : '')
+    div.modal-overlay
+        div.work-area.grid-12-sl.grid-4-t.grid-2-m
+            div.modal-box
+                div.modal-close.modal-control-close(data-target=modalId)
+                    i.zmdi.zmdi-close(title="Закрыть")
+                block modal-header
+                block modal-body
+                block modal-footer

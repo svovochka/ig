@@ -1,0 +1,15 @@
+extends ./base-modal.pug
+
+block modal-variables
+    - var modalId = 'complain-feedback-modal';
+    - var modalOpened= false;
+
+block modal-body
+    div.modal-title Жалоба на отзыв
+    form
+        div.form-section
+            div.form-group
+                div.form-element
+                    textarea(placeholder="Расскажите, что не так...")
+            div.form-button
+                button.button.button-yellow.modal-control-commit(data-target=modalId) Отправить

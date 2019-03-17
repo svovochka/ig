@@ -1,0 +1,10 @@
+extends ./base-modal.pug
+
+block modal-variables
+    - var modalId = 'complain-sent-modal';
+    - var modalOpened= false;
+
+block modal-body
+    div.modal-title Ваша жалоба успешно отправлена!
+    div.modal-message Мы уже смотрим, что не так.
+    button.button.button-yellow.modal-control-commit(data-target=modalId) Ok

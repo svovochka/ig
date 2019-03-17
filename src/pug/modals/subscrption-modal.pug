@@ -1,0 +1,10 @@
+extends ./base-modal.pug
+
+block modal-variables
+    - var modalId = 'subscription-modal';
+    - var modalOpened= false;
+
+block modal-body
+    div.modal-title Вы подписаны на новости и акции igetup!
+    div.modal-message Спасибо за подписку
+    button.button.button-yellow.modal-control-commit(data-target=modalId) Ok

@@ -1,0 +1,12 @@
+extends ./base-modal.pug
+
+block modal-variables
+    - var modalId = 'error-modal';
+    - var modalOpened= false;
+
+block modal-body
+    div.modal-title Что-то пошло не так...
+    div.modal-message
+        | Пожалуйста, свяжитесь с нами напрямую по email
+        a(href="mailto:help@igetup.io") help@igetup.io
+    button.button.button-yellow.modal-control-commit(data-target=modalId) Ok

@@ -1,0 +1,33 @@
+extends ./base-modal.pug
+
+block modal-variables
+    - var modalId = 'share-modal';
+    - var modalOpened= false;
+
+block modal-body
+    div.modal-title Поделиться
+    div.modal-message
+        div.social-share
+            div.social-share-icon
+                i.zmdi.zmdi-vk
+            a.social-share-link(href="#") Vkontakte
+        div.social-share
+            div.social-share-icon
+                i.zmdi.zmdi-facebook
+            a.social-share-link(href="#") Facebook
+        div.social-share
+            div.social-share-icon
+                i.zmdi.zmdi-twitter
+            a.social-share-link(href="#") Twitter
+        div.social-share
+            div.social-share-icon
+                i.zmdi.zmdi-email
+            a.social-share-link(href="#") Messenger
+        div.social-share
+            div.social-share-icon
+                i.zmdi.zmdi-email
+            a.social-share-link(href="#") Email
+        div.social-share
+            div.social-share-icon
+                i.zmdi.zmdi-copy
+            a.social-share-link(href="#") Скопировать ссылку

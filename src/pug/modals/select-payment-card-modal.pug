@@ -1,0 +1,35 @@
+extends ./base-modal.pug
+
+block modal-variables
+    - var modalId = 'select-payment-card-modal';
+    - var modalOpened= false;
+
+block modal-body
+    div.modal-title Выбрать платежную карту
+    div.modal-message
+        div.select-card
+            div.select-card-option.active
+                div.select-card-name
+                    img(src="../img/visa-logo.png")
+                    | **** **** **** 1234
+                div.select-card-control
+                    div.radio-button.selected
+                        span.redio-button
+                            i.zmdi.zmdi-check
+                        span.redio-button-label Использовать
+            div.select-card-option
+                div.select-card-name
+                    img(src="../img/visa-logo.png")
+                    | **** **** **** 5678
+                div.select-card-control
+                    div.radio-button.selected
+                        span.redio-button
+                            i.zmdi.zmdi-check
+                        span.redio-button-label Использовать
+    div
+        button.button.button-yellow.modal-control-commit(data-target=modalId) Готово
+    div
+        | Добавляя платежную карту, вы соглашаетесь с нашими
+        a(href="#", target="_blank") Правилами использования
+        | и
+        a(href="#", target="_blank") Политикой конфиденциальности
