@@ -14,7 +14,7 @@ block content
                 div.back-nav
                     a.button.button-transparent-black(href="blog-list.html") Назад к списку статей
 
-            div.work-area.grid-12-sl.grid-4-t.grid-2-m
+            div.work-area.grid-12-sl
                 div.carousel.top-carousel
                     div.carousel-nav
                         div.carousel-nav-prev
@@ -24,18 +24,20 @@ block content
                             button
                                 i.zmdi.zmdi-chevron-right
                     div.carousel-caret
-                        div.carousel-item
-                            img.img(src="../../data/article-carousel1.jpg")
-                        div.carousel-item
-                            img.img(src="../../data/article-carousel2.jpg")
-                        div.carousel-item
-                            img.img(src="../../data/article-carousel3.jpg")
-                        div.carousel-item
-                            img.img(src="../../data/article-carousel4.jpg")
-                        div.carousel-item
-                            img.img(src="../../data/article-carousel5.jpg")
+                        div.carousel-item.image-container
+                            img.img.resizable(src="../../data/article-carousel1.jpg")
+                        div.carousel-item.image-container
+                            img.img.resizable(src="../../data/article-carousel2.jpg")
+                        div.carousel-item.image-container
+                            img.img.resizable(src="../../data/article-carousel3.jpg")
+                        div.carousel-item.image-container
+                            img.img.resizable(src="../../data/article-carousel4.jpg")
+                        div.carousel-item.image-container
+                            img.img.resizable(src="../../data/article-carousel5.jpg")
+
+            div.work-area.grid-12-sl.grid-4-t.grid-2-m
                 div.columns
-                    div.social-column.column.grid-12-sl-2
+                    div.social-column.column.grid-12-sl-2.grid-4-t-4.grid-2-m-2
                         div.label Поделиться:
                         div.buttons
                             a.social-button(href='#')
@@ -49,20 +51,21 @@ block content
                             a.social-button(href='#')
                                 i.zmdi.zmdi-copy
 
-                    div.column.grid-12-sl-8
+                    div.content-column.column.grid-12-sl-8
                         article
                             h1 Лучшие завтраки в Петербурге
                             div.article-info
-                                div.author
+                                div.author.width-dec-tl-3.width-dec-m-10
                                     .author-avatar
                                         img(src="../../data/avatar1.jpg")
                                     .author-name Александр Борисов
-                                div.width-dec-ml-5
-                                    i.zmdi.zmdi-timer
-                                    | &nbsp; 02 Сент 2018
-                                div.width-dec-ml-5
-                                    i.zmdi.zmdi-label-alt-outline
-                                    | &nbsp; Промо-акции
+                                div.params.width-dec-tl-7.width-dec-m-10
+                                    div.param
+                                        i.zmdi.zmdi-timer
+                                        | &nbsp; 02 Сент 2018
+                                    div.param
+                                        i.zmdi.zmdi-label-alt-outline
+                                        | &nbsp; Промо-акции
                             div.article-body
 
                                 p Просторная кофейня от ресторатора Михаила Георгиевского («Суп-вино», «Кинг-Понг», «Тесто»),
@@ -85,16 +88,16 @@ block content
                                             button
                                                 i.zmdi.zmdi-chevron-right
                                     div.carousel-caret
-                                        div.carousel-item
-                                            img.img(src="../../data/article-carousel5.jpg")
-                                        div.carousel-item
-                                            img.img(src="../../data/article-carousel4.jpg")
-                                        div.carousel-item
-                                            img.img(src="../../data/article-carousel3.jpg")
-                                        div.carousel-item
-                                            img.img(src="../../data/article-carousel2.jpg")
-                                        div.carousel-item
-                                            img.img(src="../../data/article-carousel1.jpg")
+                                        div.carousel-item.image-container
+                                            img.img.resizable(src="../../data/article-carousel5.jpg")
+                                        div.carousel-item.image-container
+                                            img.img.resizable(src="../../data/article-carousel4.jpg")
+                                        div.carousel-item.image-container
+                                            img.img.resizable(src="../../data/article-carousel3.jpg")
+                                        div.carousel-item.image-container
+                                            img.img.resizable(src="../../data/article-carousel2.jpg")
+                                        div.carousel-item.image-container
+                                            img.img.resizable(src="../../data/article-carousel1.jpg")
 
                                 h3 Третий заголовок
 
@@ -124,10 +127,10 @@ block content
                             a(href="#") 10 предысторий известных киногероев
 
                         div.section-author-details.column-split
-                            div.author-photo.column.grid-12-sl-2
+                            div.author-photo.column.grid-12-sl-2.grid-4-t-1
                                 div.author-photo-container
                                     img(src="../../data/avatar1.jpg")
-                            div.author-info.column.grid-12-sl-6
+                            div.author-info.column.grid-12-sl-6.grid-4-t-3
                                 h2 Об авторе
                                 div.name Петр Мясник
                                 div.about Специалист в области кулинарии и ресторанного бизнеса, колумнист «Великой еды». В сферу его интересов входит оценка кухни, винной карты, уровня обслуживания, интерьера и общей атмосферы заведений.
@@ -138,10 +141,10 @@ block content
 
                             div.comments-list
                                 div.comment.column-split
-                                    div.comment-user-photo.column.grid-12-sl-1
+                                    div.comment-user-photo.column.grid-12-sl-1.width-dec-t-2
                                         div.comment-user-photo-container
                                             img(src="../../data/avatar1.jpg")
-                                    div.comment-data.column.grid-12-sl-7
+                                    div.comment-data.column.grid-12-sl-7.width-dec-t-8
                                         div.comment-username Иван Петров
                                         div.comment-date 22 сен 2018 22:45
                                         div.comment-text В 2003-м году итальянский ресторанный критик Эдуардо Распелли (итал. Edoardo Raspelli) выступил с резкими заявлениями относительно качества блюд в ресторанах быстрого питания McDonald’s, назвав Биг Мак «скотской пищей», а картофель-фри «похабной и отдающей вкусом бумаги». Юристы McDonald’s подали в суд, оценив нанесенный компании моральный ущерб в 20 миллионов долларов[1].
@@ -153,14 +156,16 @@ block content
                                                 i.zmdi.zmdi-close
                                                 | Удалить
                                 div.comment.column-split
-                                    div.comment-user-photo.column.grid-12-sl-1
+                                    div.comment-user-photo.column.grid-12-sl-1.width-dec-t-2
                                         div.comment-user-photo-container
                                             img(src="../../data/avatar1.jpg")
-                                    div.comment-data.column.grid-12-sl-7
+                                    div.comment-data.column.grid-12-sl-7.width-dec-t-8
                                         div.comment-username Иван Петров
-                                            span.reply-info &nbsp;в ответ на сообщение
+                                        div.reply-info.device-m-hidden &nbsp;в ответ на сообщение
                                                 a(href="#") &nbsp;Петра Иванова
                                         div.comment-date 22 сен 2018 22:45
+                                        div.reply-info.device-tl-hidden &nbsp;в ответ на сообщение
+                                            a(href="#") &nbsp;Петра Иванова
                                         div.comment-text В 2003-м году итальянский ресторанный критик Эдуардо Распелли (итал. Edoardo Raspelli) выступил с резкими заявлениями относительно качества блюд в ресторанах быстрого питания McDonald’s, назвав Биг Мак «скотской пищей», а картофель-фри «похабной и отдающей вкусом бумаги». Юристы McDonald’s подали в суд, оценив нанесенный компании моральный ущерб в 20 миллионов долларов[1].
                                         div.comment-actions
                                             button.link(type='button')
@@ -172,7 +177,7 @@ block content
 
                             div.comments-add-form
                                 div.form-header Оставить комментарий
-                                    span.reply-info &nbsp;в ответ на сообщение
+                                    span.reply-info &nbsp;ваш ответ на сообщение
                                         a(href="#") &nbsp;Петра Иванова
                                 form
                                     textarea(placeholder="Ваш комментарий")
