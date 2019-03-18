@@ -8,8 +8,8 @@
 - var article = article ? article : default_article
 
 div.article-card
-    div.article-card-section.article-card-cover
-        img.article-card-cover-image(src=article.image)
+    div.article-card-section.article-card-cover.image-container
+        img.article-card-cover-image.resizable(src=article.image)
         div.author
             .author-avatar
                 img(src="../../data/avatar1.jpg")

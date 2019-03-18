@@ -1,23 +1,23 @@
 @import "../variables.scss";
 
 //Main container
-.page-blog-list{
+.page-blog-list {
   margin-top: 40px;
   margin-bottom: 95px;
-  .combined-form{
+  .combined-form {
     margin-bottom: 40px;
   }
-  .city-search{
+  .city-search {
     margin: 64px 0;
-    h1{
-      margin:0;
-      padding:0;
+    h1 {
+      margin: 0;
+      padding: 0;
       margin-top: 10px;
       text-align: center;
     }
-    p{
-      margin:0;
-      padding:0;
+    p {
+      margin: 0;
+      padding: 0;
       margin-top: 10px;
       text-align: center;
     }
@@ -26,7 +26,35 @@
 
 //Mobile styles
 @media (max-width: $width-max-m) {
-
+  .page-blog-list {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .top-section {
+      display: flex;
+      flex-direction: column-reverse;
+      .combined-form {
+        margin-bottom: 40px;
+      }
+      .city-search {
+        margin: 0;
+        margin-bottom: 40px;
+        h1 {
+          margin: 0;
+          padding: 0;
+          margin-top: 10px;
+          text-align: center;
+          font-size: 28px;
+          line-height: 32px;
+        }
+        p {
+          margin: 0;
+          padding: 0;
+          margin-top: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
 //Tablet styles
