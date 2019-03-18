@@ -37,14 +37,6 @@ $(function () {
 
     });
 
-    $('#toggle-filters').click(function () {
-        var fs = $('#filters');
-        if (fs.length > 0) {
-            fs.toggleClass('device-ms-hidden');
-        }
-
-    });
-
     $('.flip-toggle').click(function (e) {
         $(e.target).parents('.flip-container').toggleClass('flipped');
     });
