@@ -3,7 +3,7 @@
 //- var has_notifications = true;
 //- var is_homepage= false;
 
-header.header(class = is_homepage === true ? 'transparent' : '')
+header.header(class = transparent_header === true ? 'transparent' : '')
     div.width-holder
         div.work-area.grid-12-sl.grid-4-t.grid-2-m
             div.logo
@@ -18,12 +18,7 @@ header.header(class = is_homepage === true ? 'transparent' : '')
                 i.zmdi.zmdi-menu
                 i.zmdi.zmdi-close
             nav.top-menu.padding-area.grid-4-t
-                if !is_homepage
-                    div.top-menu-item.active
-                        a.device-s-hidden(href='./index.html') Главная
-                        a.icon.device-mt-hidden.device-dl-hidden(href='./index.html', title='Главная')
-                            i.zmdi.zmdi-home
-                div.top-menu-item
+                div.top-menu-item.active
                     a(href='./activity-list.html') Найти развлечения
                 div.top-menu-item
                     a(href='./blog-list.html') Блог
@@ -75,5 +70,5 @@ header.header(class = is_homepage === true ? 'transparent' : '')
                             div.notification-message Представитель развлечения подтвердил ваше &nbsp;
                                 a(href='./activity-view.html') бронирование №14568
                                 | &nbsp; на 12.08.19.
-if !is_homepage
+if !is_homepage && !transparent_header
     div.header-height-holder

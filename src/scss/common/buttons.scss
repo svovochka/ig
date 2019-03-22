@@ -11,7 +11,7 @@
   margin-right: 16px;
   font-weight: bold;
   text-decoration: none;
-  box-sizing: border-box;
+  box-sizing: content-box;
   border: none;
   text-align: center;
   &:last-child {
@@ -43,25 +43,33 @@
   &.button-transparent {
     color: $color-text-default;
     background-color: transparent;
+    padding-top: 11px;
+    padding-bottom: 11px;
     border: 1px dashed $color-brand-border-strong;
   }
-  &.button-transparent-black  {
+  &.button-transparent-black {
     color: $color-text-default;
     background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 2px solid $color-brand-border-strong;
   }
   &.button-contrast-filled {
     color: $color-black;
     background-color: $color-white;
   }
-  &.button-contrast-transparent  {
+  &.button-contrast-transparent {
     color: $color-white;
     background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 2px solid $color-white;
   }
   &.button-inverted {
     color: $color-white;
     background-color: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 2px solid $color-white;
   }
   &.button-badge {
@@ -77,7 +85,7 @@
   &.button-full-size {
     width: 100%;
   }
-  &.button-small{
+  &.button-small {
     font-size: $font-size-small;
     line-height: 20px;
     font-weight: normal;
@@ -85,27 +93,27 @@
   }
 }
 
-.contrast{
-  .contrast-light{
-    .button{
+.contrast {
+  .contrast-light {
+    .button {
       &.button-contrast-filled {
         color: $color-black;
         background-color: $color-white;
       }
-      &.button-contrast-transparent  {
+      &.button-contrast-transparent {
         color: $color-white;
         background-color: transparent;
         border: 2px solid $color-white;
       }
     }
   }
-  .contrast-dark{
-    .button{
+  .contrast-dark {
+    .button {
       &.button-contrast-filled {
         color: $color-white;
         background-color: $color-black;
       }
-      &.button-contrast-transparent  {
+      &.button-contrast-transparent {
         color: $color-black;
         background-color: transparent;
         border: 2px solid $color-black;
@@ -123,6 +131,6 @@
   background-color: transparent;
 }
 
-.one-button-line{
+.one-button-line {
   text-align: center;
 }
