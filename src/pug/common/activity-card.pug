@@ -5,10 +5,10 @@
     has_rating: true
     }
 
-- var index = index ? index : 1
+- var index = index !==null ? index : 1
 - var activity = activity ? activity : default_activity
 
-div.activity-card
+div.activity-card(class = index > 1 ? 'device-m-hidden' : '')
     div.activity-card-section.activity-card-cover
         img.activity-card-cover-image(src=activity.image)
         div.activity-like-mark
@@ -25,7 +25,7 @@ div.activity-card
     div.activity-card-section.activity-card-basics
         div.activity-company ООО Паспорту
         div.activity-name
-            a(href="#") #{activity.title}
+            a(href="./activity-view.html") #{activity.title}
         div.activity-address
             i.zmdi.zmdi-pin
             | &nbsp; Санкт-Петербург, ул. Воссотания 6

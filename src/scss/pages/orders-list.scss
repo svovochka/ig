@@ -20,7 +20,33 @@
 
 //Mobile styles
 @media (max-width: $width-max-m) {
-
+  //Main container
+  .page-orders-list {
+    margin-top: 0;
+    .box {
+      border:none;
+      .box-content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border:none;
+        border-radius: 0;
+        h1 {
+          text-align: center;
+          display: block;
+          font-size: 28px;
+          margin: 4px 0;
+          padding: 0;
+        }
+      }
+      .previous-toggle {
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+        float: unset;
+      }
+    }
+  }
 }
 
 //Tablet styles

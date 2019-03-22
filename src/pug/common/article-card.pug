@@ -5,9 +5,10 @@
     image: '../../data/art1.jpg'
     }
 
+- var index = index !==null ? index : 1
 - var article = article ? article : default_article
 
-div.article-card
+div.article-card(class= index > 1 ? 'device-m-hidden' : '')
     div.article-card-section.article-card-cover.image-container
         img.article-card-cover-image.resizable(src=article.image)
         div.author
