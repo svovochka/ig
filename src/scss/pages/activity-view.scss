@@ -403,7 +403,11 @@
 
 //Mobile styles
 @media (max-width: $width-max-m) {
-
+  .page-activity-view {
+    .activity-cover {
+      height: 568px;
+    }
+  }
 }
 
 //Tablet styles
