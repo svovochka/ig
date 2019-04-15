@@ -36,7 +36,8 @@ header.header(class = transparent_header === true ? 'transparent' : '')
                             img(src="../../data/avatar1.jpg")
                         div.username Иван Иванов
                         button.icon(type='button', title='Настройки')
-                            i.zmdi.zmdi-settings
+                            a(href="./profile-edit-1-personal.html")
+                                i.zmdi.zmdi-settings
                 else
                     div.top-menu-item
                         button.link.modal-control-open(type='button', data-target="login-register-modal") Войти

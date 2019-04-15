@@ -1,0 +1,22 @@
+extends layout
+
+append variables
+    - var active_point = 1;
+
+block content
+    div.page-profile.page-profile-edit
+        div.profile-menu
+            div.width-holder
+                div.work-area.profile-menu-items
+                    div.profile-menu-item(class = active_point === 1 ? 'active' : '')
+                        a(href="./profile-edit-1-personal.html")
+                            span Профиль
+                    div.profile-menu-item(class = active_point === 2 ? 'active' : '')
+                        a(href="./profile-edit-2-phone.html")
+                            span Телефон
+                    div.profile-menu-item(class = active_point === 3 ? 'active' : '')
+                        a(href="./profile-edit-3-payment.html")
+
+                            span Платежная карта
+        div.profile-section
+            block profile-section

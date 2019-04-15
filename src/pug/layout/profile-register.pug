@@ -1,0 +1,24 @@
+extends layout
+
+append variables
+  - var active_point = 1;
+
+block content
+    div.page-profile.page-profile-register
+        div.profile-menu
+            div.width-holder
+                div.work-area.profile-menu-items
+                    div.profile-menu-item(class = active_point === 1 ? 'active' : '')
+                        a(href="./profile-register-1-personal.html")
+                            span.device-m-hidden 1. Основная информация
+                            span.device-tl-hidden 1.
+                    div.profile-menu-item(class = active_point === 2 ? 'active' : '')
+                        a(href="./profile-register-2-phone.html")
+                            span.device-m-hidden 2. Подтверждение телефона
+                            span.device-tl-hidden 2.
+                    div.profile-menu-item(class = active_point === 3 ? 'active' : '')
+                        a(href="./profile-register-3-payment.html")
+                            span.device-m-hidden 3. Подтверждение платежной карты
+                            span.device-tl-hidden 3.
+        div.profile-section
+            block profile-section
