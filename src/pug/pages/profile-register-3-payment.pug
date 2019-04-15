@@ -1,0 +1,51 @@
+extends ../layout/profile-register
+
+append variables
+    - var title = 'Регистрация — Igetup';
+    - var description = 'Регистрация — Igetup';
+    - var active_point = 3;
+
+block profile-section
+    div.page-profile-register
+        div.width-holder
+            div.work-area.grid-12-sl.grid-4-t.grid-2-m
+                div.columns
+                    div.column.grid-12-dl-2
+                    div.column.grid-12-dl-8.grid-12-s-12
+                        div.box
+                            div.box-body
+                                .box-title
+                                    h1 Добавьте платежную карту для бронирования развлечений
+                                div.column-split
+                                    div.column.grid-12-dl-4.grid-12-s-6.grid-4-t-2.grid-4-t-first
+                                        div.form-group
+                                            label.form-label Номер карты
+                                            div.form-element
+                                                input(type="text", placeholder="xxxx xxxx xxxx xxxx")
+
+                                        div.form-group
+                                            label.form-label Имя держателя
+                                            div.form-element
+                                                input(type="text", placeholder="IVAN PETROV")
+                                    div.column.grid-12-dl-4.grid-12-s-6.grid-4-t-2.grid-4-t-first
+                                        div.form-group
+                                            label.form-label Срок действия
+                                            div.form-element
+                                                input(type="text", placeholder="ММ/ГГ")
+
+                                        div.form-group
+                                            label.form-label CVC/CVV
+                                            div.form-element
+                                                input(type="text", placeholder="xxx")
+
+
+                                div.one-button-line
+                                    button.button.button-yellow(type="button") Добавить карту
+
+                                div.sub-text
+                                    | Добавляя платежную карту, вы соглашаетесь с нашими &nbsp;
+                                    a(href="#",target="_blank") Правилами использования
+                                    | &nbsp; и &nbsp;
+                                    a(href="#",target="_blank") Политикой конфиденциальности
+
+                    div.column.grid-12-dl-2
