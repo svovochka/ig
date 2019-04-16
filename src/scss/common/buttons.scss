@@ -133,4 +133,10 @@
 
 .one-button-line {
   text-align: center;
+  &.button-left{
+    text-align: left;
+  }
+  &.button-right{
+    text-align: right;
+  }
 }

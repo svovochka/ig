@@ -11,50 +11,168 @@ block content
                 div.columns
                     div.column.grid-12-dl-2
                     div.column.grid-12-dl-8.grid-12-s-12
-                        div.one-button-line
+                        div.one-button-line.button-left
                             a.button.button-transparent-black(href="./activity-list.html") Назад к странице развлечений
+            div.work-area.grid-12-sl.grid-4-t
+                div.columns
+                    div.column.grid-12-dl-2
+                    div.column.grid-12-dl-8.grid-12-s-12
+                        div.box
+                            div.box-body
+                                div.box-title
+                                    h1 Выбраный тариф
+                                div.section-tariff
+                                    div.tariff-info
+                                        div.tariff-title 1 комната с 2 енотами + корм
+                                        div.tariff-options
+                                            span.tariff-option
+                                                i.zmdi.zmdi-account-o
+                                                | &nbsp; 1-2 человека
+                                            span.tariff-option
+                                                i.zmdi.zmdi-timer
+                                                | &nbsp; 120 минут
+                                        div.tariff-promo
+                                            span.tariff-option
+                                                div.badge.badge-small.no-prepayment-badge
+                                                    i.zmdi.zmdi-shield-check
+                                                    | &nbsp; Без предоплаты
+                                            span.tariff-option
+                                                div.badge.badge-small.free-cancel-badge
+                                                    i.zmdi.zmdi-rotate-left
+                                                    | &nbsp; Бесплатная отмена
+                                    div.tariff-price
+                                        .value 10 000 ₽
 
                         div.box
                             div.box-body
-                                .box-title
-                                    h1 Выбраный тариф
-                        div.box
-                            div.box-body
-                                .box-title
+                                div.box-title
                                     h1 Кэшбэк
-                            div.box-body
+                                div.section-cashback
+                                    div.cashback-info
+                                        div.badge 10%
+                                        span На ваш счет будет зачислено:
+                                    div.cashback-value
+                                        .value 1234 баллов
+
                         div.box
                             div.box-body
-                                .box-title
+                                div.box-title
                                     h1 Количество участников
-                            div.box-body
+                                div
+                                    div.option-buttons
+                                        div.option-buttons-caret
+                                            button.active(type="button") 1
+                                            button(type="button") 2
+                                            button(type="button") 3
+                                            button(type="button") 4
+                                            button(type="button") 5
+                                            button(type="button") 6
+                                            button(type="button") 7
+                                            button(type="button") 8
+
                         div.box
                             div.box-body
-                                .box-title
+                                div.box-title
                                     h1 Доступное время на 24.05.2019
-                            div.box-body
+                                div
+                                    div.option-buttons
+                                        div.option-buttons-caret
+                                            button.active(type="button") 07:00
+                                            button(type="button") 08:30
+                                            button(type="button") 09:25
+                                            button.discount(type="button")
+                                                div.top 10:50
+                                                div.bottom +1500 ₽
+                                            button(type="button") 11:00
+                                            button(type="button") 12:00
+                                            button(type="button") 13:00
+                                            button.discount(type="button")
+                                                div.top 10:50
+                                                div.bottom -500 ₽
+
                         div.box
                             div.box-body
-                                .box-title
+                                div.box-title
                                     h1 Продолжительность в минутах
-                            div.box-body
+                                div
+                                    div.option-buttons
+                                        div.option-buttons-caret
+                                            button.active(type="button") 30
+                                            button(type="button") 45
+                                            button(type="button") 60
+                                            button(type="button") 90
+                                            button(type="button") 120
+                                            button(type="button") 180
+                                            button(type="button") 240
+                                            button(type="button") 300
                         div.box
                             div.box-body
-                                .box-title
+                                div.box-title
                                     h1 Количество заказов
-                            div.box-body
+                                div
+                                    div.option-buttons
+                                        div.option-buttons-caret
+                                            button.active(type="button") 1
+                                            button(type="button") 2
+                                            button(type="button") 3
                         div.box
                             div.box-body
-                                .box-title
+                                div.box-title
                                     h1 Контактные данные
-                            div.box-body
+                                div.section-contacts.column-split
+                                    div.column.grid-12-dl-4.grid-12-s-6.grid-4-t-2
+                                        div.form-group
+                                            label.form-label Имя и фамилия
+                                            div.form-element
+                                                input(type="text", placeholder="Петр Иванов")
+                                        div.form-group
+                                            label.form-label Email
+                                            div.form-element
+                                                input(type="email", placeholder="email@domain.com")
+                                    div.column.grid-12-dl-4.grid-12-s-6.grid-4-t-2
+                                        div.form-group
+                                            label.form-label Телефон
+                                            div.form-element
+                                                input(type="text", placeholder="Петр Иванов")
+                                        div.form-group.no-label
+                                            div.form-element
+                                                div.checkbox
+                                                    input(type="hidden")
+                                                    label
+                                                        span.checkbox-button
+                                                            i.zmdi.zmdi-check
+                                                        | Использовать данные аккаунта
+
+
                         div.box
                             div.box-body
-                                .box-title
+                                div.box-title
                                     h1 Карта оплаты
-                            div.box-body
+                                div.column-split
+                                    div.column.grid-12-dl-4.grid-12-s-6.grid-4-t-2
+                                        div.form-group
+                                            label.form-label Номер карты
+                                            div.form-element
+                                                input(type="text", placeholder="xxxx xxxx xxxx xxxx")
+                                    div.column.grid-12-dl-4.grid-12-s-6.grid-4-t-2
+                                        div.form-group.no-label
+                                            button.button.button-transparent-black(type="button") Изменить карту
                         div.box
                             div.box-body
-                                .box-title
+                                div.box-title
                                     h1 Комментарии к заказу
-                            div.box-body
+                                div
+                                    div
+                                        textarea(placeholder="Напишите, если у вас есть дополнительная просьба или комментарий")
+                                    div.sub-text
+                                        | Бронируя развлечение, вы соглашаетесь с нашими &nbsp;
+                                        a(href="#",target="_blank") Правилами использования
+                                        | &nbsp; и &nbsp;
+                                        a(href="#",target="_blank") Политикой конфиденциальности
+
+            div.work-area.grid-12-sl.grid-4-t.grid-2-m
+                div.columns
+                    div.column.grid-12-dl-2
+                    div.column.grid-12-dl-8.grid-12-s-12
+                        div.one-button-line
+                            button.button.button-yellow(type="button") Забронировать за 9 500 ₽

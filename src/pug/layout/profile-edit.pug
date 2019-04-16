@@ -7,16 +7,19 @@ block content
     div.page-profile.page-profile-edit
         div.profile-menu
             div.width-holder
-                div.work-area.profile-menu-items
-                    div.profile-menu-item(class = active_point === 1 ? 'active' : '')
-                        a(href="./profile-edit-1-personal.html")
-                            span Профиль
-                    div.profile-menu-item(class = active_point === 2 ? 'active' : '')
-                        a(href="./profile-edit-2-phone.html")
-                            span Телефон
-                    div.profile-menu-item(class = active_point === 3 ? 'active' : '')
-                        a(href="./profile-edit-3-payment.html")
-
-                            span Платежная карта
+                div.work-area.grid-12-sl.grid-4-t.grid-2-m
+                    div.columns
+                        div.column.grid-12-dl-2
+                        div.column.grid-12-dl-8.grid-12-s-12
+                            .profile-menu-items
+                                div.profile-menu-item(class = active_point === 1 ? 'active' : '')
+                                    a(href="./profile-edit-1-personal.html")
+                                        span Профиль
+                                div.profile-menu-item(class = active_point === 2 ? 'active' : '')
+                                    a(href="./profile-edit-2-phone.html")
+                                        span Телефон
+                                div.profile-menu-item(class = active_point === 3 ? 'active' : '')
+                                    a(href="./profile-edit-3-payment.html")
+                                        span Платежная карта
         div.profile-section
             block profile-section

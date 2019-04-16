@@ -1,13 +1,150 @@
 @import "../variables.scss";
 
 //Main container
-.page-activity-booking{
+.page-activity-booking {
   margin-top: 40px;
+
+  .one-button-line {
+    margin-bottom: 40px;
+  }
+
+  .section-tariff {
+    position: relative;
+    .tariff-info {
+      .tariff-title {
+        font-size: $font-size-big;
+        font-weight: bold;
+        line-height: 32px;
+        margin-bottom: 20px;
+      }
+      .tariff-options {
+        margin-bottom: 20px;
+        .tariff-option {
+          margin-right: 20px;
+        }
+      }
+      .tariff-promo {
+        .tariff-option {
+          margin-right: 20px;
+        }
+      }
+    }
+    .tariff-price {
+      font-size: 24px;
+      font-weight: bold;
+      position: absolute;
+      right: 0;
+      top: 0;
+      vertical-align: middle;
+    }
+  }
+  .section-cashback {
+    position: relative;
+    .cashback-info {
+      .badge {
+        font-weight: bold;
+        font-size: $font-size-big;
+        line-height: 32px;
+        margin-right: 16px;
+      }
+    }
+    .cashback-value {
+      font-size: 24px;
+      font-weight: bold;
+      position: absolute;
+      right: 0;
+      top: 0;
+      vertical-align: middle;
+    }
+  }
+
+  .section-contacts{
+    .column{
+      margin-bottom: 20px;
+    }
+  }
+
+
+  .option-buttons {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .option-buttons-caret {
+      display: flex;
+      button {
+        display: block;
+        flex: 0 0;
+        cursor: pointer;
+        color: $color-text-grey;
+        border: 1px solid $color-text-grey;
+        background-color: transparent;
+        height: 64px;
+        min-width: 80px;
+        border-radius: $border-radius-button;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.active, &:hover {
+          background-color: $color-brand-yellow;
+          border: none;
+          font-weight: bold;
+          color: $color-text-default;
+        }
+        &.discount {
+          .top {
+            line-height: 24px;
+            border-bottom: 1px solid $color-text-grey;
+          }
+          .bottom {
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  textarea {
+    font-family: inherit;
+    font-size: $font-size-default;
+    border: 1px solid $color-brand-border;
+    border-radius: $border-radius-button;
+    padding: 12px;
+    background-color: $color-brand-background;
+    display:block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 144px;
+    resize: none;
+    margin-bottom: 20px;
+  }
+
+  .sub-text {
+    margin-top: 20px;
+    font-size: $font-size-small;
+    text-align: center;
+  }
+
 }
 
 //Mobile styles
 @media (max-width: $width-max-m) {
+  .page-activity-booking{
+    .section-tariff {
+      .tariff-price {
+        position: unset;
+        margin-top: 20px;
+      }
+    }
+    .section-cashback {
+      .cashback-value {
+        position: unset;
+        margin-top: 20px;
+      }
+    }
 
+  }
 }
 
 //Tablet styles

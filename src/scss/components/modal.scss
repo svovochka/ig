@@ -49,6 +49,11 @@
           border-bottom: 1px solid $color-brand-border;
         }
       }
+      .modal-buttons{
+        text-align: center;
+        margin-top: 32px;
+        margin-bottom: 16px;
+      }
       .modal-message {
         text-align: center;
         margin-bottom: 16px;
@@ -107,4 +112,31 @@
       margin-right: 20px;
     }
   }
+}
+
+
+//Mobile styles
+@media (max-width: $width-max-m) {
+  .modal {
+    .modal-overlay{
+      .modal-box{
+        width:100%;
+      }
+    }
+  }
+}
+
+//Tablet styles
+@media (min-width: $width-min-t) and (max-width: $width-max-t) {
+
+}
+
+//Desktop styles
+@media (min-width: $width-min-d) and (max-width: $width-max-d) {
+
+}
+
+//Large desktop styles
+@media (min-width: $width-min-l) {
+
 }
