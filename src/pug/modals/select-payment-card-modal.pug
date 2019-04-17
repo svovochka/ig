@@ -7,29 +7,35 @@ block modal-variables
 block modal-body
     div.modal-title Выбрать платежную карту
     div.modal-message
-        div.select-card
-            div.select-card-option.active
-                div.select-card-name
-                    img(src="../img/visa-logo.png")
-                    | **** **** **** 1234
-                div.select-card-control
-                    div.radio-button.selected
-                        span.redio-button
-                            i.zmdi.zmdi-check
-                        span.redio-button-label Использовать
-            div.select-card-option
-                div.select-card-name
-                    img(src="../img/visa-logo.png")
-                    | **** **** **** 5678
-                div.select-card-control
-                    div.radio-button.selected
-                        span.redio-button
-                            i.zmdi.zmdi-check
-                        span.redio-button-label Использовать
-    div
+        .cards-list
+            .card-item
+                .card-num
+                    img(src="../../img/card-visa.png")
+                    span **** **** **** 1234
+                .card-status
+                    div.checkbox.checked
+                        input(type="hidden")
+                        label
+                            span.checkbox-button
+                                i.zmdi.zmdi-check
+                            span.device-m-hidden Использовать
+
+            .card-item
+                .card-num
+                    img(src="../../img/card-visa.png")
+                    span **** **** **** 1234
+                .card-status
+                    div.checkbox
+                        input(type="hidden")
+                        label
+                            span.checkbox-button
+                                i.zmdi.zmdi-check
+                            span.device-m-hidden Использовать
+
+    div.modal-buttons
         button.button.button-yellow.modal-control-commit( type='button') Готово
-    div
-        | Добавляя платежную карту, вы соглашаетесь с нашими
+    div.sub-text
+        | Добавляя платежную карту, вы соглашаетесь с нашими &nbsp;
         a(href="#", target="_blank") Правилами использования
-        | и
+        | &nbsp; и &nbsp;
         a(href="#", target="_blank") Политикой конфиденциальности

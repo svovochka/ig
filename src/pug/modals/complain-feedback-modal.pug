@@ -6,10 +6,10 @@ block modal-variables
 
 block modal-body
     div.modal-title Жалоба на отзыв
-    form
-        div.form-section
-            div.form-group
-                div.form-element
-                    textarea(placeholder="Расскажите, что не так...")
-            div.form-button
-                button.button.button-yellow.modal-control-open(data-target="error-modal", type='button') Отправить
+
+    div.modal-message
+        div.form-group
+            div.form-element
+                textarea(placeholder="Расскажите, что не так...")
+    div.modal-buttons
+        button.button.button-yellow.modal-control-open(data-target="complain-sent-modal", type='button') Отправить

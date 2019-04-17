@@ -93,6 +93,20 @@
           }
         }
       }
+
+      textarea {
+        font-family: inherit;
+        font-size: $font-size-default;
+        border: 1px solid $color-brand-border;
+        border-radius: $border-radius-button;
+        padding: 12px;
+        background-color: $color-brand-background;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100px;
+        resize: none;
+      }
     }
   }
 
@@ -179,10 +193,63 @@
 }
 
 #add-payment-card-modal {
-  .sub-text{
+  .sub-text {
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 20px;
+  }
+}
+
+#share-modal {
+  .social-share {
+    text-align: left;
+    margin-bottom: 20px;
+    div.social-share-icon {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      border: 2px solid $color-brand-board;
+      color: $color-brand-board;
+      display: inline-block;
+      margin: 0 8px 0 0;
+      text-align: center;
+      &:last-child {
+        margin-left: 0;
+      }
+      i {
+        margin-top: 7px;
+      }
+    }
+  }
+}
+
+#select-payment-card-modal {
+  .sub-text {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+  .cards-list {
+    .card-item {
+      display: flex;
+      width: 100%;
+      padding: 20px 0;
+      vertical-align: middle;
+      border-bottom: 1px solid $color-brand-border;
+      .card-num {
+        flex: 0 0 50%;
+        img {
+          margin-right: 20px;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+      .card-status {
+        flex: 0 0 50%;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -235,7 +302,6 @@
       }
     }
   }
-
 
   .modal {
     .modal-overlay {
