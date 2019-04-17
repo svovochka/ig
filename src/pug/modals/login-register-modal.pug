@@ -17,74 +17,80 @@ block modal-body
             div#tab-login.modal-tab-content.opened
                 form
                     div.form-section
-                        div.form-group
-                            label.form-label Email
-                            div.form-element
-                                input(type="email", placeholder="email@domain.com")
-                        div.form-group
-                            label.form-label Пароль
-                            div.form-element
-                                input(type="password")
+                        .form-width-holder
+                            div.form-group
+                                label.form-label Email
+                                div.form-element
+                                    input(type="email", placeholder="email@domain.com")
+                            div.form-group
+                                label.form-label Пароль
+                                div.form-element
+                                    input(type="password")
 
-                        button.link.modal-control-open(data-target="restore-password-modal", type='button') Забыли пароль?
-                        div.form-button
-                            button.button.button-yellow.modal-control-commit( type='button') Войти
+                            button.link.modal-control-open(data-target="restore-password-modal", type='button') Забыли пароль?
+                            div.one-button-line
+                                div.form-element
+                                    button.button.button-yellow.modal-control-commit( type='button') Войти
 
                     div.form-section
-                        legend.form-legend или войдите в аккаунт
+                        legend.form-legend
+                            span или войдите в аккаунт
                         div.login-via-social
-                            button.login-via-social-option(type='button')
+                            div.login-via-social-option
                                 img.login-via-social-image(src="../../img/icon-fb.png")
-                                span.login-via-social-label Войти через Facebook
-                            button.login-via-social-option(type='button')
+                                a.login-via-social-label(href="#",target="_blank") Войти через Facebook
+                            div.login-via-social-option
                                 img.login-via-social-image(src="../../img/icon-vk.png")
-                                span.login-via-social-label Войти через Vkontakte
-                    div.form-section
-                        | Заходя в аккаунт, вы соглашаетесь с нашими
+                                a.login-via-social-label(href="#",target="_blank") Войти через Vkontakte
+                    div.form-section.sub-text
+                        | Заходя в аккаунт, вы соглашаетесь с нашими &nbsp;
                         a(href="#",target="_blank") Правилами использования
-                        | и
+                        | &nbsp; и &nbsp;
                         a(href="#",target="_blank") Политикой конфиденциальности
 
 
             div#tab-register.modal-tab-content
                 form
                     div.form-section
-                        div.form-group
-                            label.form-label Ваше имя и фамилия
-                            div.form-element
-                                input(type="text", placeholder="Петр Иванов")
-                        div.form-group
-                            label.form-label Email
-                            div.form-element
-                                input(type="email", placeholder="email@domain.com")
-                        div.form-group
-                            label.form-label Пароль
-                            div.form-element
-                                input(type="password")
-                        div.form-group
-                            label.form-label Повтор пароля
-                            div.form-element
-                                input(type="password")
-                        div.form-group
-                            label.form-label Пол
-                            div.form-element
-                                div.dropdown
-                                    input(type="hidden")
-                                    div.dropdown-value Не указан
-                                        i.zmdi.zmdi-caret-down
-                                        i.zmdi.zmdi-caret-up
-                                    div.dropdown-options
-                                        div.dropdown-option.selected Не указан
-                                        div.dropdown-option Мужской
-                                        div.dropdown-option Женский
-                        div.form-group
-                            label.form-label Дата рождения
-                            div.form-element
-                                input(type="text", placeholder="дд.мм.гггг")
-                        div.form-button
-                            button.button.button-yellow.modal-control-commit( type='button') Зарегистрироваться
-                    div.form-section
-                        | Регистрируясь, вы соглашаетесь с нашими
+                        .form-width-holder
+                            div.form-group
+                                label.form-label Ваше имя и фамилия
+                                div.form-element
+                                    input(type="text", placeholder="Петр Иванов")
+                            div.form-group
+                                label.form-label Email
+                                div.form-element
+                                    input(type="email", placeholder="email@domain.com")
+                            div.form-group
+                                label.form-label Пароль
+                                div.form-element
+                                    input(type="password")
+                            div.form-group
+                                label.form-label Повтор пароля
+                                div.form-element
+                                    input(type="password")
+                            div.form-group
+                                label.form-label Пол
+                                div.form-element
+                                    div.dropdown
+                                        input(type="hidden")
+                                        div.dropdown-value Не указан
+                                            i.zmdi.zmdi-caret-down
+                                            i.zmdi.zmdi-caret-up
+                                        div.dropdown-options
+                                            div.dropdown-option.selected Не указан
+                                            div.dropdown-option Мужской
+                                            div.dropdown-option Женский
+                            div.form-group
+                                label.form-label Дата рождения
+                                div.form-element
+                                    input(type="text", placeholder="дд.мм.гггг")
+                            div.one-button-line
+                                div.form-element
+                                    button.button.button-yellow.modal-control-commit( type='button') Зарегистрироваться
+
+                    div.form-section.sub-text
+                        | Регистрируясь, вы соглашаетесь с нашими &nbsp;
                         a(href="#",target="_blank") Правилами использования
-                        | и
+                        | &nbsp; и &nbsp;
                         a(href="#",target="_blank") Политикой конфиденциальности

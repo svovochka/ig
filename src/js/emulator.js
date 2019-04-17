@@ -75,11 +75,25 @@ $(function () {
     });
 
     $('.modal-control-commit').click(function (e) {
+        var control = $(e.target);
         if (!control.hasClass('modal-control-commit')) {
             control = control.parents('.modal-control-commit');
         }
-        var control = $(e.target);
         control.parents('.modal').removeClass('opened');
+    });
+
+    $('.modal-tab').click(function(e){
+        var control = $(e.target);
+        if (!control.hasClass('modal-tab')) {
+            control = control.parents('.modal-tab');
+        }
+        var modal = control.parents('.modal');
+        var targetId = control.data('target');
+
+        modal.find('.modal-tab').removeClass('opened');
+        modal.find('.modal-tab-content').removeClass('opened');
+        control.addClass('opened');
+        modal.find('#'+targetId).addClass('opened');
     });
 
     $(window).on('resize', fix_size);

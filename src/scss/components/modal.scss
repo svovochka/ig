@@ -49,7 +49,7 @@
           border-bottom: 1px solid $color-brand-border;
         }
       }
-      .modal-buttons{
+      .modal-buttons {
         text-align: center;
         margin-top: 32px;
         margin-bottom: 16px;
@@ -114,13 +114,137 @@
   }
 }
 
+#login-register-modal {
+  .form-width-holder {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .one-button-line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    button {
+      width: 100%;
+    }
+  }
+
+  .form-section {
+    position: relative;
+    legend {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      span {
+        display: inline-block;
+        padding: 0 40px;
+        background-color: $color-white;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .login-via-social {
+    margin: 10px 20px 0 20px;
+    display: flex;
+    .login-via-social-option {
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      img.login-via-social-image {
+        margin-right: 20px;
+      }
+      a.login-via-social-label {
+        display: inline-block;
+        line-height: 24px;
+        text-align: left;
+      }
+    }
+  }
+
+  .sub-text {
+    font-size: $font-size-small;
+    text-align: center;
+  }
+}
 
 //Mobile styles
 @media (max-width: $width-max-m) {
+
+  #login-register-modal {
+    .form-width-holder {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .form-section {
+      position: relative;
+      legend {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        span {
+          display: inline-block;
+          padding: 0 20px;
+          font-size: $font-size-small;
+        }
+      }
+    }
+    .login-via-social {
+      margin: 10px 20px 0 20px;
+      display: block;
+      .login-via-social-option {
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        margin-bottom: 12px;
+        img.login-via-social-image {
+          display: inline-block;
+          margin-right: 12px;
+          width: 24px;
+          height: auto;
+          vertical-align: middle;
+        }
+        a.login-via-social-label {
+          display: inline-block;
+          font-size: 12px;
+          line-height: 20px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+
   .modal {
-    .modal-overlay{
-      .modal-box{
-        width:100%;
+    .modal-overlay {
+      .modal-box {
+        width: 100%;
+        .modal-tabs-controls {
+          background-color: $color-brand-background;
+          display: flex;
+          padding-right: 60px;
+          .modal-tab {
+            background-color: transparent;
+            flex: 1;
+            font-size: 12px;
+            line-height: 20px;
+            padding: 13px 0;
+            text-align: center;
+            cursor: pointer;
+            &.opened {
+              cursor: unset;
+              font-weight: bold;
+              background-color: $color-white;
+            }
+          }
+        }
       }
     }
   }
