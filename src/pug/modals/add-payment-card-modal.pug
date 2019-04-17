@@ -24,12 +24,11 @@ block modal-body
                 label.form-label CVC/CVV
                 div.form-element
                     input(type="text", placeholder="xxx")
-            div.form-button
-                button.button.button-yellow.modal-control-commit( type='button') Добавить
-            div.form-button
-                button.button.button-transparent-black.modal-control-commit( type='button') Отмена
-    div
-        | Добавляя платежную карту, вы соглашаетесь с нашими
+    div.modal-buttons
+        button.button.button-yellow.modal-control-commit( type='button') Добавить
+        button.button.button-transparent-black.modal-control-commit( type='button') Отмена
+    div.sub-text
+        | Добавляя платежную карту, вы соглашаетесь с нашими &nbsp;
         a(href="#", target="_blank") Правилами использования
-        | и
+        | &nbsp; и &nbsp;
         a(href="#", target="_blank") Политикой конфиденциальности

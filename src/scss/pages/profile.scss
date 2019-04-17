@@ -64,4 +64,36 @@
 
   }
 
+  .cards-list{
+    .card-item{
+      display: flex;
+      width: 100%;
+      padding: 20px 0;
+      vertical-align: middle;
+      border-bottom: 1px solid $color-brand-border;
+      .card-num{
+        flex: 0 0 50%;
+        img{
+          margin-right: 20px;
+        }
+        span{
+          font-weight: bold;
+        }
+      }
+      .card-status{
+        flex: 0 0 25%;
+        text-align: center;
+      }
+      .card-actions{
+        flex: 0 0 25%;
+        text-align: center;
+        button{
+          color: $color-brand-red;
+        }
+      }
+    }
+  }
+
+
+
 }

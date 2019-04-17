@@ -14,5 +14,49 @@ block profile-section
                     div.column.grid-12-dl-8.grid-12-s-12
                         div.box
                             div.box-body
-                                .box-title
-                                    h1 Платежные карты
+                                .box-title.no-margin-bottom
+                                    h1 Редактирование карты
+                                .cards-list
+
+                                    .card-item
+                                        .card-num
+                                            img(src="../../img/card-visa.png")
+                                            span **** **** **** 1234
+                                        .card-status
+                                            div.checkbox
+                                                input(type="hidden")
+                                                label
+                                                    span.checkbox-button
+                                                        i.zmdi.zmdi-check
+                                                    span.device-m-hidden Активная
+                                        .card-actions
+                                            button.link
+                                                span.device-m-hidden Удалить
+                                                span.device-tl-hidden
+                                                    i.zmdi.zmdi-close(title="Удалить")
+
+                                    .card-item
+                                        .card-num
+                                            img(src="../../img/card-visa.png")
+                                            span **** **** **** 1234
+                                        .card-status
+                                            div.checkbox
+                                                input(type="hidden")
+                                                label
+                                                    span.checkbox-button
+                                                        i.zmdi.zmdi-check
+                                                    span.device-m-hidden Активная
+                                        .card-actions
+                                            button.link
+                                                span.device-m-hidden Удалить
+                                                span.device-tl-hidden
+                                                    i.zmdi.zmdi-close(title="Удалить")
+
+                                div.one-button-line
+                                    button.button.button-yellow.modal-control-open(type='button', data-target="add-payment-card-modal") Добавить карту
+
+                                div.sub-text
+                                    | Добавляя платежную карту, вы соглашаетесь с нашими &nbsp;
+                                    a(href="#",target="_blank") Правилами использования
+                                    | &nbsp; и &nbsp;
+                                    a(href="#",target="_blank") Политикой конфиденциальности

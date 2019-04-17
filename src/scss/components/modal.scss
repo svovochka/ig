@@ -56,7 +56,9 @@
       }
       .modal-message {
         text-align: center;
+        margin: 0 20px;
         margin-bottom: 16px;
+
       }
       .modal-sub {
         font-size: $font-size-small;
@@ -92,6 +94,11 @@
         }
       }
     }
+  }
+
+  .sub-text {
+    font-size: $font-size-small;
+    text-align: center;
   }
 }
 
@@ -168,6 +175,14 @@
   .sub-text {
     font-size: $font-size-small;
     text-align: center;
+  }
+}
+
+#add-payment-card-modal {
+  .sub-text{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
   }
 }
 
