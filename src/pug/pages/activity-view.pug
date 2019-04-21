@@ -17,17 +17,20 @@ block content
                 div.header-height-holder
                 div.width-holder
                     div.work-area.grid-12-sl.grid-4-t.grid-2-m
-                        div.back-button.back-button
+                        div.back-button
                             a.button.button-contrast-transparent(href="./activity-list.html") Вернуться к списку
                 div.bottom-buttons
                     div.width-holder
                         div.work-area.grid-12-sl.grid-4-t.grid-2-m
                             div.show-photos-button
                                 button.button.button-contrast-filled.device-m-hidden(type="button") Помотреть 5 фото
-                            div.action-buttons
-                                button.button.button-contrast-transparent(type="button") В избранное
-                                button.button.button-contrast-transparent(type="button") Ещё
-                                button.button.button-yellow.device-tl-hidden(type="button") Забронировать
+                            div.action-buttons.columns
+                                span.column.grid-2-m-1
+                                    button.button.button-contrast-transparent.button-favorites(type="button") В избранное
+                                span.column.grid-2-m-1
+                                    button.button.button-contrast-transparent.button-more(type="button") Ещё
+                                span.column.grid-2-m-2
+                                    button.button.button-yellow.device-tl-hidden.button-bookmark(type="button") Забронировать
 
         div.width-holder
             div.work-area.grid-12-sl.grid-4-t.gr
@@ -47,7 +50,7 @@ block content
                                     div.param
                                         i.zmdi.zmdi-timer
                                         | 15 мин. - 8 ч.
-                                    div.param
+                                    div.param.price
                                         | от 10 000 &#8381
 
                             div.box-section.activity-description-rating
@@ -107,7 +110,7 @@ block content
                             div.box-section.activity-description-address
                                 div.address
                                     i.zmdi.zmdi-pin
-                                    | &nbsp; Санкт-Петербург, Невский проспект, д 5, корпус 4
+                                    span Санкт-Петербург, Невский проспект, д 5, корпус 4
 
                             div.box-section.activity-description-feedbacks
                                 h2 27 проверенных отзывов
@@ -296,7 +299,7 @@ block content
                                                     .td
                                                         div.quantity-selector
                                                             button.decrement -
-                                                            input(type="text")
+                                                            input(type="text", value="0")
                                                             button.increment +
 
                                 div.one-button-line
