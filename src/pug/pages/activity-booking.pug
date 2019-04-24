@@ -11,7 +11,7 @@ block content
                 div.columns
                     div.column.grid-12-dl-2
                     div.column.grid-12-dl-8.grid-12-s-12
-                        div.one-button-line.button-left
+                        div.one-button-line.button-left.back-button
                             a.button.button-transparent-black(href="./activity-list.html") Назад к странице развлечений
             div.work-area.grid-12-sl.grid-4-t
                 div.columns
@@ -153,10 +153,10 @@ block content
                                         div.form-group
                                             label.form-label Номер карты
                                             div.form-element
-                                                input(type="text", placeholder="xxxx xxxx xxxx xxxx")
+                                                .pseudo-input.card.card-visa.modal-control-open(data-target="select-payment-card-modal") **** **** **** 1234
                                     div.column.grid-12-dl-4.grid-12-s-6.grid-4-t-2
                                         div.form-group.no-label
-                                            button.button.button-transparent-black(type="button") Изменить карту
+                                            button.button.button-transparent-black.modal-control-open(type='button', data-target="add-payment-card-modal") Добавить карту
                         div.box
                             div.box-body
                                 div.box-title

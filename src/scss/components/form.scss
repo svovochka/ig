@@ -6,7 +6,7 @@
   .combined-form-element {
     display: inline-block;
     position: relative;
-    input, select, button, .dropdown-value {
+    input, select, button, .dropdown-value, .pseudo-input {
       font-size: $font-size-default;
       padding: 16px 20px;
       border: none;
@@ -16,25 +16,25 @@
       height:56px;
       overflow:hidden;
     }
-    input, select, .dropdown-value {
+    input, select, .dropdown-value, .pseudo-input {
       border-top: 1px solid $color-brand-border;
       border-bottom: 1px solid $color-brand-border;
       border-left: 1px solid $color-brand-border;
     }
     &:first-child {
-      input, select, button, .dropdown-value {
+      input, select, button, .dropdown-value, .pseudo-input {
         border-top-left-radius: $border-radius-button;
         border-bottom-left-radius: $border-radius-button;
       }
     }
     &:last-child {
-      input, select, button, .dropdown-value {
+      input, select, button, .dropdown-value, .pseudo-input {
         border-top-right-radius: $border-radius-button;
         border-bottom-right-radius: $border-radius-button;
       }
     }
     &.opened {
-        input, select, button, .dropdown-value {
+        input, select, button, .dropdown-value, .pseudo-input {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
       }
@@ -181,7 +181,7 @@
   }
   .form-element {
     position: relative;
-    input, select, button, .dropdown-value {
+    input, select, button, .dropdown-value, .pseudo-input {
       font-size: $font-size-default;
       padding: 16px 20px;
       margin: 0;
@@ -196,8 +196,15 @@
     select {
       background-color: $color-brand-background;
     }
-    input {
+    input, .pseudo-input {
       background-color: $color-brand-background;
+      &.card{
+        &.card-visa{
+          background-image: url('../img/card-visa-form.png');
+          background-position: top 16px right 20px;
+          background-repeat: no-repeat;
+        }
+      }
     }
     button, input[type="button"] {
       cursor: pointer;
@@ -232,19 +239,19 @@
     .combined-form-element {
       margin-bottom:12px;
 
-      input, select, button, .dropdown-value {
+      input, select, button, .dropdown-value, .pseudo-input {
         padding: 12px 20px;
         height:48px;
       }
 
-      input, select, .dropdown-value {
+      input, select, .dropdown-value, .pseudo-input {
         border: 1px solid $color-brand-border;
       }
-      input, select, button, .dropdown-value {
+      input, select, button, .dropdown-value, .pseudo-input {
         border-radius: $border-radius-button;
       }
       .dropdown.opened {
-        input, select, button, .dropdown-value {
+        input, select, button, .dropdown-value, .pseudo-input {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
@@ -259,19 +266,19 @@
     .combined-form-element {
       margin-bottom:20px;
 
-      input, select, button, .dropdown-value {
+      input, select, button, .dropdown-value, .pseudo-input {
         padding: 12px 20px;
         height:48px;
       }
 
-      input, select, .dropdown-value {
+      input, select, .dropdown-value, .pseudo-input {
         border: 1px solid $color-brand-border;
       }
-      input, select, button, .dropdown-value {
+      input, select, button, .dropdown-value, .pseudo-input {
         border-radius: $border-radius-button;
       }
       .dropdown.opened {
-        input, select, button, .dropdown-value {
+        input, select, button, .dropdown-value, .pseudo-input {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
