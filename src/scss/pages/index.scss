@@ -46,19 +46,18 @@
       position: absolute;
       width: 100%;
       bottom: 0;
-      overflow: hidden;
+      overflow-y: hidden;
+      overflow-x: scroll;
       background-color: rgba(45, 49, 66, 0.9);
       .categories-menu-items {
         text-align: center;
-
         height: 72px;
         margin: 0 auto;
         min-width: 1000px;
         .categories-menu-item {
           display: inline-block;
           margin: 0 30px;
-          padding: 27px 0;
-          opacity: 0.9;
+          padding: 24px 0;
           position: relative;
           a, a:visited {
             text-decoration: none;
@@ -73,9 +72,6 @@
             a {
               color: $color-brand-yellow;
             }
-            background-image: url('../img/categories-menu-caret.png');
-            background-repeat: no-repeat;
-            background-position: bottom center;
           }
         }
       }
@@ -105,6 +101,7 @@
         text-align: center;
         font-size: 40px;
         color: #ffffff;
+        line-height: 48px;
         span {
           color: $color-brand-yellow;
         }
@@ -149,6 +146,7 @@
           margin: 0;
           padding: 0;
           font-size: 40px;
+          line-height: 48px;
         }
         p {
           margin: 0;
@@ -181,7 +179,7 @@
         margin: 0;
         padding: 0;
         font-size: 40px;
-        line-height: 60px;
+        line-height: 48px;
       }
       p {
         text-align: center;
@@ -189,6 +187,7 @@
         margin: 0;
         padding: 0;
         line-height: 24px;
+        margin-top: 12px;
       }
 
       .video-carousel {
@@ -208,14 +207,14 @@
             .video-title {
               position: absolute;
               color: $color-white;
-              font-size: $font-size-h4;
-              line-height: 34px;
+              font-size: 24px;
+              line-height: 36px;
               bottom: 52px;
               margin: 0;
               padding: 0;
               left: 20px;
               width: 85%;
-              font-weight: bold;
+              font-weight: 500;
             }
             .video-views {
               position: absolute;

@@ -5,7 +5,7 @@
   .profile-menu {
     margin-bottom: 40px;
     background-color: $color-white;
-    .column{
+    .column {
       margin-bottom: 0;
     }
     .profile-menu-items {
@@ -17,7 +17,7 @@
         font-weight: bold;
         font-size: $font-size-default;
         line-height: 32px;
-        padding: 24px 0;
+        padding: 20px 0;
         color: $color-text-grey;
         a {
           color: $color-text-grey;
@@ -34,7 +34,7 @@
 
   .one-button-line {
     margin-top: 32px;
-    .button{
+    .button {
       padding-left: 40px;
       padding-right: 40px;
     }
@@ -46,54 +46,80 @@
     text-align: center;
   }
 
-  .column{
+  .column {
     margin-bottom: 20px;
   }
 
-  .profile-photo{
+  .profile-photo {
+
     height: 148px;
-    width:148px;
-    border-radius:50%;
-    overflow: hidden;
+    width: 148px;
     margin: 0 auto;
-    background-color: $color-text-grey;
-    img {
-      width:100%;
-      height:auto;
+    position: relative;
+    margin-top: 32px;
+    .image-mask {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: $color-brand-board;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+
+      }
+    }
+    .change-photo {
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      height: 40px;
+      width: 40px;
+      button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        color: $color-white;
+        opacity: 0.8;
+        font-size: 32px;
+        vertical-align: center;
+        margin: auto;
+        cursor: pointer;
+      }
     }
 
   }
 
-  .cards-list{
-    .card-item{
+  .cards-list {
+    .card-item {
       display: flex;
       width: 100%;
       padding: 20px 0;
       vertical-align: middle;
       border-bottom: 1px solid $color-brand-border;
-      .card-num{
+      .card-num {
         flex: 0 0 50%;
-        img{
+        img {
           margin-right: 20px;
         }
-        span{
+        span {
           font-weight: bold;
         }
       }
-      .card-status{
+      .card-status {
         flex: 0 0 25%;
         text-align: center;
       }
-      .card-actions{
+      .card-actions {
         flex: 0 0 25%;
         text-align: center;
-        button{
+        button {
           color: $color-brand-red;
         }
       }
     }
   }
-
-
 
 }

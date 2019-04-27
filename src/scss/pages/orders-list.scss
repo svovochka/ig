@@ -3,18 +3,27 @@
 //Main container
 .page-orders-list {
   margin-top: 40px;
-  .box-content {
-    h1 {
-      display: inline-block;
-      font-size: $font-size-h4;
-      margin: 4px 0;
-      padding: 0;
+  .box {
+    box-sizing: border-box;
+    .box-content {
+      position: relative;
+      padding: 23px 20px;
+      h1 {
+        display: inline-block;
+        font-size: $font-size-h4;
+        line-height: 36px;
+        margin: 0;
+        padding: 0;
+      }
+      .previous-toggle {
+        margin: 0;
+        margin-right: 30px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        display: inline-block;
+        float: right;
+      }
     }
-  }
-  .previous-toggle {
-    margin: 10px 30px 10px 0;
-    display: inline-block;
-    float: right;
   }
 }
 
@@ -37,14 +46,15 @@
           margin: 4px 0;
           padding: 0;
         }
+        .previous-toggle {
+          margin: 0 auto;
+          margin-top: 10px;
+          display: block;
+          text-align: center;
+          float: unset;
+        }
       }
-      .previous-toggle {
-        margin: 0 auto;
-        margin-top: 10px;
-        display: block;
-        text-align: center;
-        float: unset;
-      }
+
     }
   }
 }

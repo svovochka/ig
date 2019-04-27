@@ -8,11 +8,11 @@
 - var index = index !==null ? index : 1
 - var activity = activity ? activity : default_activity
 
-div.flip-container(class = index > 1 ? 'device-m-hidden' : '')
+div.flip-container(class = (index > 1 ? 'device-m-hidden' : '') + ' ' + ((index + 3) % 3 == 0 ? 'rejected-order': '')  )
     div.activity-card-order.flipper
         div.averse
-            div.activity-card-section.activity-card-cover
-                img.activity-card-cover-image(src=activity.image)
+            div.activity-card-section.activity-card-cover.image-container
+                img.activity-card-cover-image.resizable(src=activity.image)
                 div.status-indicator
                     if (index + 3) % 3 == 0
                         div.status-mark.rejected
@@ -63,8 +63,7 @@ div.flip-container(class = index > 1 ? 'device-m-hidden' : '')
                 div.width-dec-ml-5
                     if (index + 2) % 2 == 1
                         button.link.flip-toggle(type='button')
-                            strong Сообщения
-                            | &nbsp; (5)
+                            strong Сообщения (5)
                     if (index + 2) % 2 == 0
                         button.link.flip-toggle(type='button') Сообщения
                 div.width-dec-ml-5.decline

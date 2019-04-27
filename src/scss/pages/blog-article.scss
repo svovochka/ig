@@ -18,14 +18,16 @@
   .social-column {
     position: relative;
     .label {
-      margin-top: 24px;
+      margin-top: 26px;
       text-align: center;
     }
     .buttons {
       .social-button {
+        box-sizing: border-box;
         margin: 0 auto;
         margin-top: 20px;
         display: block;
+        font-size: $font-size-small;
       }
     }
   }
@@ -36,12 +38,15 @@
       padding: 0;
       margin-bottom: 32px;
       font-size: $font-size-h1;
+      line-height: 60px;
     }
     .article-info {
       display: flex;
       padding-bottom: 20px;
       border-bottom: 1px solid $color-brand-border;
+      margin-bottom: 40px;
       .author {
+        max-width:238px;
         .author-avatar {
           border-radius: 50%;
           overflow: hidden;
@@ -56,7 +61,7 @@
           }
         }
         .author-name {
-          margin-left: 8px;
+          margin-left: 4px;
           display: inline-block;
           vertical-align: middle;
           font-size: $font-size-small;
@@ -234,11 +239,24 @@
         font-weight: bold;
         margin-bottom: 20px;
         font-size: $font-size-big;
+        line-height: 32px;
         .reply-info {
           margin-left: 10px;
           font-size: $font-size-small;
           color: $color-text-grey;
           font-weight: normal;
+        }
+        .dont-answer {
+          display: block;
+          float: right;
+          button {
+            font-size: $font-size-small;
+            font-weight: normal;
+            i{
+              vertical-align: middle;
+              font-size: $font-size-default;
+            }
+          }
         }
       }
       form {
@@ -249,7 +267,7 @@
           border-radius: $border-radius-button;
           padding: 12px;
           background-color: $color-white;
-          display:block;
+          display: block;
           box-sizing: border-box;
           width: 100%;
           height: 144px;
@@ -531,18 +549,24 @@
         .form-header {
           font-weight: bold;
           margin-bottom: 20px;
+          line-height: 24px;
           font-size: $font-size-big;
           .reply-info {
-            margin-left: 10px;
+            display: block;
+            margin-left: 0;
             font-size: $font-size-small;
             color: $color-text-grey;
             font-weight: normal;
+          }
+          .dont-answer{
+            display: block;
+            float: unset;
           }
         }
         form {
           position: relative;
           textarea {
-            display:block;
+            display: block;
             box-sizing: border-box;
             width: 100%;
             font-family: inherit;
@@ -592,8 +616,8 @@
       }
     }
 
-    article{
-      .article-body{
+    article {
+      .article-body {
         .carousel {
           height: 400px;
         }

@@ -19,7 +19,11 @@ block profile-section
                                 div.column-split
                                     div.column.grid-12-dl-2.grid-12-s-4.grid-4-t-4.grid-4-t-single
                                         div.profile-photo
-                                            img(src="../../data/avatar1.jpg")
+                                            div.image-mask
+                                                img(src="../../data/avatar1.jpg")
+                                            div.change-photo
+                                                button(type="button")
+                                                    i.zmdi.zmdi-camera
                                     div.column.grid-12-dl-3.grid-12-s-4.grid-4-t-2.grid-4-t-first
                                         div.form-group
                                             label.form-label Имя и фамилия

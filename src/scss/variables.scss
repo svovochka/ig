@@ -5,6 +5,10 @@
 $width-min-m: 0;
 $width-max-m: 767px;
 
+//I - iphone
+$width-min-i: 375px;
+$width-max-i: 767px;
+
 //T - tablet
 $width-min-t: 768px;
 $width-max-t: 1024px;
@@ -24,6 +28,7 @@ $width-max-l: 3000px;
 // Define breakpoints
 $grid-breakpoints: (
         m: (min:$width-min-m ,max: $width-max-m),
+        i: (min:$width-min-i ,max: $width-max-i),
         t: (min:$width-min-t ,max: $width-max-t),
         s: (min:$width-min-s ,max: $width-max-s),
         d: (min:$width-min-d ,max: $width-max-d),

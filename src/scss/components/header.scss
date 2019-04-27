@@ -72,7 +72,7 @@
         color: $color-white;
         font-size: $font-size-default;
         text-decoration: none;
-        margin: 34px 0;
+        margin: 32px 0;
       }
       > button {
         vertical-align: middle;
@@ -95,7 +95,7 @@
         &.icon {
           vertical-align: middle;
           padding: 0;
-          margin: 34px 0;
+          margin: 32px 0;
           border: none;
           border-radius: unset;
           .attention-mark {
@@ -140,8 +140,12 @@
         color: $color-white;
         font-size: $font-size-default;
         text-decoration: none;
-        margin: 34px 12px;
+        margin: 32px 12px;
         font-weight: bold;
+        a {
+          color: $color-white;
+          text-decoration: none;
+        }
       }
     }
     .notifications {
@@ -295,7 +299,7 @@
         }
         > a {
           line-height: 24px;
-          &.icon{
+          &.icon {
             margin-top: 12px;
             margin-bottom: 12px;
           }

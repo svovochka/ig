@@ -1,8 +1,9 @@
 block modal-variables
     - var modalId = 'default';
+    - var subclass = '';
     - var modalOpened= false;
 
-div.modal(id=modalId, class = modalOpened === true ? 'opened' : '')
+div.modal(id=modalId, class = (modalOpened === true ? 'opened' : '') + '' + subclass )
     div.modal-overlay
         div.work-area.grid-12-sl.grid-4-t.grid-2-m
             div.modal-box
