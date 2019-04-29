@@ -1,5 +1,29 @@
 @import "../variables.scss";
 
+.checked-icon {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $color-brand-yellow;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  overflow: hidden;
+  text-align: center;
+  font-size: $font-size-small;
+  position: relative;
+  top: -2px;
+  padding-top: 2px;
+  i {
+    position: relative;
+    top: -5px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+
+  }
+}
+
 //Main container
 .page-activity-view {
   .activity-cover {
@@ -40,18 +64,32 @@
 
     .activity-description-title {
       .title {
+        display: flex;
         margin-bottom: 20px;
+        position: relative;
         h1 {
           margin: 0;
           padding: 0;
           font-size: 24px;
           line-height: 36px;
+          flex: 0 0 85%;
+        }
+
+        .check-icon-container {
+          flex: 0 0 15%;
+          height: 100%;
+          position: relative;
+          text-align: right;
         }
       }
       .params {
-        display: flex;
+        display: block;
         .param {
-          flex: 0 0 25%;
+          display: inline-block;
+          margin-right: 40px;
+          &:last-child {
+            margin-right: 0;
+          }
           i {
             margin-right: 8px;
           }
@@ -68,7 +106,7 @@
           height: 48px;
           background-color: $color-brand-yellow;
           font-weight: bold;
-          font-size: $font-size-big;
+          font-size: $font-size-default;
           text-align: center;
           padding: 12px 0;
           border-radius: $border-radius-button;
@@ -92,6 +130,9 @@
           box-sizing: border-box;
           margin-right: 12px;
         }
+        .info-icon {
+          font-size: $font-size-big;
+        }
       }
     }
 
@@ -100,22 +141,22 @@
       .company-info {
         display: flex;
         .company-logo {
-          width: 48px;
-          height: 48px;
-          background-color: $color-text-grey;
+          width: 52px;
+          height: 52px;
+          background-color: $color-brand-board;
           font-weight: bold;
-          font-size: $font-size-big;
           text-align: center;
           padding: 12px 0;
-          border-radius: $border-radius-button;
+          border-radius: 50%;
           overflow: hidden;
           box-sizing: border-box;
-          margin-right: 12px;
+          margin-right: 20px;
         }
 
         .company-registered {
           margin-top: 4px;
           font-size: $font-size-small;
+          color: $color-text-grey;
         }
       }
       .activities-info {
@@ -139,20 +180,7 @@
 
     .activity-description-checked {
       .checked-icon {
-        box-sizing: border-box;
-        display: inline-block;
-        vertical-align: middle;
-        background-color: $color-brand-yellow;
-        border-radius: 50%;
-        height: 20px;
-        width: 20px;
-        overflow: hidden;
-        text-align: center;
-        font-size: $font-size-small;
-        position: relative;
-        top: -2px;
-        padding-top: 2px;
-        margin-right: 12px;
+        margin-right: 5px;
       }
       span.check-date {
         display: inline-block;
@@ -179,6 +207,12 @@
       }
     }
 
+    .activity-description-address {
+      .pion-icon {
+        margin-right: 8px;
+      }
+    }
+
     .activity-description-feedbacks {
       h2 {
         margin: 0;
@@ -194,7 +228,7 @@
             display: flex;
             line-height: 1.5em;
             .feedback-author {
-              margin-right: 40px;
+              flex: 0 0 50%;
               padding: 20px 0;
               display: flex;
               .feedback-author-photo {
@@ -224,12 +258,14 @@
               }
             }
             .feedback-marks {
-              padding: 20px 0;
+              flex: 0 0 50%;
+              margin: 20px 0;
               display: flex;
               position: relative;
+              border-left: 1px solid $color-brand-border;
               .feedback-mark {
-                min-width: 33%;
-                padding: 0 12px 0 12px;
+                flex: 0 0 33.3333%;
+                padding: 0 2px;
                 .feedback-mark-value {
                   color: $color-brand-green;
                   text-align: center;
@@ -251,6 +287,7 @@
           }
 
           .feedback-actions {
+            margin-bottom: 20px;
             button {
               color: $color-text-grey
             }
@@ -258,8 +295,9 @@
 
           .feedback-response {
             line-height: 24px;
-            padding-left: 40px;
+            //padding-left: 40px;
             margin-bottom: 20px;
+            border-top: 1px solid $color-brand-border;
             .feedback-response-header {
               padding: 20px 0;
               font-weight: bold;
@@ -269,6 +307,9 @@
                 font-weight: normal;
                 color: $color-text-grey;
               }
+            }
+            .feedback-response-text {
+              color: $color-text-grey;
             }
           }
         }
@@ -333,11 +374,36 @@
         border: 1px solid $color-brand-border;
         vertical-align: top;
         position: relative;
+        &.center {
+          text-align: center;
+          vertical-align: middle;
+        }
       }
       .th {
         font-weight: bold;
         text-align: center;
         color: $color-text-grey;
+        &.th-tariffs {
+          text-align: left;
+        }
+        .caret {
+          display: none;
+          font-size: $font-size-big;
+          float: right;
+          margin-top: 4px;
+        }
+        &.sort {
+          &.sort-asc {
+            .caret.caret-asc {
+              display: inline-block;
+            }
+          }
+          &.sort-desc {
+            .caret.caret-desc {
+              display: inline-block;
+            }
+          }
+        }
       }
 
       .price {
@@ -349,20 +415,32 @@
       .quantity-selector {
         display: flex;
         button, input {
+          font-size: $font-size-default;
           display: block;
           font-family: inherit;
           padding: 4px;
-          border: 1px solid $color-brand-border;
+          border-top: 1px solid $color-brand-border;
+          border-bottom: 1px solid $color-brand-border;
+          border-left: 1px solid $color-brand-border;
+          border-right: none;
           background-color: transparent;
+          width: 32px;
+          height: 32px;
+          &:last-child {
+            border-right: 1px solid $color-brand-border;
+          }
         }
         button {
           cursor: pointer;
-          width: 28px;
           text-align: center;
+          color: $color-text-grey;
+          font-weight: bold;
         }
         input {
+          box-sizing: border-box;
           display: block;
-          width: 36px;
+          text-align: center;
+          font-weight: bold;
         }
       }
 
@@ -379,6 +457,7 @@
           box-sizing: border-box;
         }
         div.tariff-info {
+          width: 100%;
           .tariff-title {
             color: $color-brand-blue;
           }
@@ -405,7 +484,7 @@
 }
 
 //Mobile styles
-@media (max-width: $width-max-m) {
+@media (max-width: $width-max-i) {
   .page-activity-view {
     .activity-cover {
       margin-bottom: 0;
@@ -516,9 +595,11 @@
                 }
               }
               .feedback-marks {
+                border-left: none;
                 border-top: 1px solid $color-brand-border;
                 border-bottom: 1px solid $color-brand-border;
                 margin: 0;
+                padding: 20px;
                 .feedback-mark {
                   width: auto;
                   padding: 0;
@@ -558,19 +639,16 @@
 
       .table {
         margin-top: 10px;
-        border-collapse: collapse;
-        display: table;
+        border: 1px solid $color-brand-border;
+        border-radius: $border-radius-block;
+        display: block;
+        position: relative;
         .thead {
           display: none;
         }
         .tbody {
           display: block;
-        }
-        .tr {
-          display: block;
-          padding: 16px 20px;
-          border: none;
-          border-top: 1px solid $color-brand-border;
+          position: relative;
         }
         .td, .th {
           display: block;
@@ -583,6 +661,55 @@
           font-weight: bold;
           text-align: center;
           color: $color-text-grey;
+        }
+        .tr {
+          padding: 0;
+          border: none;
+          border-top: 1px solid $color-brand-border;
+          position: relative;
+
+          &:first-child {
+            border-top: none;
+          }
+          .td {
+            display: block;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px 0;
+
+            &.cell-tariff {
+              border-bottom: 1px solid $color-brand-border;
+              .tariff-card {
+                .tariff-info {
+                  .tariff-promo {
+                    display: block;
+                    .width-dec-ml-5 {
+                      display: block;
+                      width: 100%;
+                      flex: 0 0 100%;
+                      margin-bottom: 10px;
+                      &:last-child {
+                        margin-bottom: 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            &.cell-price {
+              text-align: left;
+              float: left;
+              .price {
+                text-align: left;
+              }
+
+            }
+            &.cell-quantity {
+              .quantity-selector {
+                float: right;
+              }
+            }
+          }
         }
       }
 

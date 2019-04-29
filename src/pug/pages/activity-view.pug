@@ -24,13 +24,14 @@ block content
                         div.work-area.grid-12-sl.grid-4-t.grid-2-m
                             div.show-photos-button
                                 button.button.button-contrast-filled.device-m-hidden(type="button") Помотреть 5 фото
-                            div.action-buttons.columns
-                                span.column.grid-2-m-1
-                                    button.button.button-contrast-transparent.button-favorites(type="button") В избранное
-                                span.column.grid-2-m-1
-                                    button.button.button-contrast-transparent.button-more(type="button") Ещё
-                                span.column.grid-2-m-2
-                                    button.button.button-yellow.device-tl-hidden.button-bookmark(type="button") Забронировать
+                            div.action-buttons
+                                .columns
+                                    .column.grid-2-m-1
+                                        button.button.button-contrast-transparent.button-favorites(type="button") В избранное
+                                    .column.grid-2-m-1
+                                        button.button.button-contrast-transparent.button-more(type="button") Ещё
+                                    .column.grid-2-m-2
+                                        button.button.button-yellow.device-tl-hidden.button-bookmark(type="button") Забронировать
 
         div.width-holder
             div.work-area.grid-12-sl.grid-4-t.grid-2-i
@@ -40,6 +41,10 @@ block content
                             div.box-section.activity-description-title
                                 div.title
                                     h1 Провести время с енотом-полоскуном и его верным другом
+                                    div.check-icon-container
+                                        span.checked-icon
+                                            i.zmdi.zmdi-check
+
                                 div.params
                                     div.param
                                         i.zmdi.zmdi-label-alt-outline
@@ -56,7 +61,7 @@ block content
                             div.box-section.activity-description-rating
                                 .column-split
                                     div.rating.column.grid-12-sl-3.grid-4-t-2
-                                        div.rating-value 8.9
+                                        div.rating-value 8.7
                                         div
                                             div.rating-summary
                                                 strong Очень хорошо
@@ -69,8 +74,8 @@ block content
                                             div
                                                 strong Доступно сегодня
                                             div.shedule-time.second-line
-                                                | 12:00 &ndash; 23:00
-                                                button.link.shedule-info
+                                                | 12:00 - 23:00
+                                                button.link.shedule-info.info-icon
                                                     i.zmdi.zmdi-info-outline
                             div.box-section.activity-description-info
                                 .column-split
@@ -78,15 +83,15 @@ block content
                                         .company-logo
                                         div
                                             div.company-name
-                                                strong ООО Еноты
+                                                strong ООО Еноты в лесу
                                             div.company-registered Зарегистрирован с 2018 года
                                     div.activities-info.column.grid-12-sl-3.grid-4-t-2
                                         div.activities-count
                                             strong 1
                                             | &nbsp;активное развлечение
                                         div.usage-statistics
-                                            strong 125
-                                            | &nbsp;человек воспользовались услугами
+                                            strong 324
+                                            | &nbsp;человека воспользовались услугами
                             div.box-section.no-padding.activity-description-video
                                 div.video
                             div.box-section.activity-description-checked
@@ -94,7 +99,7 @@ block content
                                     i.zmdi.zmdi-check
                                 | &nbsp;
                                 strong Проверено командой igetup
-                                span.check-date 12.09.2018
+                                span.check-date 14.11.2018
                             div.box-section.activity-description-about
                                 div.about-text
                                     p Lotteria is one of fast-food restaurant chains belonging to Lotte Group – top five greatest group
@@ -109,7 +114,7 @@ block content
                                 div.map#map
                             div.box-section.activity-description-address
                                 div.address
-                                    i.zmdi.zmdi-pin
+                                    i.zmdi.zmdi-pin.pion-icon
                                     span Санкт-Петербург, Невский проспект, д 5, корпус 4
 
                             div.box-section.activity-description-feedbacks
@@ -122,8 +127,8 @@ block content
                                                     div.feedback-author-photo
                                                         img(src="../../data/avatar1.jpg")
                                                     div.feedback-author-info
-                                                        div.feedback-author-name Иван Васильевич
-                                                        div.feedback-date 10 декабря 2018 в 8:18
+                                                        div.feedback-author-name Tyler Mendez
+                                                        div.feedback-date 10 декабря 2018 в&nbsp;8:18
 
                                                 div.feedback-marks
                                                     div.feedback-mark
@@ -214,17 +219,20 @@ block content
                                     .table.tariffs-table
                                         .thead
                                             .tr
-                                                .th Доступные тарифы
-                                                .th Цена
-                                                .th Количество
+                                                .th.th-tariffs Доступные тарифы
+                                                .th.th-price.sort.sort-desc
+                                                    | Цена
+                                                    i.zmdi.zmdi-caret-down.caret.caret-desc
+                                                    i.zmdi.zmdi-caret-up.caret.caret-asc
+                                                .th.th-quantity Количество
                                         .tbody
                                             each val in [1, 2, 3]
                                                 .tr
-                                                    .td
+                                                    .td.cell-tariff
                                                         div.tariff
                                                             div.tariff-card
                                                                 div.tariff-info
-                                                                    div.tariff-title 1 комната с 2 енотами + корм, вместе с инструктором по жизни
+                                                                    div.tariff-title 2 комнаты с енотами + корм
                                                                     div.tariff-options
                                                                         div.width-dec-ml-5
                                                                             i.zmdi.zmdi-account-o
@@ -232,20 +240,20 @@ block content
                                                                         div.width-dec-ml-5
                                                                             i.zmdi.zmdi-timer
                                                                             | &nbsp; 120 минут
-                                                    .td
+                                                    .td.center.cell-price
                                                         .price 10 000 &#8381
-                                                    .td
+                                                    .td.center.cell-quantity
                                                         div.quantity-selector
                                                             button.decrement -
-                                                            input(type="text")
+                                                            input(type="text", placeholder="0")
                                                             button.increment +
 
                                                 .tr
-                                                    .td
+                                                    .td.cell-tariff
                                                         div.tariff
                                                             div.tariff-card
                                                                 div.tariff-info
-                                                                    div.tariff-title 1 комната с 2 енотами + корм, вместе с инструктором по жизни
+                                                                    div.tariff-title 2 комнаты с енотами + корм
                                                                     div.tariff-options
                                                                         div.width-dec-ml-5
                                                                             i.zmdi.zmdi-account-o
@@ -262,16 +270,16 @@ block content
                                                                             div.badge.badge-small.free-cancel-badge
                                                                                 i.zmdi.zmdi-rotate-left
                                                                                 | &nbsp; Бесплатная отмена
-                                                    .td
+                                                    .td.center.cell-price
                                                         .price 10 000 &#8381
-                                                    .td
+                                                    .td.center.cell-quantity
                                                         div.quantity-selector
                                                             button.decrement -
-                                                            input(type="text")
+                                                            input(type="text", placeholder="0")
                                                             button.increment +
 
                                                 .tr
-                                                    .td
+                                                    .td.cell-tariff
                                                         div.tariff
                                                             div.tariff-card
                                                                 div.tariff-image
@@ -294,12 +302,12 @@ block content
                                                                             div.badge.badge-small.free-cancel-badge
                                                                                 i.zmdi.zmdi-rotate-left
                                                                                 | &nbsp; Бесплатная отмена
-                                                    .td
+                                                    .td.center.cell-price
                                                         .price 10 000 &#8381
-                                                    .td
+                                                    .td.center.cell-quantity
                                                         div.quantity-selector
                                                             button.decrement -
-                                                            input(type="text", value="0")
+                                                            input(type="text", value="0", placeholder="0")
                                                             button.increment +
 
                                 div.one-button-line
