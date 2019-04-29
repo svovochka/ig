@@ -3,6 +3,12 @@
 .activity-card-order {
   margin-bottom: 40px;
 
+  &.rejected-order {
+    .averse {
+      opacity: 0.7;
+    }
+  }
+
   .averse {
 
     .activity-card-section {
@@ -24,8 +30,8 @@
         background-color: $color-brand-border;
 
         img.activity-card-cover-image {
-          display:block;
-          width:100%;
+          display: block;
+          width: 100%;
           height: auto;
           filter: brightness(70%);
         }
@@ -111,6 +117,7 @@
           color: $color-brand-blue;
           height: 40px;
           overflow: hidden;
+          line-height: 20px;
         }
         .options {
           margin-top: 4px;
@@ -173,7 +180,7 @@
             color: $color-text-grey;
             clear: both;
           }
-          .cleanup{
+          .cleanup {
             clear: both;
             height: 4px;
           }

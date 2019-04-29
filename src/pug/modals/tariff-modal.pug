@@ -1,12 +1,11 @@
 extends ./base-modal.pug
 
 block modal-variables
-    - var modalId = 'subscription-modal';
+    - var modalId = 'tariff-modal';
     - var subclass = '';
     - var modalOpened= false;
 
 block modal-body
-    div.modal-title Вы подписаны на новости и акции igetup!
-    div.modal-message Благодарим за подписку.
+    div.modal-title Тариф
     div.modal-buttons
         button.button.button-yellow.modal-control-close( type='button') Ok
