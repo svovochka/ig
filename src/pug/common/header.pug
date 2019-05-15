@@ -27,7 +27,7 @@ header.header(class = transparent_header === true ? 'transparent' : '')
                         a(href='./orders-list.html') Мои бронирования
                     div.top-menu-item
                         a(href='./favorites-list.html') Избранное
-                    div.top-menu-item
+                    div.top-menu-item.last-child
                         button#toggle-notifications.icon(type='button', title='Уведомления')
                             i.zmdi.zmdi-notifications
                             if has_notifications
@@ -39,7 +39,7 @@ header.header(class = transparent_header === true ? 'transparent' : '')
                             a(href="./profile-edit-1-personal.html") Иван Иванов
                 else
                     div.top-menu-item
-                        button.link.modal-control-open(type='button', data-target="login-register-modal") Войти
+                        a.modal-control-open(data-target="login-register-modal", href='#') Войти
                     div.top-menu-item
                         button.modal-control-open(type='button', data-target="login-register-modal") Создать аккаунт
                 if has_notifications

@@ -1,29 +1,28 @@
 extends layout
 
 append variables
-  - var active_point = 1;
+    - var active_point = 1;
 
 block content
     div.page-profile.page-profile-register
         div.profile-menu
             div.width-holder
-                div.work-area
-                    div.work-area.grid-12-sl.grid-4-t.grid-2-m
-                        div.columns
-                            div.column.grid-12-dl-2
-                            div.column.grid-12-dl-8.grid-12-s-12
-                                .profile-menu-items
-                                    div.profile-menu-item(class = active_point === 1 ? 'active' : '')
-                                        a(href="./profile-register-1-personal.html")
-                                            span.device-m-hidden 1. Основная информация
-                                            span.device-tl-hidden 1.
-                                    div.profile-menu-item(class = active_point === 2 ? 'active' : '')
-                                        a(href="./profile-register-2-phone.html")
-                                            span.device-m-hidden 2. Подтверждение телефона
-                                            span.device-tl-hidden 2.
-                                    div.profile-menu-item(class = active_point === 3 ? 'active' : '')
-                                        a(href="./profile-register-3-payment.html")
-                                            span.device-m-hidden 3. Подтверждение платежной карты
-                                            span.device-tl-hidden 3.
+                div.work-area.grid-12-sl.grid-4-t.grid-2-m
+                    div.columns
+                        div.column.grid-12-dl-2
+                        div.column.grid-12-dl-8.grid-12-s-12
+                            .profile-menu-items
+                                div.profile-menu-item(class = active_point === 1 ? 'active' : '')
+                                    a(href="./profile-register-1-personal.html")
+                                        span.device-m-hidden 1. Профиль
+                                        span.device-tl-hidden Профиль
+                                div.profile-menu-item(class = active_point === 2 ? 'active' : '')
+                                    a(href="./profile-register-2-phone.html")
+                                        span.device-m-hidden 2. Телефон
+                                        span.device-tl-hidden Телефон
+                                div.profile-menu-item(class = active_point === 3 ? 'active' : '')
+                                    a(href="./profile-register-3-payment.html")
+                                        span.device-m-hidden 3. Платежная карта
+                                        span.device-tl-hidden Карта
         div.profile-section
             block profile-section

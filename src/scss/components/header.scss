@@ -66,6 +66,9 @@
       &:last-child {
         margin-right: 0;
       }
+      &.last-child{
+        margin-right: 0;
+      }
       > a {
         vertical-align: middle;
         display: inline-block;
@@ -244,6 +247,9 @@
         &:last-child {
           margin-bottom: 0;
         }
+        &.last-child{
+          margin-bottom: 0;
+        }
         > a {
           line-height: 24px;
         }
@@ -295,6 +301,9 @@
         margin-bottom: 20px;
         padding: 10px 0;
         &:last-child {
+          margin-bottom: 0;
+        }
+        &.last-child{
           margin-bottom: 0;
         }
         > a {
@@ -394,7 +403,7 @@
         margin-right: 12px;
         margin-left: 12px;
         .avatar {
-          margin-left: 12px;
+          margin-left: 20px;
         }
       }
     }
