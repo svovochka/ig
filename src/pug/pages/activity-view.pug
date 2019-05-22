@@ -56,7 +56,8 @@ block content
                                         i.zmdi.zmdi-timer
                                         | 15 мин. - 8 ч.
                                     div.param.price
-                                        | от 10 000 &#8381
+                                        i.zmdi &#8381
+                                        | от 10 000
 
                             div.box-section.activity-description-rating
                                 .column-split
@@ -220,11 +221,7 @@ block content
                                         .thead
                                             .tr
                                                 .th.th-tariffs Доступные тарифы
-                                                .th.th-price.sort.sort-desc
-                                                    | Цена
-                                                    i.zmdi.zmdi-caret-down.caret.caret-desc
-                                                    i.zmdi.zmdi-caret-up.caret.caret-asc
-                                                .th.th-quantity Количество
+                                                .th.th-price Цена
                                         .tbody
                                             each val in [1, 2, 3]
                                                 .tr
@@ -241,12 +238,7 @@ block content
                                                                             i.zmdi.zmdi-timer
                                                                             | &nbsp; 120 минут
                                                     .td.center.cell-price
-                                                        .price 10 000 &#8381
-                                                    .td.center.cell-quantity
-                                                        div.quantity-selector
-                                                            button.decrement -
-                                                            input(type="text", placeholder="0")
-                                                            button.increment +
+                                                        button.button.button-yellow(type="button") 10 000 &#8381
 
                                                 .tr
                                                     .td.cell-tariff
@@ -271,12 +263,7 @@ block content
                                                                                 i.zmdi.zmdi-rotate-left
                                                                                 | &nbsp; Бесплатная отмена
                                                     .td.center.cell-price
-                                                        .price 10 000 &#8381
-                                                    .td.center.cell-quantity
-                                                        div.quantity-selector
-                                                            button.decrement -
-                                                            input(type="text", placeholder="0")
-                                                            button.increment +
+                                                        button.button.button-yellow(type="button") 10 000 &#8381
 
                                                 .tr
                                                     .td.cell-tariff
@@ -303,15 +290,8 @@ block content
                                                                                 i.zmdi.zmdi-rotate-left
                                                                                 | &nbsp; Бесплатная отмена
                                                     .td.center.cell-price
-                                                        .price 10 000 &#8381
-                                                    .td.center.cell-quantity
-                                                        div.quantity-selector
-                                                            button.decrement -
-                                                            input(type="text", value="0", placeholder="0")
-                                                            button.increment +
+                                                        button.button.button-yellow(type="button") 10 000 &#8381
 
-                                div.one-button-line
-                                    button.button.button-yellow(type="button") Забронировать
 
         div.width-holder
             div.work-area.grid-12-sl.grid-4-t.grid-2-i

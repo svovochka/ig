@@ -65,6 +65,7 @@
 .dropdown {
   position: relative;
   .dropdown-value {
+    box-sizing: border-box;
     .zmdi-caret-up, .zmdi-caret-down {
       color: $color-text-grey;
       font-size: 1.2em;
@@ -177,7 +178,7 @@
 .form-group {
   margin-bottom: 20px;
   &.no-label{
-    margin-top:30px;
+    padding-top:36px;
   }
 
   &:last-child {
@@ -193,14 +194,29 @@
     position: relative;
     input, select, button, .dropdown-value, .pseudo-input {
       font-size: $font-size-default;
-      padding: 16px 20px;
+      padding: 12px 12px;
       margin: 0;
       width: 100%;
       border: 1px solid $color-brand-border;
       box-sizing: border-box;
       border-radius: $border-radius-button;
+
+    }
+    &.has-error{
+      input, select, button, .dropdown-value, .pseudo-input {
+        border: 1px solid #ff4757;
+      }
+      .error-message{
+        position: absolute;
+        right: 0;
+        top: -32px;
+        color: $color-brand-red;
+        font-size: $font-size-small;
+        line-height: 20px;
+      }
     }
     .dropdown-value {
+      line-height: 19px;
       background-color: $color-brand-background;
     }
     select {

@@ -161,11 +161,11 @@
       }
       .activities-info {
         .activities-count {
-          font-size: $font-size-small;
+          font-size: 14px;
         }
         .usage-statistics {
           margin-top: 4px;
-          font-size: $font-size-small;
+          font-size: 14px;
         }
       }
     }
@@ -409,7 +409,7 @@
       .price {
         font-weight: bold;
         text-align: right;
-        min-width: 70px;
+        min-width: 150px;
       }
 
       .quantity-selector {

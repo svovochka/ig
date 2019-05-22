@@ -28,6 +28,9 @@
         margin-top: 20px;
         display: block;
         font-size: $font-size-small;
+        i{
+
+        }
       }
     }
   }
@@ -47,6 +50,7 @@
       margin-bottom: 40px;
       .author {
         max-width:238px;
+        margin-right: 40px;
         .author-avatar {
           border-radius: 50%;
           overflow: hidden;
@@ -71,7 +75,7 @@
       .params {
         display: inline-block;
         vertical-align: middle;
-        padding: 6px;
+        padding-top: 4px;
         font-size: $font-size-small;
         .param {
           margin-right: 40px;

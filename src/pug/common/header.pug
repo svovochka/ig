@@ -45,12 +45,14 @@ header.header(class = transparent_header === true ? 'transparent' : '')
                 if has_notifications
                     div.notifications#notifications
                         div.notifications-item
-                            div.notification-mark.message
+                            //div.notification-mark.message
                                 i.zmdi.zmdi-info-outline
                             div.notification-date Сегодня в 13:45
                             div.notification-link
                                 a(href='./activity-view.html') Комната с енотами
-                            div.notification-message Представитель развлесения отправил вам &nbsp;
+                            div.notification-message
+                                | Представитель развлесения отправил вам
+                                |
                                 a(href='./activity-view.html') новое сообщение
                         div.notifications-item
                             div.notification-mark.rejected
@@ -58,17 +60,23 @@ header.header(class = transparent_header === true ? 'transparent' : '')
                             div.notification-date Вчера в 16:32
                             div.notification-link
                                 a(href='./activity-view.html') Прокатиться на карете
-                            div.notification-message Представитель развлечения отменил ваше &nbsp;
+                            div.notification-message
+                                | Представитель развлечения отменил ваше
+                                |
                                 a(href='./activity-view.html') бронирование №14568
-                                | &nbsp; на 12.08.19.
+                                |
+                                | на 12.08.19.
                         div.notifications-item
                             div.notification-mark.accepted
                                 i.zmdi.zmdi-check
                             div.notification-date 23.01.18 в 11:30
                             div.notification-link
                                 a(href='./activity-view.html') Пострелять по звёздам
-                            div.notification-message Представитель развлечения подтвердил ваше &nbsp;
+                            div.notification-message
+                                | Представитель развлечения подтвердил ваше
+                                |
                                 a(href='./activity-view.html') бронирование №14568
-                                | &nbsp; на 12.08.19.
+                                |
+                                | на 12.08.19.
 if !is_homepage && !transparent_header
     div.header-height-holder

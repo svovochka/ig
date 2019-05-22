@@ -141,6 +141,10 @@
     margin: 0 auto;
   }
 
+  .modal-overlay .modal-box .modal-close {
+    top: 25px;
+  }
+
   .one-button-line {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -259,6 +263,11 @@
       width: 100%;
       margin: 0 auto;
     }
+
+    .modal-overlay .modal-box .modal-close {
+      top: 12px;
+    }
+
     .form-section {
       position: relative;
       legend {
